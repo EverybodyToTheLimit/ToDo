@@ -1,0 +1,38 @@
+:root {
+    --salmon: #FFA69E;
+    --yellow: #FAF3DD;
+    --green: #B8F2E6;
+    --blue: #AED9E0;
+    --grey: #5E6472;
+    --black: #2D2D34;
+}
+
+body {
+    margin: 0;
+}
+
+.header {
+    background-color: var(--salmon);
+    height: 60px;
+    width: 100%;
+    position:absolute;
+    font-family: 'Tillana', cursive;
+    font-size: xx-large;
+}
+
+.sidebar {
+    width: 300px;
+    height: 100vh;
+    background-color: var(--blue);
+}
+
+.container {
+    display: flex;
+}
+
+.main {
+    flex: 1;
+    min-width: 300px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Tillana&display=swap');
