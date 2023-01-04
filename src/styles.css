@@ -2,37 +2,71 @@
     --salmon: #FFA69E;
     --yellow: #FAF3DD;
     --green: #B8F2E6;
-    --blue: #AED9E0;
-    --grey: #5E6472;
+    --blue: #545a5c;
+    --grey: #e9e9e9;
+    --grey-highlight: #e9e9e970;
     --black: #2D2D34;
 }
 
 body {
     margin: 0;
+    font-family: 'Tillana', cursive;
 }
 
 .header {
     background-color: var(--salmon);
     height: 60px;
     width: 100%;
+    padding-left: 30px;
     position:absolute;
-    font-family: 'Tillana', cursive;
-    font-size: xx-large;
+    font-size: 25px;
 }
 
 .sidebar {
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
     width: 300px;
     height: 100vh;
     background-color: var(--blue);
 }
 
+.static-list-item {
+    display: inline-flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 20px;
+    padding: 10px;
+    padding-left: 20px;
+    color: var(--grey);
+    font-size: 25px;
+    align-items: center;
+
+}
+
+.static-list-item:hover {
+    background-color: var(--grey-highlight);
+}
+
+.nav-static {
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+}
+
+a {
+    text-decoration:none;
+ }
+
 .container {
     display: flex;
+    width: 100%;
 }
 
 .main {
     flex: 1;
     min-width: 300px;
+    background-color: var(--grey);
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Tillana&display=swap');
