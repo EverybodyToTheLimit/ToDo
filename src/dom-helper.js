@@ -5,7 +5,7 @@ let renderHeader = () => {
     document.body.appendChild(headerObject);
 }
 
-let renderContainer = () => {
+let renderStaticElements = () => {
     let containerObject = document.createElement('div');
     containerObject.className = "container";
     let sidebarObject = document.createElement('nav');
@@ -44,6 +44,20 @@ let renderContainer = () => {
     let navstaticCompleteIcon = document.createElement('i');
     navstaticCompleteIcon.className = "material-symbols-outlined";
     navstaticCompleteIcon.textContent = "download_done"
+    let navProjectsHeader = document.createElement("div");
+    navProjectsHeader.className = "nav-project-header"
+    let navProjectsTitle = document.createElement("div");
+    navProjectsTitle.className = "nav-project-title"
+    navProjectsTitle.textContent = "Projects"
+    let navProjectsAdd = document.createElement("a");
+    navProjectsAdd.href = '#'
+    navProjectsAdd.className = "material-symbols-outlined"
+    navProjectsAdd.textContent = "Add"
+
+
+    navProjectsHeader.appendChild(navProjectsTitle);
+    navProjectsHeader.appendChild(navProjectsAdd);
+    navProjectsObject.appendChild(navProjectsHeader);
     navstaticToday.appendChild(navstaticTodayIcon);
     navStaticObject.appendChild(navstaticToday);
     navstaticWeek.appendChild(navstaticWeekIcon);
@@ -62,5 +76,5 @@ let renderContainer = () => {
 
 export {
     renderHeader,
-    renderContainer
+    renderStaticElements
 }

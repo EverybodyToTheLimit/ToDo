@@ -22,7 +22,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Concert+One&family=Tillana&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ":root {\n    --salmon: #FFA69E;\n    --yellow: #FAF3DD;\n    --green: #B8F2E6;\n    --blue: #545a5c;\n    --grey: #e9e9e9;\n    --grey-highlight: #e9e9e970;\n    --black: #2D2D34;\n}\n\nbody {\n    margin: 0;\n    font-family: 'Tillana', cursive;\n}\n\n.header {\n    background-color: var(--salmon);\n    height: 60px;\n    width: 100%;\n    padding-left: 30px;\n    position:absolute;\n    font-size: 25px;\n}\n\n.sidebar {\n    padding-top: 60px;\n    display: flex;\n    flex-direction: column;\n    width: 300px;\n    height: 100vh;\n    background-color: var(--blue);\n}\n\n.static-list-item {\n    display: inline-flex;\n    flex-direction: row-reverse;\n    justify-content: flex-end;\n    gap: 20px;\n    padding: 10px;\n    padding-left: 20px;\n    color: var(--grey);\n    font-size: 25px;\n    align-items: center;\n\n}\n\n.static-list-item:hover {\n    background-color: var(--grey-highlight);\n}\n\n.nav-static {\n    display: flex;\n    flex-direction: column;\n    padding-top: 30px;\n}\n\na {\n    text-decoration:none;\n }\n\n.container {\n    display: flex;\n    width: 100%;\n}\n\n.main {\n    flex: 1;\n    min-width: 300px;\n    background-color: var(--grey);\n}", "",{"version":3,"sources":["webpack://./src/styles.css"],"names":[],"mappings":"AAAA;IACI,iBAAiB;IACjB,iBAAiB;IACjB,gBAAgB;IAChB,eAAe;IACf,eAAe;IACf,2BAA2B;IAC3B,gBAAgB;AACpB;;AAEA;IACI,SAAS;IACT,+BAA+B;AACnC;;AAEA;IACI,+BAA+B;IAC/B,YAAY;IACZ,WAAW;IACX,kBAAkB;IAClB,iBAAiB;IACjB,eAAe;AACnB;;AAEA;IACI,iBAAiB;IACjB,aAAa;IACb,sBAAsB;IACtB,YAAY;IACZ,aAAa;IACb,6BAA6B;AACjC;;AAEA;IACI,oBAAoB;IACpB,2BAA2B;IAC3B,yBAAyB;IACzB,SAAS;IACT,aAAa;IACb,kBAAkB;IAClB,kBAAkB;IAClB,eAAe;IACf,mBAAmB;;AAEvB;;AAEA;IACI,uCAAuC;AAC3C;;AAEA;IACI,aAAa;IACb,sBAAsB;IACtB,iBAAiB;AACrB;;AAEA;IACI,oBAAoB;CACvB;;AAED;IACI,aAAa;IACb,WAAW;AACf;;AAEA;IACI,OAAO;IACP,gBAAgB;IAChB,6BAA6B;AACjC","sourcesContent":[":root {\n    --salmon: #FFA69E;\n    --yellow: #FAF3DD;\n    --green: #B8F2E6;\n    --blue: #545a5c;\n    --grey: #e9e9e9;\n    --grey-highlight: #e9e9e970;\n    --black: #2D2D34;\n}\n\nbody {\n    margin: 0;\n    font-family: 'Tillana', cursive;\n}\n\n.header {\n    background-color: var(--salmon);\n    height: 60px;\n    width: 100%;\n    padding-left: 30px;\n    position:absolute;\n    font-size: 25px;\n}\n\n.sidebar {\n    padding-top: 60px;\n    display: flex;\n    flex-direction: column;\n    width: 300px;\n    height: 100vh;\n    background-color: var(--blue);\n}\n\n.static-list-item {\n    display: inline-flex;\n    flex-direction: row-reverse;\n    justify-content: flex-end;\n    gap: 20px;\n    padding: 10px;\n    padding-left: 20px;\n    color: var(--grey);\n    font-size: 25px;\n    align-items: center;\n\n}\n\n.static-list-item:hover {\n    background-color: var(--grey-highlight);\n}\n\n.nav-static {\n    display: flex;\n    flex-direction: column;\n    padding-top: 30px;\n}\n\na {\n    text-decoration:none;\n }\n\n.container {\n    display: flex;\n    width: 100%;\n}\n\n.main {\n    flex: 1;\n    min-width: 300px;\n    background-color: var(--grey);\n}\n\n@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Tillana&display=swap');"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ":root {\n    --salmon: #FFA69E;\n    --yellow: #FAF3DD;\n    --green: #B8F2E6;\n    --blue: #545a5c;\n    --grey: #e9e9e9;\n    --grey-highlight: #e9e9e970;\n    --black: #2D2D34;\n}\n\nbody {\n    margin: 0;\n    font-family: 'Tillana', cursive;\n}\n\n.header {\n    background-color: var(--salmon);\n    height: 60px;\n    width: 100%;\n    padding-left: 30px;\n    position:absolute;\n    font-size: 25px;\n}\n\n.sidebar {\n    padding-top: 60px;\n    display: flex;\n    flex-direction: column;\n    width: 300px;\n    height: 100vh;\n    background-color: var(--blue);\n}\n\n.static-list-item {\n    display: inline-flex;\n    flex-direction: row-reverse;\n    justify-content: flex-end;\n    gap: 20px;\n    padding: 10px;\n    padding-left: 20px;\n    color: var(--grey);\n    font-size: 25px;\n    align-items: center;\n\n}\n\n.static-list-item:hover {\n    background-color: var(--grey-highlight);\n}\n\n.nav-static {\n    display: flex;\n    flex-direction: column;\n    padding-top: 30px;\n}\n\na {\n    text-decoration:none;\n    color: var(--grey);\n }\n\n.container {\n    display: flex;\n    width: 100%;\n}\n\n.main {\n    flex: 1;\n    min-width: 300px;\n    background-color: var(--grey);\n}\n\n.nav-project-header {\n    display:flex;\n    margin: 20px;\n    justify-content: space-between;\n    align-items: center;\n    color: var(--grey);\n    font-size: 20px;\n    padding-bottom: 5px;\n    border-bottom: 2px solid var(--grey);\n}\n\n\n\n.material-symbols-outlined:hover {\n    background-color: var(--grey-highlight);\n}", "",{"version":3,"sources":["webpack://./src/styles.css"],"names":[],"mappings":"AAAA;IACI,iBAAiB;IACjB,iBAAiB;IACjB,gBAAgB;IAChB,eAAe;IACf,eAAe;IACf,2BAA2B;IAC3B,gBAAgB;AACpB;;AAEA;IACI,SAAS;IACT,+BAA+B;AACnC;;AAEA;IACI,+BAA+B;IAC/B,YAAY;IACZ,WAAW;IACX,kBAAkB;IAClB,iBAAiB;IACjB,eAAe;AACnB;;AAEA;IACI,iBAAiB;IACjB,aAAa;IACb,sBAAsB;IACtB,YAAY;IACZ,aAAa;IACb,6BAA6B;AACjC;;AAEA;IACI,oBAAoB;IACpB,2BAA2B;IAC3B,yBAAyB;IACzB,SAAS;IACT,aAAa;IACb,kBAAkB;IAClB,kBAAkB;IAClB,eAAe;IACf,mBAAmB;;AAEvB;;AAEA;IACI,uCAAuC;AAC3C;;AAEA;IACI,aAAa;IACb,sBAAsB;IACtB,iBAAiB;AACrB;;AAEA;IACI,oBAAoB;IACpB,kBAAkB;CACrB;;AAED;IACI,aAAa;IACb,WAAW;AACf;;AAEA;IACI,OAAO;IACP,gBAAgB;IAChB,6BAA6B;AACjC;;AAEA;IACI,YAAY;IACZ,YAAY;IACZ,8BAA8B;IAC9B,mBAAmB;IACnB,kBAAkB;IAClB,eAAe;IACf,mBAAmB;IACnB,oCAAoC;AACxC;;;;AAIA;IACI,uCAAuC;AAC3C","sourcesContent":[":root {\n    --salmon: #FFA69E;\n    --yellow: #FAF3DD;\n    --green: #B8F2E6;\n    --blue: #545a5c;\n    --grey: #e9e9e9;\n    --grey-highlight: #e9e9e970;\n    --black: #2D2D34;\n}\n\nbody {\n    margin: 0;\n    font-family: 'Tillana', cursive;\n}\n\n.header {\n    background-color: var(--salmon);\n    height: 60px;\n    width: 100%;\n    padding-left: 30px;\n    position:absolute;\n    font-size: 25px;\n}\n\n.sidebar {\n    padding-top: 60px;\n    display: flex;\n    flex-direction: column;\n    width: 300px;\n    height: 100vh;\n    background-color: var(--blue);\n}\n\n.static-list-item {\n    display: inline-flex;\n    flex-direction: row-reverse;\n    justify-content: flex-end;\n    gap: 20px;\n    padding: 10px;\n    padding-left: 20px;\n    color: var(--grey);\n    font-size: 25px;\n    align-items: center;\n\n}\n\n.static-list-item:hover {\n    background-color: var(--grey-highlight);\n}\n\n.nav-static {\n    display: flex;\n    flex-direction: column;\n    padding-top: 30px;\n}\n\na {\n    text-decoration:none;\n    color: var(--grey);\n }\n\n.container {\n    display: flex;\n    width: 100%;\n}\n\n.main {\n    flex: 1;\n    min-width: 300px;\n    background-color: var(--grey);\n}\n\n.nav-project-header {\n    display:flex;\n    margin: 20px;\n    justify-content: space-between;\n    align-items: center;\n    color: var(--grey);\n    font-size: 20px;\n    padding-bottom: 5px;\n    border-bottom: 2px solid var(--grey);\n}\n\n\n\n.material-symbols-outlined:hover {\n    background-color: var(--grey-highlight);\n}\n\n@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Tillana&display=swap');"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -516,8 +516,8 @@ module.exports = styleTagTransform;
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "renderContainer": () => (/* binding */ renderContainer),
-/* harmony export */   "renderHeader": () => (/* binding */ renderHeader)
+/* harmony export */   "renderHeader": () => (/* binding */ renderHeader),
+/* harmony export */   "renderStaticElements": () => (/* binding */ renderStaticElements)
 /* harmony export */ });
 let renderHeader = () => {
     let headerObject = document.createElement('div');
@@ -526,7 +526,7 @@ let renderHeader = () => {
     document.body.appendChild(headerObject);
 }
 
-let renderContainer = () => {
+let renderStaticElements = () => {
     let containerObject = document.createElement('div');
     containerObject.className = "container";
     let sidebarObject = document.createElement('nav');
@@ -565,6 +565,20 @@ let renderContainer = () => {
     let navstaticCompleteIcon = document.createElement('i');
     navstaticCompleteIcon.className = "material-symbols-outlined";
     navstaticCompleteIcon.textContent = "download_done"
+    let navProjectsHeader = document.createElement("div");
+    navProjectsHeader.className = "nav-project-header"
+    let navProjectsTitle = document.createElement("div");
+    navProjectsTitle.className = "nav-project-title"
+    navProjectsTitle.textContent = "Projects"
+    let navProjectsAdd = document.createElement("a");
+    navProjectsAdd.href = '#'
+    navProjectsAdd.className = "material-symbols-outlined"
+    navProjectsAdd.textContent = "Add"
+
+
+    navProjectsHeader.appendChild(navProjectsTitle);
+    navProjectsHeader.appendChild(navProjectsAdd);
+    navProjectsObject.appendChild(navProjectsHeader);
     navstaticToday.appendChild(navstaticTodayIcon);
     navStaticObject.appendChild(navstaticToday);
     navstaticWeek.appendChild(navstaticWeekIcon);
@@ -670,7 +684,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 (0,_dom_helper__WEBPACK_IMPORTED_MODULE_1__.renderHeader)();
-(0,_dom_helper__WEBPACK_IMPORTED_MODULE_1__.renderContainer)();
+(0,_dom_helper__WEBPACK_IMPORTED_MODULE_1__.renderStaticElements)();
 })();
 
 /******/ })()

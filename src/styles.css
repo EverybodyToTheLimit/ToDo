@@ -56,6 +56,7 @@ body {
 
 a {
     text-decoration:none;
+    color: var(--grey);
  }
 
 .container {
@@ -67,6 +68,23 @@ a {
     flex: 1;
     min-width: 300px;
     background-color: var(--grey);
+}
+
+.nav-project-header {
+    display:flex;
+    margin: 20px;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--grey);
+    font-size: 20px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid var(--grey);
+}
+
+
+
+.material-symbols-outlined:hover {
+    background-color: var(--grey-highlight);
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Tillana&display=swap');

@@ -1,4 +1,4 @@
 import '../src/styles.css';
-import { renderContainer, renderHeader } from './dom-helper';
+import { renderStaticElements, renderHeader } from './dom-helper';
 renderHeader();
-renderContainer();
+renderStaticElements();
