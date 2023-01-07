@@ -22,7 +22,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Concert+One&family=Tillana&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ":root {\n    --salmon: #FFA69E;\n    --yellow: #FAF3DD;\n    --green: #B8F2E6;\n    --blue: #545a5c;\n    --grey: #e9e9e9;\n    --grey-highlight: #e9e9e970;\n    --black: #2D2D34;\n}\n\nbody {\n    margin: 0;\n    font-family: 'Tillana', cursive;\n}\n\n.header {\n    background-color: var(--salmon);\n    height: 60px;\n    width: 100%;\n    padding-left: 30px;\n    position:absolute;\n    font-size: 25px;\n}\n\n.sidebar {\n    padding-top: 60px;\n    display: flex;\n    flex-direction: column;\n    width: 300px;\n    height: 100vh;\n    background-color: var(--blue);\n}\n\n.static-list-item {\n    display: inline-flex;\n    flex-direction: row-reverse;\n    justify-content: flex-end;\n    gap: 20px;\n    padding: 10px;\n    padding-left: 20px;\n    color: var(--grey);\n    font-size: 25px;\n    align-items: center;\n\n}\n\n.static-list-item:hover {\n    background-color: var(--grey-highlight);\n}\n\n.nav-static {\n    display: flex;\n    flex-direction: column;\n    padding-top: 30px;\n}\n\na {\n    text-decoration:none;\n    color: var(--grey);\n }\n\n.container {\n    display: flex;\n    width: 100%;\n}\n\n.main {\n    flex: 1;\n    min-width: 300px;\n    background-color: var(--grey);\n}\n\n.nav-project-header {\n    display:flex;\n    margin: 20px;\n    justify-content: space-between;\n    align-items: center;\n    color: var(--grey);\n    font-size: 20px;\n    padding-bottom: 5px;\n    border-bottom: 2px solid var(--grey);\n}\n\n\n\n.material-symbols-outlined:hover {\n    background-color: var(--grey-highlight);\n}", "",{"version":3,"sources":["webpack://./src/styles.css"],"names":[],"mappings":"AAAA;IACI,iBAAiB;IACjB,iBAAiB;IACjB,gBAAgB;IAChB,eAAe;IACf,eAAe;IACf,2BAA2B;IAC3B,gBAAgB;AACpB;;AAEA;IACI,SAAS;IACT,+BAA+B;AACnC;;AAEA;IACI,+BAA+B;IAC/B,YAAY;IACZ,WAAW;IACX,kBAAkB;IAClB,iBAAiB;IACjB,eAAe;AACnB;;AAEA;IACI,iBAAiB;IACjB,aAAa;IACb,sBAAsB;IACtB,YAAY;IACZ,aAAa;IACb,6BAA6B;AACjC;;AAEA;IACI,oBAAoB;IACpB,2BAA2B;IAC3B,yBAAyB;IACzB,SAAS;IACT,aAAa;IACb,kBAAkB;IAClB,kBAAkB;IAClB,eAAe;IACf,mBAAmB;;AAEvB;;AAEA;IACI,uCAAuC;AAC3C;;AAEA;IACI,aAAa;IACb,sBAAsB;IACtB,iBAAiB;AACrB;;AAEA;IACI,oBAAoB;IACpB,kBAAkB;CACrB;;AAED;IACI,aAAa;IACb,WAAW;AACf;;AAEA;IACI,OAAO;IACP,gBAAgB;IAChB,6BAA6B;AACjC;;AAEA;IACI,YAAY;IACZ,YAAY;IACZ,8BAA8B;IAC9B,mBAAmB;IACnB,kBAAkB;IAClB,eAAe;IACf,mBAAmB;IACnB,oCAAoC;AACxC;;;;AAIA;IACI,uCAAuC;AAC3C","sourcesContent":[":root {\n    --salmon: #FFA69E;\n    --yellow: #FAF3DD;\n    --green: #B8F2E6;\n    --blue: #545a5c;\n    --grey: #e9e9e9;\n    --grey-highlight: #e9e9e970;\n    --black: #2D2D34;\n}\n\nbody {\n    margin: 0;\n    font-family: 'Tillana', cursive;\n}\n\n.header {\n    background-color: var(--salmon);\n    height: 60px;\n    width: 100%;\n    padding-left: 30px;\n    position:absolute;\n    font-size: 25px;\n}\n\n.sidebar {\n    padding-top: 60px;\n    display: flex;\n    flex-direction: column;\n    width: 300px;\n    height: 100vh;\n    background-color: var(--blue);\n}\n\n.static-list-item {\n    display: inline-flex;\n    flex-direction: row-reverse;\n    justify-content: flex-end;\n    gap: 20px;\n    padding: 10px;\n    padding-left: 20px;\n    color: var(--grey);\n    font-size: 25px;\n    align-items: center;\n\n}\n\n.static-list-item:hover {\n    background-color: var(--grey-highlight);\n}\n\n.nav-static {\n    display: flex;\n    flex-direction: column;\n    padding-top: 30px;\n}\n\na {\n    text-decoration:none;\n    color: var(--grey);\n }\n\n.container {\n    display: flex;\n    width: 100%;\n}\n\n.main {\n    flex: 1;\n    min-width: 300px;\n    background-color: var(--grey);\n}\n\n.nav-project-header {\n    display:flex;\n    margin: 20px;\n    justify-content: space-between;\n    align-items: center;\n    color: var(--grey);\n    font-size: 20px;\n    padding-bottom: 5px;\n    border-bottom: 2px solid var(--grey);\n}\n\n\n\n.material-symbols-outlined:hover {\n    background-color: var(--grey-highlight);\n}\n\n@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Tillana&display=swap');"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ":root {\n    --salmon: #FFA69E;\n    --yellow: #FAF3DD;\n    --green: #B8F2E6;\n    --blue: #545a5c;\n    --grey: #e9e9e9;\n    --grey-highlight: #e9e9e970;\n    --black: #2D2D34;\n    --white: #ffffff;\n}\n\nbody {\n    margin: 0;\n    font-family: 'Tillana', cursive;\n}\n\n.header {\n    background-color: var(--salmon);\n    height: 60px;\n    width: 100%;\n    padding-left: 30px;\n    font-size: 25px;\n}\n\n.sidebar {\n    display: flex;\n    flex-direction: column;\n    width: 300px;\n    height: 100vh;\n    background-color: var(--blue);\n}\n\n.static-list-item {\n    display: inline-flex;\n    flex-direction: row-reverse;\n    justify-content: flex-end;\n    gap: 20px;\n    padding: 10px;\n    padding-left: 20px;\n    color: var(--grey);\n    font-size: 25px;\n    align-items: center;\n\n}\n\n.static-list-item:hover {\n    background-color: var(--grey-highlight);\n}\n\n.nav-static {\n    display: flex;\n    flex-direction: column;\n    padding-top: 30px;\n}\n\na {\n    text-decoration:none;\n    color: var(--grey);\n }\n\n.container {\n    display: flex;\n    width: 100%;\n}\n\n.main {\n    flex: 1;\n    min-width: 300px;\n    background-color: var(--grey);\n}\n\n.nav-project-header {\n    display:flex;\n    margin: 20px;\n    margin-top: 40px;\n    justify-content: space-between;\n    align-items: center;\n    color: var(--grey);\n    font-size: 20px;\n    padding-bottom: 5px;\n    border-bottom: 2px solid var(--grey);\n}\n\n.active-project:hover{\n    background-color: var(--grey-highlight);\n}\n\n.active-project {\n    display: flex;\n    justify-content: space-between;\n    padding: 10px 20px 10px 20px;\n    font-size: 20px;\n    align-items: center\n}\n\n.modal-div {\n    display: flex;\n    justify-content: space-between;\n    gap: 5px;\n    align-items: center\n}\n\n\n.modal-display {\n    display: flex;\n    justify-content: center;\n    align-items: flex-start;\n    position: fixed;\n    left: 0;\n    right: 0;\n    width: 100%;\n    height: 100%;\n    background-color: #121e2281\n}\n\n.new-project-modal-container {\n    display: flex;\n    flex-direction: column;\n    min-width: 400px;\n    margin-top: 180px;\n    height: auto;\n    background-color: var(--grey);\n    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;\n    color: var(--blue);\n}\n\n.modal-title-div {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    padding: 15px;\n    font-size: 20px;\n    background-color: var(--salmon);\n}\n\n.modal-body, .modal-submit{\n    margin: 20px;\n    display: flex;\n    flex-direction: column;\n    gap: 5px;\n    background-color: var(--);\n}\n\ninput {\n    padding-top: 5px;\n    height: 45px;\n    padding: 0 12px;\n    border: solid 1px var(--black);\n    border-radius: 8px;\n    color: var(--black);\n    -webkit-transition: all .2s;\n    transition: all .2s;\n}\n\n.modal-submit {\n    flex-direction: row;\n    justify-content: flex-end;\n}\n\n.cancel-button, .submit-button {\n    border: solid 1px rgba(0,0,0,.15);\n    padding: 8px 12px;\n    cursor: pointer;\n    border-radius: 6px;\n}\n\n.submit-button {\n    background-color: var(--salmon);\n}", "",{"version":3,"sources":["webpack://./src/styles.css"],"names":[],"mappings":"AAAA;IACI,iBAAiB;IACjB,iBAAiB;IACjB,gBAAgB;IAChB,eAAe;IACf,eAAe;IACf,2BAA2B;IAC3B,gBAAgB;IAChB,gBAAgB;AACpB;;AAEA;IACI,SAAS;IACT,+BAA+B;AACnC;;AAEA;IACI,+BAA+B;IAC/B,YAAY;IACZ,WAAW;IACX,kBAAkB;IAClB,eAAe;AACnB;;AAEA;IACI,aAAa;IACb,sBAAsB;IACtB,YAAY;IACZ,aAAa;IACb,6BAA6B;AACjC;;AAEA;IACI,oBAAoB;IACpB,2BAA2B;IAC3B,yBAAyB;IACzB,SAAS;IACT,aAAa;IACb,kBAAkB;IAClB,kBAAkB;IAClB,eAAe;IACf,mBAAmB;;AAEvB;;AAEA;IACI,uCAAuC;AAC3C;;AAEA;IACI,aAAa;IACb,sBAAsB;IACtB,iBAAiB;AACrB;;AAEA;IACI,oBAAoB;IACpB,kBAAkB;CACrB;;AAED;IACI,aAAa;IACb,WAAW;AACf;;AAEA;IACI,OAAO;IACP,gBAAgB;IAChB,6BAA6B;AACjC;;AAEA;IACI,YAAY;IACZ,YAAY;IACZ,gBAAgB;IAChB,8BAA8B;IAC9B,mBAAmB;IACnB,kBAAkB;IAClB,eAAe;IACf,mBAAmB;IACnB,oCAAoC;AACxC;;AAEA;IACI,uCAAuC;AAC3C;;AAEA;IACI,aAAa;IACb,8BAA8B;IAC9B,4BAA4B;IAC5B,eAAe;IACf;AACJ;;AAEA;IACI,aAAa;IACb,8BAA8B;IAC9B,QAAQ;IACR;AACJ;;;AAGA;IACI,aAAa;IACb,uBAAuB;IACvB,uBAAuB;IACvB,eAAe;IACf,OAAO;IACP,QAAQ;IACR,WAAW;IACX,YAAY;IACZ;AACJ;;AAEA;IACI,aAAa;IACb,sBAAsB;IACtB,gBAAgB;IAChB,iBAAiB;IACjB,YAAY;IACZ,6BAA6B;IAC7B,2CAA2C;IAC3C,kBAAkB;AACtB;;AAEA;IACI,aAAa;IACb,8BAA8B;IAC9B,mBAAmB;IACnB,aAAa;IACb,eAAe;IACf,+BAA+B;AACnC;;AAEA;IACI,YAAY;IACZ,aAAa;IACb,sBAAsB;IACtB,QAAQ;IACR,yBAAyB;AAC7B;;AAEA;IACI,gBAAgB;IAChB,YAAY;IACZ,eAAe;IACf,8BAA8B;IAC9B,kBAAkB;IAClB,mBAAmB;IACnB,2BAA2B;IAC3B,mBAAmB;AACvB;;AAEA;IACI,mBAAmB;IACnB,yBAAyB;AAC7B;;AAEA;IACI,iCAAiC;IACjC,iBAAiB;IACjB,eAAe;IACf,kBAAkB;AACtB;;AAEA;IACI,+BAA+B;AACnC","sourcesContent":[":root {\n    --salmon: #FFA69E;\n    --yellow: #FAF3DD;\n    --green: #B8F2E6;\n    --blue: #545a5c;\n    --grey: #e9e9e9;\n    --grey-highlight: #e9e9e970;\n    --black: #2D2D34;\n    --white: #ffffff;\n}\n\nbody {\n    margin: 0;\n    font-family: 'Tillana', cursive;\n}\n\n.header {\n    background-color: var(--salmon);\n    height: 60px;\n    width: 100%;\n    padding-left: 30px;\n    font-size: 25px;\n}\n\n.sidebar {\n    display: flex;\n    flex-direction: column;\n    width: 300px;\n    height: 100vh;\n    background-color: var(--blue);\n}\n\n.static-list-item {\n    display: inline-flex;\n    flex-direction: row-reverse;\n    justify-content: flex-end;\n    gap: 20px;\n    padding: 10px;\n    padding-left: 20px;\n    color: var(--grey);\n    font-size: 25px;\n    align-items: center;\n\n}\n\n.static-list-item:hover {\n    background-color: var(--grey-highlight);\n}\n\n.nav-static {\n    display: flex;\n    flex-direction: column;\n    padding-top: 30px;\n}\n\na {\n    text-decoration:none;\n    color: var(--grey);\n }\n\n.container {\n    display: flex;\n    width: 100%;\n}\n\n.main {\n    flex: 1;\n    min-width: 300px;\n    background-color: var(--grey);\n}\n\n.nav-project-header {\n    display:flex;\n    margin: 20px;\n    margin-top: 40px;\n    justify-content: space-between;\n    align-items: center;\n    color: var(--grey);\n    font-size: 20px;\n    padding-bottom: 5px;\n    border-bottom: 2px solid var(--grey);\n}\n\n.active-project:hover{\n    background-color: var(--grey-highlight);\n}\n\n.active-project {\n    display: flex;\n    justify-content: space-between;\n    padding: 10px 20px 10px 20px;\n    font-size: 20px;\n    align-items: center\n}\n\n.modal-div {\n    display: flex;\n    justify-content: space-between;\n    gap: 5px;\n    align-items: center\n}\n\n\n.modal-display {\n    display: flex;\n    justify-content: center;\n    align-items: flex-start;\n    position: fixed;\n    left: 0;\n    right: 0;\n    width: 100%;\n    height: 100%;\n    background-color: #121e2281\n}\n\n.new-project-modal-container {\n    display: flex;\n    flex-direction: column;\n    min-width: 400px;\n    margin-top: 180px;\n    height: auto;\n    background-color: var(--grey);\n    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;\n    color: var(--blue);\n}\n\n.modal-title-div {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    padding: 15px;\n    font-size: 20px;\n    background-color: var(--salmon);\n}\n\n.modal-body, .modal-submit{\n    margin: 20px;\n    display: flex;\n    flex-direction: column;\n    gap: 5px;\n    background-color: var(--);\n}\n\ninput {\n    padding-top: 5px;\n    height: 45px;\n    padding: 0 12px;\n    border: solid 1px var(--black);\n    border-radius: 8px;\n    color: var(--black);\n    -webkit-transition: all .2s;\n    transition: all .2s;\n}\n\n.modal-submit {\n    flex-direction: row;\n    justify-content: flex-end;\n}\n\n.cancel-button, .submit-button {\n    border: solid 1px rgba(0,0,0,.15);\n    padding: 8px 12px;\n    cursor: pointer;\n    border-radius: 6px;\n}\n\n.submit-button {\n    background-color: var(--salmon);\n}\n\n@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Tillana&display=swap');"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -516,9 +516,15 @@ module.exports = styleTagTransform;
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "removeProjectSidebar": () => (/* binding */ removeProjectSidebar),
 /* harmony export */   "renderHeader": () => (/* binding */ renderHeader),
+/* harmony export */   "renderNewProject": () => (/* binding */ renderNewProject),
+/* harmony export */   "renderNewProjectModal": () => (/* binding */ renderNewProjectModal),
 /* harmony export */   "renderStaticElements": () => (/* binding */ renderStaticElements)
 /* harmony export */ });
+/* harmony import */ var _handlers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./handlers */ "./src/handlers.js");
+
+
 let renderHeader = () => {
     let headerObject = document.createElement('div');
     headerObject.className = "header";
@@ -527,6 +533,9 @@ let renderHeader = () => {
 }
 
 let renderStaticElements = () => {
+
+    // Add static elements and define the properties
+
     let containerObject = document.createElement('div');
     containerObject.className = "container";
     let sidebarObject = document.createElement('nav');
@@ -575,6 +584,15 @@ let renderStaticElements = () => {
     navProjectsAdd.className = "material-symbols-outlined"
     navProjectsAdd.textContent = "Add"
 
+    // add event listeners and redirect to handler function
+
+    navstaticToday.addEventListener('click', () => {;(0,_handlers__WEBPACK_IMPORTED_MODULE_0__.clickHandler)("today")})
+    navstaticWeek.addEventListener('click', () => {;(0,_handlers__WEBPACK_IMPORTED_MODULE_0__.clickHandler)("week")})
+    navstaticImportant.addEventListener('click', () => {;(0,_handlers__WEBPACK_IMPORTED_MODULE_0__.clickHandler)("important")})
+    navstaticComplete.addEventListener('click', () => {;(0,_handlers__WEBPACK_IMPORTED_MODULE_0__.clickHandler)("complete")})
+    navProjectsAdd.addEventListener('click', () => {;(0,_handlers__WEBPACK_IMPORTED_MODULE_0__.clickHandler)("new-project")})
+
+    //create objects in DOM
 
     navProjectsHeader.appendChild(navProjectsTitle);
     navProjectsHeader.appendChild(navProjectsAdd);
@@ -594,6 +612,147 @@ let renderStaticElements = () => {
     document.body.appendChild(containerObject);
 }
 
+let renderNewProject = (projectName, projectId) => {
+
+
+    // add elements and define the properties
+
+    let newProjectObject = document.createElement("a");
+    newProjectObject.href = "#";
+    newProjectObject.className = "active-project";
+    newProjectObject.id = projectId;
+    let newTitle = document.createElement("a");
+    newTitle.textContent = projectName;
+    let newProjectNav = document.createElement("div");
+    newProjectNav.className = "modal-div"
+    let newDeleteModal = document.createElement("btn");
+    newDeleteModal.className = "material-symbols-outlined";
+    newDeleteModal.textContent = "Delete";
+    let newEditModal = document.createElement("btn");
+    newEditModal.className = "material-symbols-outlined";
+    newEditModal.textContent = "Edit"
+
+    // add click listerners and pass to handler
+
+    newTitle.addEventListener('click', () => {;(0,_handlers__WEBPACK_IMPORTED_MODULE_0__.clickHandler)(projectName, projectId)})
+    newEditModal.addEventListener('click', () => {;(0,_handlers__WEBPACK_IMPORTED_MODULE_0__.clickHandler)("edit", projectId)})
+    newDeleteModal.addEventListener('click', () => {;(0,_handlers__WEBPACK_IMPORTED_MODULE_0__.clickHandler)("delete", projectId)})
+
+    // add elements to the DOM 
+
+    newProjectObject.appendChild(newTitle);
+    newProjectNav.appendChild(newEditModal);
+    newProjectNav.appendChild(newDeleteModal);
+    newProjectObject.appendChild(newProjectNav);
+
+    let mainAppend = document.querySelector(".nav-projects");
+    mainAppend.appendChild(newProjectObject)
+}
+
+let removeProjectSidebar = (projectName, projectId) => {
+    
+    let delElement = document.getElementById(projectId);
+    delElement.remove();
+
+}
+
+let renderNewProjectModal = () => {
+
+    //create elements and define properties
+
+    let modalDisplay = document.createElement('div');
+    modalDisplay.className = "modal-display"
+    let newProjectModalDiv = document.createElement('div');
+    newProjectModalDiv.className = "new-project-modal-container";
+    let modalTitle = document.createElement('div');
+    modalTitle.className = "modal-title-div";
+    let modalTitleText = document.createElement('div');
+    modalTitleText.className = "modal-title";
+    modalTitleText.textContent = "New Project"
+    let modalExit = document.createElement('btn');
+    modalExit.href = "#"
+    modalExit.className = "material-symbols-outlined";
+    modalExit.textContent = "close"
+    let mainAppend = document.body;
+
+    let modalForm = document.createElement('form');
+    modalForm.action = "#"
+
+    let modalBody = document.createElement('div');
+    modalBody.className = "modal-body"
+    let modalFormProjectName = document.createElement('input')
+    modalFormProjectName.id = "project-name"
+    modalFormProjectName.name = "project-name"
+    modalFormProjectName.type = "text"
+    modalFormProjectName.placeholder = "e.g. Learn metallurgy"
+    modalFormProjectName.required = true;
+    let modalFormLabel = document.createElement('LABEL')
+    modalFormLabel.htmlFor = "project-name"
+    modalFormLabel.innerHTML = "Project title*"
+
+    let modalSubmitDiv = document.createElement('div');
+    modalSubmitDiv.className = "modal-submit"
+    let modalCancell = document.createElement('btn');
+    modalCancell.className= "cancel-button"
+    modalCancell.textContent = "Cancel"
+    let modalSubmit = document.createElement('btn');
+    modalSubmit.className = "submit-button"
+    modalSubmit.textContent = "Submit"
+    modalSubmit.type = "submit"
+
+    //add event listeners
+
+
+    modalSubmit.addEventListener('click', (event) => {
+        modalForm.submit();
+        event.preventDefault();
+        alert("it's working")
+    })
+
+
+    //create in DOM
+    
+    modalSubmitDiv.appendChild(modalCancell);
+    modalSubmitDiv.appendChild(modalSubmit);
+    modalBody.appendChild(modalFormLabel);
+    modalBody.appendChild(modalFormProjectName);
+    modalTitle.appendChild(modalTitleText);
+    modalTitle.appendChild(modalExit);
+    modalForm.appendChild(modalBody)
+    modalForm.appendChild(modalSubmitDiv)
+    newProjectModalDiv.appendChild(modalTitle);
+    newProjectModalDiv.appendChild(modalForm);
+    modalDisplay.appendChild(newProjectModalDiv);
+    mainAppend.insertBefore(modalDisplay, mainAppend.firstChild)
+}
+
+
+
+
+/***/ }),
+
+/***/ "./src/handlers.js":
+/*!*************************!*\
+  !*** ./src/handlers.js ***!
+  \*************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "clickHandler": () => (/* binding */ clickHandler)
+/* harmony export */ });
+/* harmony import */ var _dom_helper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./dom-helper */ "./src/dom-helper.js");
+
+
+let clickHandler = (clickOrigin, id) => {
+    alert(clickOrigin)
+    if (id !== undefined) {
+        alert(id)
+    }
+    if (clickOrigin == "delete") {
+        (0,_dom_helper__WEBPACK_IMPORTED_MODULE_0__.removeProjectSidebar)(clickOrigin, id)
+    }
+}
 
 
 
@@ -685,6 +844,11 @@ __webpack_require__.r(__webpack_exports__);
 
 (0,_dom_helper__WEBPACK_IMPORTED_MODULE_1__.renderHeader)();
 (0,_dom_helper__WEBPACK_IMPORTED_MODULE_1__.renderStaticElements)();
+(0,_dom_helper__WEBPACK_IMPORTED_MODULE_1__.renderNewProject)("someting", 12)
+;(0,_dom_helper__WEBPACK_IMPORTED_MODULE_1__.renderNewProject)("someting-else", 1223)
+;(0,_dom_helper__WEBPACK_IMPORTED_MODULE_1__.renderNewProject)("someting-else entirely", 1233)
+
+;(0,_dom_helper__WEBPACK_IMPORTED_MODULE_1__.renderNewProjectModal)();
 })();
 
 /******/ })()
