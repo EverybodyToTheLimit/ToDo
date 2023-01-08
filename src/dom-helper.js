@@ -1,8 +1,10 @@
 import { clickHandler } from "./handlers";
+import { getProjectNames } from "./projects";
 
 let renderHeader = () => {
     let headerObject = document.createElement('div');
     headerObject.className = "header";
+    headerObject.id = "header"
     headerObject.textContent = "ToDo App"
     document.body.appendChild(headerObject);
 }
@@ -87,6 +89,18 @@ let renderStaticElements = () => {
     document.body.appendChild(containerObject);
 }
 
+let renderProjectSidebar = () => {
+    document.querySelectorAll(".active-project").forEach(e => e.remove());
+
+
+    let projectList = getProjectNames();
+    
+    for (let i=0; i < projectList.length; i++) {
+        renderNewProject(projectList[i].title, i)
+    }
+
+}
+
 let renderNewProject = (projectName, projectId) => {
 
 
@@ -131,12 +145,14 @@ let removeProjectSidebar = (projectName, projectId) => {
 
 }
 
+
 let renderNewProjectModal = () => {
 
     //create elements and define properties
 
     let modalDisplay = document.createElement('div');
     modalDisplay.className = "modal-display"
+    modalDisplay.id = "modal-display"
     let newProjectModalDiv = document.createElement('div');
     newProjectModalDiv.className = "new-project-modal-container";
     let modalTitle = document.createElement('div');
@@ -177,11 +193,13 @@ let renderNewProjectModal = () => {
 
     //add event listeners
 
+    modalExit.addEventListener('click', () => {clickHandler("project-modal-cancel")});
+    modalCancell.addEventListener('click', () => {clickHandler("project-modal-cancel")});
 
     modalSubmit.addEventListener('click', (event) => {
-        modalForm.submit();
         event.preventDefault();
         clickHandler("new-project-created",undefined,modalFormProjectName.value)
+        modalForm.reset();
     })
 
 
@@ -198,19 +216,22 @@ let renderNewProjectModal = () => {
     newProjectModalDiv.appendChild(modalTitle);
     newProjectModalDiv.appendChild(modalForm);
     modalDisplay.appendChild(newProjectModalDiv);
-    mainAppend.insertBefore(modalDisplay, mainAppend.firstChild)
+    let header = document.getElementById('header')
+    header.before(modalDisplay)
+
 }
 
 let removeNewProjectModal = () => {
-    let newProjectModal = document.querySelector('modal-display');
+    let newProjectModal = document.getElementById('modal-display');
     newProjectModal.remove();
 }
 
 export {
     renderHeader,
     renderStaticElements,
+    renderProjectSidebar,
     renderNewProject,
     removeProjectSidebar,
     renderNewProjectModal,
-    removeNewProjectModal
+    removeNewProjectModal,
 }

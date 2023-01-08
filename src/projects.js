@@ -1,5 +1,8 @@
 
-    let projectList = []
+    let projectList = [{
+        title: 'Demo Project',
+        tasks: [],
+    }]
 
     class project {
         constructor(title) {
@@ -17,8 +20,14 @@
         projectList.splice(index, 1);
     };
 
+    function getProjectNames() {
+        return projectList
+
+    }
+
 export {
-    projects,
+    getProjectNames,
     createProject,
     deleteProject
 }
+

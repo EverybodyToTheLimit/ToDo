@@ -1,20 +1,23 @@
-import { removeNewProjectModal, removeProjectSidebar, renderNewProject, renderNewProjectModal } from "./dom-helper"
+import { cli } from "webpack";
+import { renderProjectSidebar, removeNewProjectModal, renderNewProjectModal } from "./dom-helper"
+import { createProject, deleteProject} from "./projects"
 
 let clickHandler = (clickOrigin, id, Projectname) => {
-    alert(clickOrigin)
-    if (id !== undefined) {
-        alert(id)
-    }
-    else if (clickOrigin == "delete") {
-        removeProjectSidebar(clickOrigin, id)
+    if (clickOrigin == "delete") {
+        deleteProject(id);
+        renderProjectSidebar();
     }
     else if (clickOrigin == "new-project-created") {
-        alert(Projectname);
-        renderNewProject(Projectname, 999);
+        createProject(Projectname)
         removeNewProjectModal();
+        renderProjectSidebar();
     }
     else if (clickOrigin == "new-project") {
         renderNewProjectModal();
+    }
+    else if (clickOrigin == "project-modal-cancel") {
+        removeNewProjectModal();
+        renderProjectSidebar();
     }
 }
 
