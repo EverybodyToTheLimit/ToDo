@@ -181,7 +181,7 @@ let renderNewProjectModal = () => {
     modalSubmit.addEventListener('click', (event) => {
         modalForm.submit();
         event.preventDefault();
-        alert("it's working")
+        clickHandler("new-project-created",undefined,modalFormProjectName.value)
     })
 
 
@@ -201,11 +201,16 @@ let renderNewProjectModal = () => {
     mainAppend.insertBefore(modalDisplay, mainAppend.firstChild)
 }
 
+let removeNewProjectModal = () => {
+    let newProjectModal = document.querySelector('modal-display');
+    newProjectModal.remove();
+}
 
 export {
     renderHeader,
     renderStaticElements,
     renderNewProject,
     removeProjectSidebar,
-    renderNewProjectModal
+    renderNewProjectModal,
+    removeNewProjectModal
 }
