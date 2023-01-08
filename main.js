@@ -516,6 +516,7 @@ module.exports = styleTagTransform;
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "removeNewProjectModal": () => (/* binding */ removeNewProjectModal),
 /* harmony export */   "removeProjectSidebar": () => (/* binding */ removeProjectSidebar),
 /* harmony export */   "renderHeader": () => (/* binding */ renderHeader),
 /* harmony export */   "renderNewProject": () => (/* binding */ renderNewProject),
@@ -706,7 +707,7 @@ let renderNewProjectModal = () => {
     modalSubmit.addEventListener('click', (event) => {
         modalForm.submit();
         event.preventDefault();
-        alert("it's working")
+        (0,_handlers__WEBPACK_IMPORTED_MODULE_0__.clickHandler)("new-project-created",undefined,modalFormProjectName.value)
     })
 
 
@@ -726,6 +727,10 @@ let renderNewProjectModal = () => {
     mainAppend.insertBefore(modalDisplay, mainAppend.firstChild)
 }
 
+let removeNewProjectModal = () => {
+    let newProjectModal = document.querySelector('modal-display');
+    newProjectModal.remove();
+}
 
 
 
@@ -744,13 +749,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _dom_helper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./dom-helper */ "./src/dom-helper.js");
 
 
-let clickHandler = (clickOrigin, id) => {
+let clickHandler = (clickOrigin, id, Projectname) => {
     alert(clickOrigin)
     if (id !== undefined) {
         alert(id)
     }
-    if (clickOrigin == "delete") {
+    else if (clickOrigin == "delete") {
         (0,_dom_helper__WEBPACK_IMPORTED_MODULE_0__.removeProjectSidebar)(clickOrigin, id)
+    }
+    else if (clickOrigin == "new-project-created") {
+        alert(Projectname);
+        (0,_dom_helper__WEBPACK_IMPORTED_MODULE_0__.renderNewProject)(Projectname, 999);
+        (0,_dom_helper__WEBPACK_IMPORTED_MODULE_0__.removeNewProjectModal)();
+    }
+    else if (clickOrigin == "new-project") {
+        (0,_dom_helper__WEBPACK_IMPORTED_MODULE_0__.renderNewProjectModal)();
     }
 }
 
@@ -848,7 +861,6 @@ __webpack_require__.r(__webpack_exports__);
 ;(0,_dom_helper__WEBPACK_IMPORTED_MODULE_1__.renderNewProject)("someting-else", 1223)
 ;(0,_dom_helper__WEBPACK_IMPORTED_MODULE_1__.renderNewProject)("someting-else entirely", 1233)
 
-;(0,_dom_helper__WEBPACK_IMPORTED_MODULE_1__.renderNewProjectModal)();
 })();
 
 /******/ })()
