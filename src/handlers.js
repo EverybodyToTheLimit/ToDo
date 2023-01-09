@@ -1,9 +1,9 @@
 import { renderTaskList, renderProjectSidebar, removeNewProjectModal, renderNewProjectModal } from "./dom-helper"
-import { createTask, createProject, deleteProject} from "./projects-tasks"
+import { deleteTask, createTask, createProject, deleteProject} from "./projects-tasks"
 
-let clickHandler = (clickOrigin, id, Projectname) => {
+let clickHandler = (clickOrigin, projectId, Projectname, taskId) => {
     if (clickOrigin == "delete") {
-        deleteProject(id);
+        deleteProject(projectId);
         renderProjectSidebar();
         renderTaskList();
     }
@@ -20,11 +20,15 @@ let clickHandler = (clickOrigin, id, Projectname) => {
         renderProjectSidebar();
     }
     else if (clickOrigin == "sidebar-project") {
-        renderTaskList(id)
+        renderTaskList(projectId)
     }
     else if (clickOrigin == "add-new-event") {
-        createTask("some-title", "Etiam diam lectus, fermentum in nunc in, euismod sollicitudin justo. Donec varius lacus leo, ut hendrerit nunc laoreet sodales.", 123, 1, id)
-        renderTaskList(id);
+        createTask("some-title", "Etiam diam lectus, fermentum in nunc in, euismod sollicitudin justo. Donec varius lacus leo, ut hendrerit nunc laoreet sodales.", 123, 1, projectId)
+        renderTaskList(projectId);
+    }
+    else if (clickOrigin == "task-delete") {
+        deleteTask(projectId, taskId);
+        renderTaskList(projectId);
     }
 }
 

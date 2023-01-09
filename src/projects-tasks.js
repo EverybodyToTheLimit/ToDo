@@ -1,12 +1,15 @@
 
     let projectList = [{
         title: 'Demo Project',
-        tasks: [],
+        tasks: [
+            
+        ],
     }]
 
     class project {
-        constructor(title) {
+        constructor(title, tasks) {
             this.title = title
+            this.tasks = []
         }
 
         
@@ -41,10 +44,15 @@
         projectList[projectIndex].tasks.push(newTask);
     }
 
+    function deleteTask(projectIndex, taskIndex) {
+        projectList[projectIndex].tasks.splice(taskIndex, 1);
+    }
+
 export {
     getProjectNames,
     createProject,
     deleteProject,
-    createTask
+    createTask,
+    deleteTask
 }
 

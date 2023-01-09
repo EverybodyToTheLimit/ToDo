@@ -280,6 +280,11 @@ let renderTaskList = (projectId) => {
         descriptionDiv.className = "task-description";
         descriptionDiv.textContent = projectList[projectId].tasks[i].description
 
+        
+        radioButton.addEventListener('click', ()=> {clickHandler("task-complete", projectId, undefined, i)})
+        editButton.addEventListener('click', ()=> {clickHandler("task-edit", projectId, undefined, i)})
+        deleteButton.addEventListener('click', ()=> {clickHandler("task-delete", projectId, undefined, i)})
+        
         taskDivTop.appendChild(taskDiv)
         taskDivTop.appendChild(descriptionDiv)
         mainAppend.appendChild(taskDivTop)
