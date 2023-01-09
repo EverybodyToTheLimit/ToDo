@@ -809,6 +809,11 @@ let renderTaskList = (projectId) => {
         descriptionDiv.className = "task-description";
         descriptionDiv.textContent = projectList[projectId].tasks[i].description
 
+        
+        radioButton.addEventListener('click', ()=> {;(0,_handlers__WEBPACK_IMPORTED_MODULE_0__.clickHandler)("task-complete", projectId, undefined, i)})
+        editButton.addEventListener('click', ()=> {;(0,_handlers__WEBPACK_IMPORTED_MODULE_0__.clickHandler)("task-edit", projectId, undefined, i)})
+        deleteButton.addEventListener('click', ()=> {;(0,_handlers__WEBPACK_IMPORTED_MODULE_0__.clickHandler)("task-delete", projectId, undefined, i)})
+        
         taskDivTop.appendChild(taskDiv)
         taskDivTop.appendChild(descriptionDiv)
         mainAppend.appendChild(taskDivTop)
@@ -857,9 +862,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-let clickHandler = (clickOrigin, id, Projectname) => {
+let clickHandler = (clickOrigin, projectId, Projectname, taskId) => {
     if (clickOrigin == "delete") {
-        (0,_projects_tasks__WEBPACK_IMPORTED_MODULE_1__.deleteProject)(id);
+        (0,_projects_tasks__WEBPACK_IMPORTED_MODULE_1__.deleteProject)(projectId);
         (0,_dom_helper__WEBPACK_IMPORTED_MODULE_0__.renderProjectSidebar)();
         (0,_dom_helper__WEBPACK_IMPORTED_MODULE_0__.renderTaskList)();
     }
@@ -876,11 +881,15 @@ let clickHandler = (clickOrigin, id, Projectname) => {
         (0,_dom_helper__WEBPACK_IMPORTED_MODULE_0__.renderProjectSidebar)();
     }
     else if (clickOrigin == "sidebar-project") {
-        (0,_dom_helper__WEBPACK_IMPORTED_MODULE_0__.renderTaskList)(id)
+        (0,_dom_helper__WEBPACK_IMPORTED_MODULE_0__.renderTaskList)(projectId)
     }
     else if (clickOrigin == "add-new-event") {
-        (0,_projects_tasks__WEBPACK_IMPORTED_MODULE_1__.createTask)("some-title", "Etiam diam lectus, fermentum in nunc in, euismod sollicitudin justo. Donec varius lacus leo, ut hendrerit nunc laoreet sodales.", 123, 1, id)
-        ;(0,_dom_helper__WEBPACK_IMPORTED_MODULE_0__.renderTaskList)(id);
+        (0,_projects_tasks__WEBPACK_IMPORTED_MODULE_1__.createTask)("some-title", "Etiam diam lectus, fermentum in nunc in, euismod sollicitudin justo. Donec varius lacus leo, ut hendrerit nunc laoreet sodales.", 123, 1, projectId)
+        ;(0,_dom_helper__WEBPACK_IMPORTED_MODULE_0__.renderTaskList)(projectId);
+    }
+    else if (clickOrigin == "task-delete") {
+        (0,_projects_tasks__WEBPACK_IMPORTED_MODULE_1__.deleteTask)(projectId, taskId);
+        (0,_dom_helper__WEBPACK_IMPORTED_MODULE_0__.renderTaskList)(projectId);
     }
 }
 
@@ -899,17 +908,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "createProject": () => (/* binding */ createProject),
 /* harmony export */   "createTask": () => (/* binding */ createTask),
 /* harmony export */   "deleteProject": () => (/* binding */ deleteProject),
+/* harmony export */   "deleteTask": () => (/* binding */ deleteTask),
 /* harmony export */   "getProjectNames": () => (/* binding */ getProjectNames)
 /* harmony export */ });
 
     let projectList = [{
         title: 'Demo Project',
-        tasks: [],
+        tasks: [
+            
+        ],
     }]
 
     class project {
-        constructor(title) {
+        constructor(title, tasks) {
             this.title = title
+            this.tasks = []
         }
 
         
@@ -942,6 +955,10 @@ __webpack_require__.r(__webpack_exports__);
     function createTask(title, description, dueDate, priority, projectIndex) {
         let newTask = new task(title, description, dueDate, priority, projectIndex);
         projectList[projectIndex].tasks.push(newTask);
+    }
+
+    function deleteTask(projectIndex, taskIndex) {
+        projectList[projectIndex].tasks.splice(taskIndex, 1);
     }
 
 
