@@ -1,4 +1,3 @@
-import { cli } from "webpack";
 import { renderProjectSidebar, removeNewProjectModal, renderNewProjectModal } from "./dom-helper"
 import { createProject, deleteProject} from "./projects"
 
