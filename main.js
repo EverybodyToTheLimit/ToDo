@@ -676,7 +676,7 @@ let removeProjectSidebar = (projectName, projectId) => {
 }
 
 
-let renderNewProjectModal = () => {
+let renderNewProjectModal = (type, projectId) => {
 
     //create elements and define properties
 
@@ -694,7 +694,6 @@ let renderNewProjectModal = () => {
     modalExit.href = "#"
     modalExit.className = "material-symbols-outlined";
     modalExit.textContent = "close"
-    let mainAppend = document.body;
 
     let modalForm = document.createElement('form');
     modalForm.action = "#"
@@ -721,10 +720,78 @@ let renderNewProjectModal = () => {
     modalSubmit.textContent = "Submit"
     modalSubmit.type = "submit"
 
-    //add event listeners
+    // add cancel and x exit options
 
     modalExit.addEventListener('click', () => {;(0,_handlers__WEBPACK_IMPORTED_MODULE_0__.clickHandler)("project-modal-cancel")});
     modalCancell.addEventListener('click', () => {(0,_handlers__WEBPACK_IMPORTED_MODULE_0__.clickHandler)("project-modal-cancel")});
+
+    // plug in fields for task modal
+
+    if (type == "task") {
+    let modalFormTaskDescription = document.createElement('input')
+    modalFormTaskDescription.id = "task-description"
+    modalFormTaskDescription.name = "task-description"
+    modalFormTaskDescription.type = "text"
+    modalFormTaskDescription.placeholder = "e.g. Getting to know types of alloys"
+    modalFormTaskDescription.required = false;
+    let modalFormDescriptionLabel = document.createElement('LABEL')
+    modalFormDescriptionLabel.htmlFor = "task-description"
+    modalFormDescriptionLabel.innerHTML = "Task Description"
+
+
+    let modalFormDueDate = document.createElement('input')
+    modalFormDueDate.id = "due-date"
+    modalFormDueDate.name = "due-date"
+    modalFormDueDate.type = "date"
+    modalFormDueDate.required = false;
+    let modalFormDueDateLabel = document.createElement('LABEL')
+    modalFormDueDateLabel.htmlFor = "due-date"
+    modalFormDueDateLabel.innerHTML = "Due Date"
+
+    let modalFormPriority = document.createElement('input')
+    modalFormPriority.id = "priority"
+    modalFormPriority.name = "priority"
+    modalFormPriority.type = "checkbox"
+    let modalFormPriorityLabel = document.createElement('LABEL')
+    modalFormPriorityLabel.htmlFor = "priority"
+    modalFormPriorityLabel.innerHTML = "Priority task?"
+    
+    modalFormLabel.textContent = "Task title*"
+    modalTitleText.textContent = "New Task"
+
+
+    modalBody.appendChild(modalFormLabel);
+    modalBody.appendChild(modalFormProjectName);
+    modalBody.appendChild(modalFormDescriptionLabel);
+    modalBody.appendChild(modalFormTaskDescription);
+    modalBody.appendChild(modalFormPriorityLabel);
+    modalBody.appendChild(modalFormPriority);
+    modalBody.appendChild(modalFormDueDateLabel);
+    modalBody.appendChild(modalFormDueDate);
+    modalSubmitDiv.appendChild(modalCancell);
+    modalSubmitDiv.appendChild(modalSubmit);
+    modalTitle.appendChild(modalTitleText);
+    modalTitle.appendChild(modalExit);
+    modalForm.appendChild(modalBody)
+    modalForm.appendChild(modalSubmitDiv)
+    newProjectModalDiv.appendChild(modalTitle);
+    newProjectModalDiv.appendChild(modalForm);
+    modalDisplay.appendChild(newProjectModalDiv);
+    let header = document.getElementById('header')
+    header.before(modalDisplay)
+
+    // add event listeners for tasks
+
+    modalSubmit.addEventListener('click', (event) => {
+        event.preventDefault();
+        (0,_handlers__WEBPACK_IMPORTED_MODULE_0__.clickHandler)("new-event-created",projectId,modalFormProjectName.value,undefined,modalFormTaskDescription.value,modalFormDueDate.value,modalFormPriority.value)
+        modalForm.reset();
+    })
+
+    }
+
+    else if (type == "project"){
+    //add event listeners for project
 
     modalSubmit.addEventListener('click', (event) => {
         event.preventDefault();
@@ -748,6 +815,7 @@ let renderNewProjectModal = () => {
     modalDisplay.appendChild(newProjectModalDiv);
     let header = document.getElementById('header')
     header.before(modalDisplay)
+    }
 
 }
 
@@ -862,7 +930,16 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-let clickHandler = (clickOrigin, projectId, Projectname, taskId) => {
+let clickHandler = (
+                        clickOrigin, 
+                        projectId, 
+                        Projectname, 
+                        taskId,
+                        taskDescription,
+                        dueDate,
+                        priority
+                    
+                    ) => {
     if (clickOrigin == "delete") {
         (0,_projects_tasks__WEBPACK_IMPORTED_MODULE_1__.deleteProject)(projectId);
         (0,_dom_helper__WEBPACK_IMPORTED_MODULE_0__.renderProjectSidebar)();
@@ -874,7 +951,7 @@ let clickHandler = (clickOrigin, projectId, Projectname, taskId) => {
         (0,_dom_helper__WEBPACK_IMPORTED_MODULE_0__.renderProjectSidebar)();
     }
     else if (clickOrigin == "new-project") {
-        (0,_dom_helper__WEBPACK_IMPORTED_MODULE_0__.renderNewProjectModal)();
+        (0,_dom_helper__WEBPACK_IMPORTED_MODULE_0__.renderNewProjectModal)("project");
     }
     else if (clickOrigin == "project-modal-cancel") {
         (0,_dom_helper__WEBPACK_IMPORTED_MODULE_0__.removeNewProjectModal)();
@@ -884,11 +961,17 @@ let clickHandler = (clickOrigin, projectId, Projectname, taskId) => {
         (0,_dom_helper__WEBPACK_IMPORTED_MODULE_0__.renderTaskList)(projectId)
     }
     else if (clickOrigin == "add-new-event") {
-        (0,_projects_tasks__WEBPACK_IMPORTED_MODULE_1__.createTask)("some-title", "Etiam diam lectus, fermentum in nunc in, euismod sollicitudin justo. Donec varius lacus leo, ut hendrerit nunc laoreet sodales.", 123, 1, projectId)
+        (0,_dom_helper__WEBPACK_IMPORTED_MODULE_0__.renderNewProjectModal)("task", projectId)
+        // createTask("some-title", "Etiam diam lectus, fermentum in nunc in, euismod sollicitudin justo. Donec varius lacus leo, ut hendrerit nunc laoreet sodales.", 123, 1, projectId)
         ;(0,_dom_helper__WEBPACK_IMPORTED_MODULE_0__.renderTaskList)(projectId);
     }
     else if (clickOrigin == "task-delete") {
         (0,_projects_tasks__WEBPACK_IMPORTED_MODULE_1__.deleteTask)(projectId, taskId);
+        (0,_dom_helper__WEBPACK_IMPORTED_MODULE_0__.renderTaskList)(projectId);
+    }
+    else if (clickOrigin == "new-event-created") {
+        (0,_projects_tasks__WEBPACK_IMPORTED_MODULE_1__.createTask)(Projectname, taskDescription, dueDate, priority, projectId)
+        ;(0,_dom_helper__WEBPACK_IMPORTED_MODULE_0__.removeNewProjectModal)();
         (0,_dom_helper__WEBPACK_IMPORTED_MODULE_0__.renderTaskList)(projectId);
     }
 }
