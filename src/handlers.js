@@ -1,7 +1,16 @@
 import { renderTaskList, renderProjectSidebar, removeNewProjectModal, renderNewProjectModal } from "./dom-helper"
 import { deleteTask, createTask, createProject, deleteProject} from "./projects-tasks"
 
-let clickHandler = (clickOrigin, projectId, Projectname, taskId) => {
+let clickHandler = (
+                        clickOrigin, 
+                        projectId, 
+                        Projectname, 
+                        taskId,
+                        taskDescription,
+                        dueDate,
+                        priority
+                    
+                    ) => {
     if (clickOrigin == "delete") {
         deleteProject(projectId);
         renderProjectSidebar();
@@ -13,7 +22,7 @@ let clickHandler = (clickOrigin, projectId, Projectname, taskId) => {
         renderProjectSidebar();
     }
     else if (clickOrigin == "new-project") {
-        renderNewProjectModal();
+        renderNewProjectModal("project");
     }
     else if (clickOrigin == "project-modal-cancel") {
         removeNewProjectModal();
@@ -23,11 +32,17 @@ let clickHandler = (clickOrigin, projectId, Projectname, taskId) => {
         renderTaskList(projectId)
     }
     else if (clickOrigin == "add-new-event") {
-        createTask("some-title", "Etiam diam lectus, fermentum in nunc in, euismod sollicitudin justo. Donec varius lacus leo, ut hendrerit nunc laoreet sodales.", 123, 1, projectId)
+        renderNewProjectModal("task", projectId)
+        // createTask("some-title", "Etiam diam lectus, fermentum in nunc in, euismod sollicitudin justo. Donec varius lacus leo, ut hendrerit nunc laoreet sodales.", 123, 1, projectId)
         renderTaskList(projectId);
     }
     else if (clickOrigin == "task-delete") {
         deleteTask(projectId, taskId);
+        renderTaskList(projectId);
+    }
+    else if (clickOrigin == "new-event-created") {
+        createTask(Projectname, taskDescription, dueDate, priority, projectId)
+        removeNewProjectModal();
         renderTaskList(projectId);
     }
 }
