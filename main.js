@@ -1,1 +1,1050 @@
-(()=>{"use strict";var e={28:(e,t,n)=>{n.d(t,{Z:()=>i});var a=n(81),o=n.n(a),r=n(645),l=n.n(r)()(o());l.push([e.id,"@import url(https://fonts.googleapis.com/css2?family=Concert+One&family=Tillana&display=swap);"]),l.push([e.id,":root {\n    --salmon: rgb(255, 166, 158);\n    --yellow: #FAF3DD;\n    --green: #B8F2E6;\n    --blue: #545a5c;\n    --grey: #e9e9e9;\n    --grey-highlight: #e9e9e970;\n    --black: #2D2D34;\n    --white: #ffffff;\n}\n\nbody {\n    margin: 0;\n    font-family: 'Tillana', cursive;\n}\n\n.header {\n    background-color: var(--salmon);\n    height: 60px;\n    width: 100%;\n    padding-left: 30px;\n    font-size: 25px;\n}\n\n.sidebar {\n    display: flex;\n    flex-direction: column;\n    width: 300px;\n    height: 100vh;\n    background-color: var(--blue);\n}\n\n.static-list-item {\n    display: inline-flex;\n    flex-direction: row-reverse;\n    justify-content: flex-end;\n    gap: 20px;\n    padding: 10px;\n    padding-left: 20px;\n    color: var(--grey);\n    font-size: 25px;\n    align-items: center;\n\n}\n\n.static-list-item:hover {\n    background-color: var(--grey-highlight);\n}\n\n.nav-static {\n    display: flex;\n    flex-direction: column;\n    padding-top: 30px;\n}\n\na {\n    text-decoration:none;\n    color: var(--grey);\n }\n\n.container {\n    display: flex;\n    width: 100%;\n}\n\n.main {\n    flex: 1;\n    min-width: 300px;\n    background-color: var(--grey);\n}\n\n.nav-project-header {\n    display:flex;\n    margin: 20px;\n    margin-top: 40px;\n    justify-content: space-between;\n    align-items: center;\n    color: var(--grey);\n    font-size: 20px;\n    padding-bottom: 5px;\n    border-bottom: 2px solid var(--grey);\n}\n\n.active-project:hover{\n    background-color: var(--grey-highlight);\n}\n\n.active-project {\n    display: flex;\n    justify-content: space-between;\n    padding: 10px 20px 10px 20px;\n    font-size: 20px;\n    align-items: center\n}\n\n.modal-div {\n    display: flex;\n    justify-content: space-between;\n    gap: 5px;\n    align-items: center\n}\n\n\n.modal-display {\n    display: flex;\n    justify-content: center;\n    align-items: flex-start;\n    position: fixed;\n    left: 0;\n    right: 0;\n    width: 100%;\n    height: 100%;\n    background-color: #121e2281\n}\n\n.new-project-modal-container {\n    display: flex;\n    flex-direction: column;\n    min-width: 400px;\n    margin-top: 180px;\n    height: auto;\n    background-color: var(--grey);\n    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;\n    color: var(--blue);\n}\n\n.modal-title-div {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    padding: 15px;\n    font-size: 20px;\n    background-color: var(--salmon);\n}\n\n.modal-body, .modal-submit{\n    margin: 20px;\n    display: flex;\n    flex-direction: column;\n    gap: 5px;\n    background-color: var(--);\n}\n\ninput {\n    padding-top: 5px;\n    height: 45px;\n    padding: 0 12px;\n    border: solid 1px var(--black);\n    border-radius: 8px;\n    color: var(--black);\n    -webkit-transition: all .2s;\n    transition: all .2s;\n}\n\n.modal-submit {\n    flex-direction: row;\n    justify-content: flex-end;\n}\n\n.cancel-button, .submit-button {\n    border: solid 1px rgba(0,0,0,.15);\n    padding: 8px 12px;\n    cursor: pointer;\n    border-radius: 6px;\n}\n\n.submit-button {\n    background-color: var(--salmon);\n}",""]);const i=l},645:e=>{e.exports=function(e){var t=[];return t.toString=function(){return this.map((function(t){var n="",a=void 0!==t[5];return t[4]&&(n+="@supports (".concat(t[4],") {")),t[2]&&(n+="@media ".concat(t[2]," {")),a&&(n+="@layer".concat(t[5].length>0?" ".concat(t[5]):""," {")),n+=e(t),a&&(n+="}"),t[2]&&(n+="}"),t[4]&&(n+="}"),n})).join("")},t.i=function(e,n,a,o,r){"string"==typeof e&&(e=[[null,e,void 0]]);var l={};if(a)for(var i=0;i<this.length;i++){var c=this[i][0];null!=c&&(l[c]=!0)}for(var d=0;d<e.length;d++){var s=[].concat(e[d]);a&&l[s[0]]||(void 0!==r&&(void 0===s[5]||(s[1]="@layer".concat(s[5].length>0?" ".concat(s[5]):""," {").concat(s[1],"}")),s[5]=r),n&&(s[2]?(s[1]="@media ".concat(s[2]," {").concat(s[1],"}"),s[2]=n):s[2]=n),o&&(s[4]?(s[1]="@supports (".concat(s[4],") {").concat(s[1],"}"),s[4]=o):s[4]="".concat(o)),t.push(s))}},t}},81:e=>{e.exports=function(e){return e[1]}},379:e=>{var t=[];function n(e){for(var n=-1,a=0;a<t.length;a++)if(t[a].identifier===e){n=a;break}return n}function a(e,a){for(var r={},l=[],i=0;i<e.length;i++){var c=e[i],d=a.base?c[0]+a.base:c[0],s=r[d]||0,p="".concat(d," ").concat(s);r[d]=s+1;var m=n(p),u={css:c[1],media:c[2],sourceMap:c[3],supports:c[4],layer:c[5]};if(-1!==m)t[m].references++,t[m].updater(u);else{var f=o(u,a);a.byIndex=i,t.splice(i,0,{identifier:p,updater:f,references:1})}l.push(p)}return l}function o(e,t){var n=t.domAPI(t);return n.update(e),function(t){if(t){if(t.css===e.css&&t.media===e.media&&t.sourceMap===e.sourceMap&&t.supports===e.supports&&t.layer===e.layer)return;n.update(e=t)}else n.remove()}}e.exports=function(e,o){var r=a(e=e||[],o=o||{});return function(e){e=e||[];for(var l=0;l<r.length;l++){var i=n(r[l]);t[i].references--}for(var c=a(e,o),d=0;d<r.length;d++){var s=n(r[d]);0===t[s].references&&(t[s].updater(),t.splice(s,1))}r=c}}},569:e=>{var t={};e.exports=function(e,n){var a=function(e){if(void 0===t[e]){var n=document.querySelector(e);if(window.HTMLIFrameElement&&n instanceof window.HTMLIFrameElement)try{n=n.contentDocument.head}catch(e){n=null}t[e]=n}return t[e]}(e);if(!a)throw new Error("Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid.");a.appendChild(n)}},216:e=>{e.exports=function(e){var t=document.createElement("style");return e.setAttributes(t,e.attributes),e.insert(t,e.options),t}},565:(e,t,n)=>{e.exports=function(e){var t=n.nc;t&&e.setAttribute("nonce",t)}},795:e=>{e.exports=function(e){var t=e.insertStyleElement(e);return{update:function(n){!function(e,t,n){var a="";n.supports&&(a+="@supports (".concat(n.supports,") {")),n.media&&(a+="@media ".concat(n.media," {"));var o=void 0!==n.layer;o&&(a+="@layer".concat(n.layer.length>0?" ".concat(n.layer):""," {")),a+=n.css,o&&(a+="}"),n.media&&(a+="}"),n.supports&&(a+="}");var r=n.sourceMap;r&&"undefined"!=typeof btoa&&(a+="\n/*# sourceMappingURL=data:application/json;base64,".concat(btoa(unescape(encodeURIComponent(JSON.stringify(r))))," */")),t.styleTagTransform(a,e,t.options)}(t,e,n)},remove:function(){!function(e){if(null===e.parentNode)return!1;e.parentNode.removeChild(e)}(t)}}}},589:e=>{e.exports=function(e,t){if(t.styleSheet)t.styleSheet.cssText=e;else{for(;t.firstChild;)t.removeChild(t.firstChild);t.appendChild(document.createTextNode(e))}}}},t={};function n(a){var o=t[a];if(void 0!==o)return o.exports;var r=t[a]={id:a,exports:{}};return e[a](r,r.exports,n),r.exports}n.n=e=>{var t=e&&e.__esModule?()=>e.default:()=>e;return n.d(t,{a:t}),t},n.d=(e,t)=>{for(var a in t)n.o(t,a)&&!n.o(e,a)&&Object.defineProperty(e,a,{enumerable:!0,get:t[a]})},n.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),n.nc=void 0,(()=>{var e=n(379),t=n.n(e),a=n(795),o=n.n(a),r=n(569),l=n.n(r),i=n(565),c=n.n(i),d=n(216),s=n.n(d),p=n(589),m=n.n(p),u=n(28),f={};f.styleTagTransform=m(),f.setAttributes=c(),f.insert=l().bind(null,"head"),f.domAPI=o(),f.insertStyleElement=s(),t()(u.Z,f),u.Z&&u.Z.locals&&u.Z.locals;let h=[{title:"Demo Project",tasks:[]}];class v{constructor(e){this.title=e}}function x(){return h}let y=(e,t,n)=>{var a;"delete"==e?(a=t,h.splice(a,1),g()):"new-project-created"==e?(function(e){let t=new v(e);h.push(t)}(n),E(),g()):"new-project"==e?C():"project-modal-cancel"==e&&(E(),g())},g=()=>{document.querySelectorAll(".active-project").forEach((e=>e.remove()));let e=x();for(let t=0;t<e.length;t++)b(e[t].title,t)},b=(e,t)=>{let n=document.createElement("a");n.href="#",n.className="active-project",n.id=t;let a=document.createElement("a");a.textContent=e;let o=document.createElement("div");o.className="modal-div";let r=document.createElement("btn");r.className="material-symbols-outlined",r.textContent="Delete";let l=document.createElement("btn");l.className="material-symbols-outlined",l.textContent="Edit",a.addEventListener("click",(()=>{y(e,t)})),l.addEventListener("click",(()=>{y("edit",t)})),r.addEventListener("click",(()=>{y("delete",t)})),n.appendChild(a),o.appendChild(l),o.appendChild(r),n.appendChild(o),document.querySelector(".nav-projects").appendChild(n)},C=()=>{let e=document.createElement("div");e.className="modal-display",e.id="modal-display";let t=document.createElement("div");t.className="new-project-modal-container";let n=document.createElement("div");n.className="modal-title-div";let a=document.createElement("div");a.className="modal-title",a.textContent="New Project";let o=document.createElement("btn");o.href="#",o.className="material-symbols-outlined",o.textContent="close",document.body;let r=document.createElement("form");r.action="#";let l=document.createElement("div");l.className="modal-body";let i=document.createElement("input");i.id="project-name",i.name="project-name",i.type="text",i.placeholder="e.g. Learn metallurgy",i.required=!0;let c=document.createElement("LABEL");c.htmlFor="project-name",c.innerHTML="Project title*";let d=document.createElement("div");d.className="modal-submit";let s=document.createElement("btn");s.className="cancel-button",s.textContent="Cancel";let p=document.createElement("btn");p.className="submit-button",p.textContent="Submit",p.type="submit",o.addEventListener("click",(()=>{y("project-modal-cancel")})),s.addEventListener("click",(()=>{y("project-modal-cancel")})),p.addEventListener("click",(e=>{e.preventDefault(),y("new-project-created",void 0,i.value),r.reset()})),d.appendChild(s),d.appendChild(p),l.appendChild(c),l.appendChild(i),n.appendChild(a),n.appendChild(o),r.appendChild(l),r.appendChild(d),t.appendChild(n),t.appendChild(r),e.appendChild(t),document.getElementById("header").before(e)},E=()=>{document.getElementById("modal-display").remove()};(()=>{let e=document.createElement("div");e.className="header",e.id="header",e.textContent="ToDo App",document.body.appendChild(e)})(),(()=>{let e=document.createElement("div");e.className="container";let t=document.createElement("nav");t.className="sidebar";let n=document.createElement("div");n.className="main";let a=document.createElement("div");a.className="nav-static";let o=document.createElement("div");o.className="nav-projects";let r=document.createElement("a");r.className="static-list-item",r.textContent="Today",r.href="#";let l=document.createElement("i");l.className="material-symbols-outlined",l.textContent="today";let i=document.createElement("a");i.className="static-list-item",i.textContent="Week",i.href="#";let c=document.createElement("i");c.className="material-symbols-outlined",c.textContent="calendar_month";let d=document.createElement("a");d.className="static-list-item",d.textContent="Important",d.href="#";let s=document.createElement("i");s.className="material-symbols-outlined",s.textContent="assignment_late";let p=document.createElement("a");p.className="static-list-item",p.textContent="Completed",p.href="#";let m=document.createElement("i");m.className="material-symbols-outlined",m.textContent="download_done";let u=document.createElement("div");u.className="nav-project-header";let f=document.createElement("div");f.className="nav-project-title",f.textContent="Projects";let h=document.createElement("a");h.href="#",h.className="material-symbols-outlined",h.textContent="Add",r.addEventListener("click",(()=>{y("today")})),i.addEventListener("click",(()=>{y("week")})),d.addEventListener("click",(()=>{y("important")})),p.addEventListener("click",(()=>{y("complete")})),h.addEventListener("click",(()=>{y("new-project")})),u.appendChild(f),u.appendChild(h),o.appendChild(u),r.appendChild(l),a.appendChild(r),i.appendChild(c),a.appendChild(i),d.appendChild(s),a.appendChild(d),p.appendChild(m),a.appendChild(p),t.appendChild(a),t.appendChild(o),e.appendChild(t),e.appendChild(n),document.body.appendChild(e)})(),g()})()})();
+/******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
+/******/ 	var __webpack_modules__ = ({
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./src/styles.css":
+/*!**************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./src/styles.css ***!
+  \**************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/sourceMaps.js */ "./node_modules/css-loader/dist/runtime/sourceMaps.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Concert+One&family=Tillana&display=swap);"]);
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ":root {\n    --salmon: rgb(255, 166, 158);\n    --yellow: #FAF3DD;\n    --green: #B8F2E6;\n    --blue: #545a5c;\n    --blue-highlight: #545a5c83;\n    --grey: #e9e9e9;\n    --grey-highlight: #e9e9e970;\n    --black: #2D2D34;\n    --white: #ffffff;\n}\n\nbody {\n    margin: 0;\n    font-family: 'Tillana', cursive;\n}\n\n.header {\n    background-color: var(--salmon);\n    height: 60px;\n    width: 100%;\n    padding-left: 30px;\n    font-size: 25px;\n}\n\n.sidebar {\n    display: flex;\n    flex-direction: column;\n    width: 300px;\n    height: 100vh;\n    background-color: var(--blue);\n}\n\n.material-symbols-outlined {\n    cursor: pointer;\n}\n\n.static-list-item {\n    display: inline-flex;\n    flex-direction: row-reverse;\n    justify-content: flex-end;\n    gap: 20px;\n    padding: 10px;\n    padding-left: 20px;\n    color: var(--grey);\n    font-size: 25px;\n    align-items: center;\n\n}\n\n.static-list-item:hover {\n    background-color: var(--grey-highlight);\n}\n\n.nav-static {\n    display: flex;\n    flex-direction: column;\n    padding-top: 30px;\n}\n\na {\n    text-decoration:none;\n    color: var(--grey);\n }\n\n.container {\n    display: flex;\n    width: 100%;\n}\n\n.main {\n    flex: 1;\n    min-width: 300px;\n    background-color: var(--grey);\n}\n\n.nav-project-header {\n    display:flex;\n    margin: 20px;\n    margin-top: 40px;\n    justify-content: space-between;\n    align-items: center;\n    color: var(--grey);\n    font-size: 20px;\n    padding-bottom: 5px;\n    border-bottom: 2px solid var(--grey);\n}\n\n.active-project:hover{\n    background-color: var(--grey-highlight);\n}\n\n\n\n.active-project {\n    display: flex;\n    justify-content: space-between;\n    padding: 10px 20px 10px 20px;\n    font-size: 20px;\n    align-items: center\n}\n\n.modal-div {\n    display: flex;\n    justify-content: space-between;\n    gap: 5px;\n    align-items: center\n}\n\n\n.modal-display {\n    display: flex;\n    justify-content: center;\n    align-items: flex-start;\n    position: fixed;\n    left: 0;\n    right: 0;\n    width: 100%;\n    height: 100%;\n    background-color: #121e2281\n}\n\n.new-project-modal-container {\n    display: flex;\n    flex-direction: column;\n    min-width: 400px;\n    margin-top: 180px;\n    height: auto;\n    background-color: var(--grey);\n    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;\n    color: var(--blue);\n}\n\n.modal-title-div {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    padding: 15px;\n    font-size: 20px;\n    background-color: var(--salmon);\n}\n\n.modal-body, .modal-submit{\n    margin: 20px;\n    display: flex;\n    flex-direction: column;\n    gap: 5px;\n    background-color: var(--);\n}\n\ninput {\n    padding-top: 5px;\n    height: 45px;\n    padding: 0 12px;\n    border: solid 1px var(--black);\n    border-radius: 8px;\n    color: var(--black);\n    -webkit-transition: all .2s;\n    transition: all .2s;\n}\n\n.modal-submit {\n    flex-direction: row;\n    justify-content: flex-end;\n}\n\n.cancel-button, .submit-button {\n    border: solid 1px rgba(0,0,0,.15);\n    padding: 8px 12px;\n    cursor: pointer;\n    border-radius: 6px;\n}\n\n.submit-button {\n    background-color: var(--salmon);\n}\n\n.main {\n    padding: 20px;\n    color: var(--blue)\n}\n\n.project-title { \n    font-size: 25px;\n    padding-bottom: 20px;\n}\n\n.task-div {\n    display: flex;\n    justify-content: space-evenly;\n    align-items: center;\n    gap: 5px;\n\n}\n\n.task-project-name {\n    flex: 1;\n}\n\n.new-task-div {\n    display: flex;\n    align-items: center;\n    gap: 5px;\n\n}\n\n.task-description {\n    margin-top: -10px;\n    margin-left: 25px;\n    font-size: 12px;\n    padding-bottom: 0;\n}\n\n.task-div-top {\n    width: 100%;\n}\n\n.task-div-top:hover {\n    background-color: var(--blue-highlight)\n}", "",{"version":3,"sources":["webpack://./src/styles.css"],"names":[],"mappings":"AAAA;IACI,4BAA4B;IAC5B,iBAAiB;IACjB,gBAAgB;IAChB,eAAe;IACf,2BAA2B;IAC3B,eAAe;IACf,2BAA2B;IAC3B,gBAAgB;IAChB,gBAAgB;AACpB;;AAEA;IACI,SAAS;IACT,+BAA+B;AACnC;;AAEA;IACI,+BAA+B;IAC/B,YAAY;IACZ,WAAW;IACX,kBAAkB;IAClB,eAAe;AACnB;;AAEA;IACI,aAAa;IACb,sBAAsB;IACtB,YAAY;IACZ,aAAa;IACb,6BAA6B;AACjC;;AAEA;IACI,eAAe;AACnB;;AAEA;IACI,oBAAoB;IACpB,2BAA2B;IAC3B,yBAAyB;IACzB,SAAS;IACT,aAAa;IACb,kBAAkB;IAClB,kBAAkB;IAClB,eAAe;IACf,mBAAmB;;AAEvB;;AAEA;IACI,uCAAuC;AAC3C;;AAEA;IACI,aAAa;IACb,sBAAsB;IACtB,iBAAiB;AACrB;;AAEA;IACI,oBAAoB;IACpB,kBAAkB;CACrB;;AAED;IACI,aAAa;IACb,WAAW;AACf;;AAEA;IACI,OAAO;IACP,gBAAgB;IAChB,6BAA6B;AACjC;;AAEA;IACI,YAAY;IACZ,YAAY;IACZ,gBAAgB;IAChB,8BAA8B;IAC9B,mBAAmB;IACnB,kBAAkB;IAClB,eAAe;IACf,mBAAmB;IACnB,oCAAoC;AACxC;;AAEA;IACI,uCAAuC;AAC3C;;;;AAIA;IACI,aAAa;IACb,8BAA8B;IAC9B,4BAA4B;IAC5B,eAAe;IACf;AACJ;;AAEA;IACI,aAAa;IACb,8BAA8B;IAC9B,QAAQ;IACR;AACJ;;;AAGA;IACI,aAAa;IACb,uBAAuB;IACvB,uBAAuB;IACvB,eAAe;IACf,OAAO;IACP,QAAQ;IACR,WAAW;IACX,YAAY;IACZ;AACJ;;AAEA;IACI,aAAa;IACb,sBAAsB;IACtB,gBAAgB;IAChB,iBAAiB;IACjB,YAAY;IACZ,6BAA6B;IAC7B,2CAA2C;IAC3C,kBAAkB;AACtB;;AAEA;IACI,aAAa;IACb,8BAA8B;IAC9B,mBAAmB;IACnB,aAAa;IACb,eAAe;IACf,+BAA+B;AACnC;;AAEA;IACI,YAAY;IACZ,aAAa;IACb,sBAAsB;IACtB,QAAQ;IACR,yBAAyB;AAC7B;;AAEA;IACI,gBAAgB;IAChB,YAAY;IACZ,eAAe;IACf,8BAA8B;IAC9B,kBAAkB;IAClB,mBAAmB;IACnB,2BAA2B;IAC3B,mBAAmB;AACvB;;AAEA;IACI,mBAAmB;IACnB,yBAAyB;AAC7B;;AAEA;IACI,iCAAiC;IACjC,iBAAiB;IACjB,eAAe;IACf,kBAAkB;AACtB;;AAEA;IACI,+BAA+B;AACnC;;AAEA;IACI,aAAa;IACb;AACJ;;AAEA;IACI,eAAe;IACf,oBAAoB;AACxB;;AAEA;IACI,aAAa;IACb,6BAA6B;IAC7B,mBAAmB;IACnB,QAAQ;;AAEZ;;AAEA;IACI,OAAO;AACX;;AAEA;IACI,aAAa;IACb,mBAAmB;IACnB,QAAQ;;AAEZ;;AAEA;IACI,iBAAiB;IACjB,iBAAiB;IACjB,eAAe;IACf,iBAAiB;AACrB;;AAEA;IACI,WAAW;AACf;;AAEA;IACI;AACJ","sourcesContent":[":root {\n    --salmon: rgb(255, 166, 158);\n    --yellow: #FAF3DD;\n    --green: #B8F2E6;\n    --blue: #545a5c;\n    --blue-highlight: #545a5c83;\n    --grey: #e9e9e9;\n    --grey-highlight: #e9e9e970;\n    --black: #2D2D34;\n    --white: #ffffff;\n}\n\nbody {\n    margin: 0;\n    font-family: 'Tillana', cursive;\n}\n\n.header {\n    background-color: var(--salmon);\n    height: 60px;\n    width: 100%;\n    padding-left: 30px;\n    font-size: 25px;\n}\n\n.sidebar {\n    display: flex;\n    flex-direction: column;\n    width: 300px;\n    height: 100vh;\n    background-color: var(--blue);\n}\n\n.material-symbols-outlined {\n    cursor: pointer;\n}\n\n.static-list-item {\n    display: inline-flex;\n    flex-direction: row-reverse;\n    justify-content: flex-end;\n    gap: 20px;\n    padding: 10px;\n    padding-left: 20px;\n    color: var(--grey);\n    font-size: 25px;\n    align-items: center;\n\n}\n\n.static-list-item:hover {\n    background-color: var(--grey-highlight);\n}\n\n.nav-static {\n    display: flex;\n    flex-direction: column;\n    padding-top: 30px;\n}\n\na {\n    text-decoration:none;\n    color: var(--grey);\n }\n\n.container {\n    display: flex;\n    width: 100%;\n}\n\n.main {\n    flex: 1;\n    min-width: 300px;\n    background-color: var(--grey);\n}\n\n.nav-project-header {\n    display:flex;\n    margin: 20px;\n    margin-top: 40px;\n    justify-content: space-between;\n    align-items: center;\n    color: var(--grey);\n    font-size: 20px;\n    padding-bottom: 5px;\n    border-bottom: 2px solid var(--grey);\n}\n\n.active-project:hover{\n    background-color: var(--grey-highlight);\n}\n\n\n\n.active-project {\n    display: flex;\n    justify-content: space-between;\n    padding: 10px 20px 10px 20px;\n    font-size: 20px;\n    align-items: center\n}\n\n.modal-div {\n    display: flex;\n    justify-content: space-between;\n    gap: 5px;\n    align-items: center\n}\n\n\n.modal-display {\n    display: flex;\n    justify-content: center;\n    align-items: flex-start;\n    position: fixed;\n    left: 0;\n    right: 0;\n    width: 100%;\n    height: 100%;\n    background-color: #121e2281\n}\n\n.new-project-modal-container {\n    display: flex;\n    flex-direction: column;\n    min-width: 400px;\n    margin-top: 180px;\n    height: auto;\n    background-color: var(--grey);\n    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;\n    color: var(--blue);\n}\n\n.modal-title-div {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    padding: 15px;\n    font-size: 20px;\n    background-color: var(--salmon);\n}\n\n.modal-body, .modal-submit{\n    margin: 20px;\n    display: flex;\n    flex-direction: column;\n    gap: 5px;\n    background-color: var(--);\n}\n\ninput {\n    padding-top: 5px;\n    height: 45px;\n    padding: 0 12px;\n    border: solid 1px var(--black);\n    border-radius: 8px;\n    color: var(--black);\n    -webkit-transition: all .2s;\n    transition: all .2s;\n}\n\n.modal-submit {\n    flex-direction: row;\n    justify-content: flex-end;\n}\n\n.cancel-button, .submit-button {\n    border: solid 1px rgba(0,0,0,.15);\n    padding: 8px 12px;\n    cursor: pointer;\n    border-radius: 6px;\n}\n\n.submit-button {\n    background-color: var(--salmon);\n}\n\n.main {\n    padding: 20px;\n    color: var(--blue)\n}\n\n.project-title { \n    font-size: 25px;\n    padding-bottom: 20px;\n}\n\n.task-div {\n    display: flex;\n    justify-content: space-evenly;\n    align-items: center;\n    gap: 5px;\n\n}\n\n.task-project-name {\n    flex: 1;\n}\n\n.new-task-div {\n    display: flex;\n    align-items: center;\n    gap: 5px;\n\n}\n\n.task-description {\n    margin-top: -10px;\n    margin-left: 25px;\n    font-size: 12px;\n    padding-bottom: 0;\n}\n\n.task-div-top {\n    width: 100%;\n}\n\n.task-div-top:hover {\n    background-color: var(--blue-highlight)\n}\n\n@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Tillana&display=swap');"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/runtime/api.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/css-loader/dist/runtime/api.js ***!
+  \*****************************************************/
+/***/ ((module) => {
+
+
+
+/*
+  MIT License http://www.opensource.org/licenses/mit-license.php
+  Author Tobias Koppers @sokra
+*/
+module.exports = function (cssWithMappingToString) {
+  var list = [];
+
+  // return the list of modules as css string
+  list.toString = function toString() {
+    return this.map(function (item) {
+      var content = "";
+      var needLayer = typeof item[5] !== "undefined";
+      if (item[4]) {
+        content += "@supports (".concat(item[4], ") {");
+      }
+      if (item[2]) {
+        content += "@media ".concat(item[2], " {");
+      }
+      if (needLayer) {
+        content += "@layer".concat(item[5].length > 0 ? " ".concat(item[5]) : "", " {");
+      }
+      content += cssWithMappingToString(item);
+      if (needLayer) {
+        content += "}";
+      }
+      if (item[2]) {
+        content += "}";
+      }
+      if (item[4]) {
+        content += "}";
+      }
+      return content;
+    }).join("");
+  };
+
+  // import a list of modules into the list
+  list.i = function i(modules, media, dedupe, supports, layer) {
+    if (typeof modules === "string") {
+      modules = [[null, modules, undefined]];
+    }
+    var alreadyImportedModules = {};
+    if (dedupe) {
+      for (var k = 0; k < this.length; k++) {
+        var id = this[k][0];
+        if (id != null) {
+          alreadyImportedModules[id] = true;
+        }
+      }
+    }
+    for (var _k = 0; _k < modules.length; _k++) {
+      var item = [].concat(modules[_k]);
+      if (dedupe && alreadyImportedModules[item[0]]) {
+        continue;
+      }
+      if (typeof layer !== "undefined") {
+        if (typeof item[5] === "undefined") {
+          item[5] = layer;
+        } else {
+          item[1] = "@layer".concat(item[5].length > 0 ? " ".concat(item[5]) : "", " {").concat(item[1], "}");
+          item[5] = layer;
+        }
+      }
+      if (media) {
+        if (!item[2]) {
+          item[2] = media;
+        } else {
+          item[1] = "@media ".concat(item[2], " {").concat(item[1], "}");
+          item[2] = media;
+        }
+      }
+      if (supports) {
+        if (!item[4]) {
+          item[4] = "".concat(supports);
+        } else {
+          item[1] = "@supports (".concat(item[4], ") {").concat(item[1], "}");
+          item[4] = supports;
+        }
+      }
+      list.push(item);
+    }
+  };
+  return list;
+};
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/runtime/sourceMaps.js":
+/*!************************************************************!*\
+  !*** ./node_modules/css-loader/dist/runtime/sourceMaps.js ***!
+  \************************************************************/
+/***/ ((module) => {
+
+
+
+module.exports = function (item) {
+  var content = item[1];
+  var cssMapping = item[3];
+  if (!cssMapping) {
+    return content;
+  }
+  if (typeof btoa === "function") {
+    var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(cssMapping))));
+    var data = "sourceMappingURL=data:application/json;charset=utf-8;base64,".concat(base64);
+    var sourceMapping = "/*# ".concat(data, " */");
+    return [content].concat([sourceMapping]).join("\n");
+  }
+  return [content].join("\n");
+};
+
+/***/ }),
+
+/***/ "./src/styles.css":
+/*!************************!*\
+  !*** ./src/styles.css ***!
+  \************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../node_modules/style-loader/dist/runtime/styleDomAPI.js */ "./node_modules/style-loader/dist/runtime/styleDomAPI.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../node_modules/style-loader/dist/runtime/insertBySelector.js */ "./node_modules/style-loader/dist/runtime/insertBySelector.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js */ "./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! !../node_modules/style-loader/dist/runtime/insertStyleElement.js */ "./node_modules/style-loader/dist/runtime/insertStyleElement.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! !../node_modules/style-loader/dist/runtime/styleTagTransform.js */ "./node_modules/style-loader/dist/runtime/styleTagTransform.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_styles_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../node_modules/css-loader/dist/cjs.js!./styles.css */ "./node_modules/css-loader/dist/cjs.js!./src/styles.css");
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var options = {};
+
+options.styleTagTransform = (_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default());
+options.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default());
+
+      options.insert = _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default().bind(null, "head");
+    
+options.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
+options.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_styles_css__WEBPACK_IMPORTED_MODULE_6__["default"], options);
+
+
+
+
+       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_styles_css__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_styles_css__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_styles_css__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
+
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js":
+/*!****************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js ***!
+  \****************************************************************************/
+/***/ ((module) => {
+
+
+
+var stylesInDOM = [];
+
+function getIndexByIdentifier(identifier) {
+  var result = -1;
+
+  for (var i = 0; i < stylesInDOM.length; i++) {
+    if (stylesInDOM[i].identifier === identifier) {
+      result = i;
+      break;
+    }
+  }
+
+  return result;
+}
+
+function modulesToDom(list, options) {
+  var idCountMap = {};
+  var identifiers = [];
+
+  for (var i = 0; i < list.length; i++) {
+    var item = list[i];
+    var id = options.base ? item[0] + options.base : item[0];
+    var count = idCountMap[id] || 0;
+    var identifier = "".concat(id, " ").concat(count);
+    idCountMap[id] = count + 1;
+    var indexByIdentifier = getIndexByIdentifier(identifier);
+    var obj = {
+      css: item[1],
+      media: item[2],
+      sourceMap: item[3],
+      supports: item[4],
+      layer: item[5]
+    };
+
+    if (indexByIdentifier !== -1) {
+      stylesInDOM[indexByIdentifier].references++;
+      stylesInDOM[indexByIdentifier].updater(obj);
+    } else {
+      var updater = addElementStyle(obj, options);
+      options.byIndex = i;
+      stylesInDOM.splice(i, 0, {
+        identifier: identifier,
+        updater: updater,
+        references: 1
+      });
+    }
+
+    identifiers.push(identifier);
+  }
+
+  return identifiers;
+}
+
+function addElementStyle(obj, options) {
+  var api = options.domAPI(options);
+  api.update(obj);
+
+  var updater = function updater(newObj) {
+    if (newObj) {
+      if (newObj.css === obj.css && newObj.media === obj.media && newObj.sourceMap === obj.sourceMap && newObj.supports === obj.supports && newObj.layer === obj.layer) {
+        return;
+      }
+
+      api.update(obj = newObj);
+    } else {
+      api.remove();
+    }
+  };
+
+  return updater;
+}
+
+module.exports = function (list, options) {
+  options = options || {};
+  list = list || [];
+  var lastIdentifiers = modulesToDom(list, options);
+  return function update(newList) {
+    newList = newList || [];
+
+    for (var i = 0; i < lastIdentifiers.length; i++) {
+      var identifier = lastIdentifiers[i];
+      var index = getIndexByIdentifier(identifier);
+      stylesInDOM[index].references--;
+    }
+
+    var newLastIdentifiers = modulesToDom(newList, options);
+
+    for (var _i = 0; _i < lastIdentifiers.length; _i++) {
+      var _identifier = lastIdentifiers[_i];
+
+      var _index = getIndexByIdentifier(_identifier);
+
+      if (stylesInDOM[_index].references === 0) {
+        stylesInDOM[_index].updater();
+
+        stylesInDOM.splice(_index, 1);
+      }
+    }
+
+    lastIdentifiers = newLastIdentifiers;
+  };
+};
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/runtime/insertBySelector.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/style-loader/dist/runtime/insertBySelector.js ***!
+  \********************************************************************/
+/***/ ((module) => {
+
+
+
+var memo = {};
+/* istanbul ignore next  */
+
+function getTarget(target) {
+  if (typeof memo[target] === "undefined") {
+    var styleTarget = document.querySelector(target); // Special case to return head of iframe instead of iframe itself
+
+    if (window.HTMLIFrameElement && styleTarget instanceof window.HTMLIFrameElement) {
+      try {
+        // This will throw an exception if access to iframe is blocked
+        // due to cross-origin restrictions
+        styleTarget = styleTarget.contentDocument.head;
+      } catch (e) {
+        // istanbul ignore next
+        styleTarget = null;
+      }
+    }
+
+    memo[target] = styleTarget;
+  }
+
+  return memo[target];
+}
+/* istanbul ignore next  */
+
+
+function insertBySelector(insert, style) {
+  var target = getTarget(insert);
+
+  if (!target) {
+    throw new Error("Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid.");
+  }
+
+  target.appendChild(style);
+}
+
+module.exports = insertBySelector;
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/runtime/insertStyleElement.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/style-loader/dist/runtime/insertStyleElement.js ***!
+  \**********************************************************************/
+/***/ ((module) => {
+
+
+
+/* istanbul ignore next  */
+function insertStyleElement(options) {
+  var element = document.createElement("style");
+  options.setAttributes(element, options.attributes);
+  options.insert(element, options.options);
+  return element;
+}
+
+module.exports = insertStyleElement;
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js":
+/*!**********************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js ***!
+  \**********************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+
+
+/* istanbul ignore next  */
+function setAttributesWithoutAttributes(styleElement) {
+  var nonce =  true ? __webpack_require__.nc : 0;
+
+  if (nonce) {
+    styleElement.setAttribute("nonce", nonce);
+  }
+}
+
+module.exports = setAttributesWithoutAttributes;
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/runtime/styleDomAPI.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/style-loader/dist/runtime/styleDomAPI.js ***!
+  \***************************************************************/
+/***/ ((module) => {
+
+
+
+/* istanbul ignore next  */
+function apply(styleElement, options, obj) {
+  var css = "";
+
+  if (obj.supports) {
+    css += "@supports (".concat(obj.supports, ") {");
+  }
+
+  if (obj.media) {
+    css += "@media ".concat(obj.media, " {");
+  }
+
+  var needLayer = typeof obj.layer !== "undefined";
+
+  if (needLayer) {
+    css += "@layer".concat(obj.layer.length > 0 ? " ".concat(obj.layer) : "", " {");
+  }
+
+  css += obj.css;
+
+  if (needLayer) {
+    css += "}";
+  }
+
+  if (obj.media) {
+    css += "}";
+  }
+
+  if (obj.supports) {
+    css += "}";
+  }
+
+  var sourceMap = obj.sourceMap;
+
+  if (sourceMap && typeof btoa !== "undefined") {
+    css += "\n/*# sourceMappingURL=data:application/json;base64,".concat(btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))), " */");
+  } // For old IE
+
+  /* istanbul ignore if  */
+
+
+  options.styleTagTransform(css, styleElement, options.options);
+}
+
+function removeStyleElement(styleElement) {
+  // istanbul ignore if
+  if (styleElement.parentNode === null) {
+    return false;
+  }
+
+  styleElement.parentNode.removeChild(styleElement);
+}
+/* istanbul ignore next  */
+
+
+function domAPI(options) {
+  var styleElement = options.insertStyleElement(options);
+  return {
+    update: function update(obj) {
+      apply(styleElement, options, obj);
+    },
+    remove: function remove() {
+      removeStyleElement(styleElement);
+    }
+  };
+}
+
+module.exports = domAPI;
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/runtime/styleTagTransform.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/style-loader/dist/runtime/styleTagTransform.js ***!
+  \*********************************************************************/
+/***/ ((module) => {
+
+
+
+/* istanbul ignore next  */
+function styleTagTransform(css, styleElement) {
+  if (styleElement.styleSheet) {
+    styleElement.styleSheet.cssText = css;
+  } else {
+    while (styleElement.firstChild) {
+      styleElement.removeChild(styleElement.firstChild);
+    }
+
+    styleElement.appendChild(document.createTextNode(css));
+  }
+}
+
+module.exports = styleTagTransform;
+
+/***/ }),
+
+/***/ "./src/dom-helper.js":
+/*!***************************!*\
+  !*** ./src/dom-helper.js ***!
+  \***************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "removeNewProjectModal": () => (/* binding */ removeNewProjectModal),
+/* harmony export */   "removeProjectSidebar": () => (/* binding */ removeProjectSidebar),
+/* harmony export */   "renderHeader": () => (/* binding */ renderHeader),
+/* harmony export */   "renderNewProject": () => (/* binding */ renderNewProject),
+/* harmony export */   "renderNewProjectModal": () => (/* binding */ renderNewProjectModal),
+/* harmony export */   "renderProjectSidebar": () => (/* binding */ renderProjectSidebar),
+/* harmony export */   "renderStaticElements": () => (/* binding */ renderStaticElements),
+/* harmony export */   "renderTaskList": () => (/* binding */ renderTaskList)
+/* harmony export */ });
+/* harmony import */ var _handlers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./handlers */ "./src/handlers.js");
+/* harmony import */ var _projects_tasks__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./projects-tasks */ "./src/projects-tasks.js");
+
+
+
+let renderHeader = () => {
+    let headerObject = document.createElement('div');
+    headerObject.className = "header";
+    headerObject.id = "header"
+    headerObject.textContent = "ToDo App"
+    document.body.appendChild(headerObject);
+}
+
+let renderStaticElements = () => {
+
+    // Add static elements and define the properties
+
+    let containerObject = document.createElement('div');
+    containerObject.className = "container";
+    let sidebarObject = document.createElement('nav');
+    sidebarObject.className = "sidebar";
+    let mainObject = document.createElement('div');
+    mainObject.className = "main";
+    mainObject.id = "main";
+    let navStaticObject = document.createElement('div');
+    navStaticObject.className = "nav-static";
+    let navProjectsObject = document.createElement('div');
+    navProjectsObject.className = "nav-projects";
+    let navstaticToday = document.createElement('a');
+    navstaticToday.className = "static-list-item"
+    navstaticToday.textContent = "Today"
+    navstaticToday.href = "#"
+    let navstaticTodayIcon = document.createElement('i');
+    navstaticTodayIcon.className = "material-symbols-outlined";
+    navstaticTodayIcon.textContent = "today"
+    let navstaticWeek = document.createElement('a');
+    navstaticWeek.className = "static-list-item"
+    navstaticWeek.textContent = "Week"
+    navstaticWeek.href = "#"
+    let navstaticWeekIcon = document.createElement('i');
+    navstaticWeekIcon.className = "material-symbols-outlined";
+    navstaticWeekIcon.textContent = "calendar_month"
+    let navstaticImportant = document.createElement('a');
+    navstaticImportant.className = "static-list-item"
+    navstaticImportant.textContent = "Important"
+    navstaticImportant.href = "#"
+    let navstaticImportantIcon = document.createElement('i');
+    navstaticImportantIcon.className = "material-symbols-outlined";
+    navstaticImportantIcon.textContent = "assignment_late"
+    let navstaticComplete = document.createElement('a');
+    navstaticComplete.className = "static-list-item"
+    navstaticComplete.textContent = "Completed"
+    navstaticComplete.href = "#"
+    let navstaticCompleteIcon = document.createElement('i');
+    navstaticCompleteIcon.className = "material-symbols-outlined";
+    navstaticCompleteIcon.textContent = "download_done"
+    let navProjectsHeader = document.createElement("div");
+    navProjectsHeader.className = "nav-project-header"
+    let navProjectsTitle = document.createElement("div");
+    navProjectsTitle.className = "nav-project-title"
+    navProjectsTitle.textContent = "Projects"
+    let navProjectsAdd = document.createElement("a");
+    navProjectsAdd.href = '#'
+    navProjectsAdd.className = "material-symbols-outlined"
+    navProjectsAdd.textContent = "Add"
+
+    // add event listeners and redirect to handler function
+
+    navstaticToday.addEventListener('click', () => {;(0,_handlers__WEBPACK_IMPORTED_MODULE_0__.clickHandler)("today")})
+    navstaticWeek.addEventListener('click', () => {;(0,_handlers__WEBPACK_IMPORTED_MODULE_0__.clickHandler)("week")})
+    navstaticImportant.addEventListener('click', () => {;(0,_handlers__WEBPACK_IMPORTED_MODULE_0__.clickHandler)("important")})
+    navstaticComplete.addEventListener('click', () => {;(0,_handlers__WEBPACK_IMPORTED_MODULE_0__.clickHandler)("complete")})
+    navProjectsAdd.addEventListener('click', () => {;(0,_handlers__WEBPACK_IMPORTED_MODULE_0__.clickHandler)("new-project")})
+
+    //create objects in DOM
+
+    navProjectsHeader.appendChild(navProjectsTitle);
+    navProjectsHeader.appendChild(navProjectsAdd);
+    navProjectsObject.appendChild(navProjectsHeader);
+    navstaticToday.appendChild(navstaticTodayIcon);
+    navStaticObject.appendChild(navstaticToday);
+    navstaticWeek.appendChild(navstaticWeekIcon);
+    navStaticObject.appendChild(navstaticWeek);
+    navstaticImportant.appendChild(navstaticImportantIcon);
+    navStaticObject.appendChild(navstaticImportant);
+    navstaticComplete.appendChild(navstaticCompleteIcon);
+    navStaticObject.appendChild(navstaticComplete);
+    sidebarObject.appendChild(navStaticObject);
+    sidebarObject.appendChild(navProjectsObject)
+    containerObject.appendChild(sidebarObject);
+    containerObject.appendChild(mainObject);
+    document.body.appendChild(containerObject);
+}
+
+let renderProjectSidebar = () => {
+    document.querySelectorAll(".active-project").forEach(e => e.remove());
+
+
+    let projectList = (0,_projects_tasks__WEBPACK_IMPORTED_MODULE_1__.getProjectNames)();
+    
+    for (let i=0; i < projectList.length; i++) {
+        renderNewProject(projectList[i].title, i)
+    }
+
+}
+
+let renderNewProject = (projectName, projectId) => {
+
+
+    // add elements and define the properties
+
+    let newProjectObject = document.createElement("a");
+    newProjectObject.href = "#";
+    newProjectObject.className = "active-project";
+    newProjectObject.id = projectId;
+    let newTitle = document.createElement("a");
+    newTitle.textContent = projectName;
+    let newProjectNav = document.createElement("div");
+    newProjectNav.className = "modal-div"
+    let newDeleteModal = document.createElement("btn");
+    newDeleteModal.className = "material-symbols-outlined";
+    newDeleteModal.textContent = "Delete";
+    let newEditModal = document.createElement("btn");
+    newEditModal.className = "material-symbols-outlined";
+    newEditModal.textContent = "Edit"
+
+    // add click listerners and pass to handler
+
+    newTitle.addEventListener('click', () => {;(0,_handlers__WEBPACK_IMPORTED_MODULE_0__.clickHandler)("sidebar-project", projectId)})
+    newEditModal.addEventListener('click', () => {;(0,_handlers__WEBPACK_IMPORTED_MODULE_0__.clickHandler)("edit", projectId)})
+    newDeleteModal.addEventListener('click', () => {;(0,_handlers__WEBPACK_IMPORTED_MODULE_0__.clickHandler)("delete", projectId)})
+
+    // add elements to the DOM 
+
+    newProjectObject.appendChild(newTitle);
+    newProjectNav.appendChild(newEditModal);
+    newProjectNav.appendChild(newDeleteModal);
+    newProjectObject.appendChild(newProjectNav);
+
+    let mainAppend = document.querySelector(".nav-projects");
+    mainAppend.appendChild(newProjectObject)
+}
+
+let removeProjectSidebar = (projectName, projectId) => {
+    
+    let delElement = document.getElementById(projectId);
+    delElement.remove();
+
+}
+
+
+let renderNewProjectModal = () => {
+
+    //create elements and define properties
+
+    let modalDisplay = document.createElement('div');
+    modalDisplay.className = "modal-display"
+    modalDisplay.id = "modal-display"
+    let newProjectModalDiv = document.createElement('div');
+    newProjectModalDiv.className = "new-project-modal-container";
+    let modalTitle = document.createElement('div');
+    modalTitle.className = "modal-title-div";
+    let modalTitleText = document.createElement('div');
+    modalTitleText.className = "modal-title";
+    modalTitleText.textContent = "New Project"
+    let modalExit = document.createElement('btn');
+    modalExit.href = "#"
+    modalExit.className = "material-symbols-outlined";
+    modalExit.textContent = "close"
+    let mainAppend = document.body;
+
+    let modalForm = document.createElement('form');
+    modalForm.action = "#"
+
+    let modalBody = document.createElement('div');
+    modalBody.className = "modal-body"
+    let modalFormProjectName = document.createElement('input')
+    modalFormProjectName.id = "project-name"
+    modalFormProjectName.name = "project-name"
+    modalFormProjectName.type = "text"
+    modalFormProjectName.placeholder = "e.g. Learn metallurgy"
+    modalFormProjectName.required = true;
+    let modalFormLabel = document.createElement('LABEL')
+    modalFormLabel.htmlFor = "project-name"
+    modalFormLabel.innerHTML = "Project title*"
+
+    let modalSubmitDiv = document.createElement('div');
+    modalSubmitDiv.className = "modal-submit"
+    let modalCancell = document.createElement('btn');
+    modalCancell.className= "cancel-button"
+    modalCancell.textContent = "Cancel"
+    let modalSubmit = document.createElement('btn');
+    modalSubmit.className = "submit-button"
+    modalSubmit.textContent = "Submit"
+    modalSubmit.type = "submit"
+
+    //add event listeners
+
+    modalExit.addEventListener('click', () => {;(0,_handlers__WEBPACK_IMPORTED_MODULE_0__.clickHandler)("project-modal-cancel")});
+    modalCancell.addEventListener('click', () => {(0,_handlers__WEBPACK_IMPORTED_MODULE_0__.clickHandler)("project-modal-cancel")});
+
+    modalSubmit.addEventListener('click', (event) => {
+        event.preventDefault();
+        (0,_handlers__WEBPACK_IMPORTED_MODULE_0__.clickHandler)("new-project-created",undefined,modalFormProjectName.value)
+        modalForm.reset();
+    })
+
+
+    //create in DOM
+    
+    modalSubmitDiv.appendChild(modalCancell);
+    modalSubmitDiv.appendChild(modalSubmit);
+    modalBody.appendChild(modalFormLabel);
+    modalBody.appendChild(modalFormProjectName);
+    modalTitle.appendChild(modalTitleText);
+    modalTitle.appendChild(modalExit);
+    modalForm.appendChild(modalBody)
+    modalForm.appendChild(modalSubmitDiv)
+    newProjectModalDiv.appendChild(modalTitle);
+    newProjectModalDiv.appendChild(modalForm);
+    modalDisplay.appendChild(newProjectModalDiv);
+    let header = document.getElementById('header')
+    header.before(modalDisplay)
+
+}
+
+let removeNewProjectModal = () => {
+    let newProjectModal = document.getElementById('modal-display');
+    newProjectModal.remove();
+}
+
+let renderTaskList = (projectId) => {
+
+    document.getElementById('main').innerHTML = '';
+
+    let projectTitle = document.createElement('div')
+    projectTitle.classList = "project-title"
+    if (projectId == undefined) {
+        projectTitle.textContent = "Select an existing project" + "\r\n" + "or add a new one"
+        let mainAppend = document.getElementById('main');
+        mainAppend.appendChild(projectTitle);
+        return
+    }
+ 
+    let projectList = (0,_projects_tasks__WEBPACK_IMPORTED_MODULE_1__.getProjectNames)();
+    projectTitle.textContent = projectList[projectId].title
+    projectTitle.id = projectId
+ 
+
+    let mainAppend = document.getElementById('main');
+    mainAppend.appendChild(projectTitle);
+
+    for (let i = 0; i < projectList[projectId].tasks.length; i++ ) {
+        let taskDivTop = document.createElement('div')
+        taskDivTop.className = "task-div-top"
+        
+        let taskDiv = document.createElement('div')
+        taskDiv.className = "task-div"
+        taskDiv.id = i;
+
+        let radioButton = document.createElement('i')
+        radioButton.className = "material-symbols-outlined"
+        radioButton.textContent = "circle"
+        taskDiv.appendChild(radioButton);
+        let projectName = document.createElement('p');
+        projectName.textContent = projectList[projectId].tasks[i].title;
+        projectName.className = "task-project-name";
+        taskDiv.appendChild(projectName);
+        let dueDate = document.createElement('p');
+        dueDate.textContent = projectList[projectId].tasks[i].dueDate;
+        taskDiv.appendChild(dueDate);
+        let editButton = document.createElement('i')
+        editButton.className = "material-symbols-outlined task-edit"
+        editButton.textContent = "edit"
+        taskDiv.appendChild(editButton);
+        let deleteButton = document.createElement('i')
+        deleteButton.className = "material-symbols-outlined task-delete"
+        deleteButton.textContent = "delete"
+        taskDiv.appendChild(deleteButton)
+
+        let descriptionDiv = document.createElement("p");
+        descriptionDiv.className = "task-description";
+        descriptionDiv.textContent = projectList[projectId].tasks[i].description
+
+        taskDivTop.appendChild(taskDiv)
+        taskDivTop.appendChild(descriptionDiv)
+        mainAppend.appendChild(taskDivTop)
+    }
+
+    renderNewTaskSection(projectId);
+
+}
+
+function renderNewTaskSection (projectId) {
+    let mainAppend = document.getElementById('main');
+    let newTaskSection = document.createElement('div');
+    newTaskSection.className =  "new-task-div"
+    let newTaskIcon = document.createElement('i');
+    newTaskIcon.className = "material-symbols-outlined"
+    newTaskIcon.textContent = "Add"
+    let newTaskText = document.createElement('p');
+    newTaskText.textContent = "Add new task"
+
+    newTaskIcon.addEventListener('click', () => {
+        ;(0,_handlers__WEBPACK_IMPORTED_MODULE_0__.clickHandler)("add-new-event", projectId);
+    })
+
+
+    newTaskSection.appendChild(newTaskIcon);
+    newTaskSection.appendChild(newTaskText);
+    mainAppend.appendChild(newTaskSection);
+}
+
+
+
+/***/ }),
+
+/***/ "./src/handlers.js":
+/*!*************************!*\
+  !*** ./src/handlers.js ***!
+  \*************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "clickHandler": () => (/* binding */ clickHandler)
+/* harmony export */ });
+/* harmony import */ var _dom_helper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./dom-helper */ "./src/dom-helper.js");
+/* harmony import */ var _projects_tasks__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./projects-tasks */ "./src/projects-tasks.js");
+
+
+
+let clickHandler = (clickOrigin, id, Projectname) => {
+    if (clickOrigin == "delete") {
+        (0,_projects_tasks__WEBPACK_IMPORTED_MODULE_1__.deleteProject)(id);
+        (0,_dom_helper__WEBPACK_IMPORTED_MODULE_0__.renderProjectSidebar)();
+        (0,_dom_helper__WEBPACK_IMPORTED_MODULE_0__.renderTaskList)();
+    }
+    else if (clickOrigin == "new-project-created") {
+        (0,_projects_tasks__WEBPACK_IMPORTED_MODULE_1__.createProject)(Projectname)
+        ;(0,_dom_helper__WEBPACK_IMPORTED_MODULE_0__.removeNewProjectModal)();
+        (0,_dom_helper__WEBPACK_IMPORTED_MODULE_0__.renderProjectSidebar)();
+    }
+    else if (clickOrigin == "new-project") {
+        (0,_dom_helper__WEBPACK_IMPORTED_MODULE_0__.renderNewProjectModal)();
+    }
+    else if (clickOrigin == "project-modal-cancel") {
+        (0,_dom_helper__WEBPACK_IMPORTED_MODULE_0__.removeNewProjectModal)();
+        (0,_dom_helper__WEBPACK_IMPORTED_MODULE_0__.renderProjectSidebar)();
+    }
+    else if (clickOrigin == "sidebar-project") {
+        (0,_dom_helper__WEBPACK_IMPORTED_MODULE_0__.renderTaskList)(id)
+    }
+    else if (clickOrigin == "add-new-event") {
+        (0,_projects_tasks__WEBPACK_IMPORTED_MODULE_1__.createTask)("some-title", "Etiam diam lectus, fermentum in nunc in, euismod sollicitudin justo. Donec varius lacus leo, ut hendrerit nunc laoreet sodales.", 123, 1, id)
+        ;(0,_dom_helper__WEBPACK_IMPORTED_MODULE_0__.renderTaskList)(id);
+    }
+}
+
+
+
+/***/ }),
+
+/***/ "./src/projects-tasks.js":
+/*!*******************************!*\
+  !*** ./src/projects-tasks.js ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "createProject": () => (/* binding */ createProject),
+/* harmony export */   "createTask": () => (/* binding */ createTask),
+/* harmony export */   "deleteProject": () => (/* binding */ deleteProject),
+/* harmony export */   "getProjectNames": () => (/* binding */ getProjectNames)
+/* harmony export */ });
+
+    let projectList = [{
+        title: 'Demo Project',
+        tasks: [],
+    }]
+
+    class project {
+        constructor(title) {
+            this.title = title
+        }
+
+        
+    }
+    function createProject(title) {
+        let newProject = new project(title);
+        projectList.push(newProject);
+    };
+
+    function deleteProject(index) {
+        projectList.splice(index, 1);
+    };
+
+    function getProjectNames() {
+        return projectList
+
+    }
+
+    class task {
+        constructor(title, description, dueDate, priority, projectIndex) {
+            this.title = title;
+            this.description = description;
+            this.dueDate = dueDate;
+            this.priority = priority;
+            this.projectIndex = projectIndex
+    
+        }
+    };
+    
+    function createTask(title, description, dueDate, priority, projectIndex) {
+        let newTask = new task(title, description, dueDate, priority, projectIndex);
+        projectList[projectIndex].tasks.push(newTask);
+    }
+
+
+
+
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			id: moduleId,
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/nonce */
+/******/ 	(() => {
+/******/ 		__webpack_require__.nc = undefined;
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+var __webpack_exports__ = {};
+// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+(() => {
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _src_styles_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../src/styles.css */ "./src/styles.css");
+/* harmony import */ var _projects_tasks__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./projects-tasks */ "./src/projects-tasks.js");
+/* harmony import */ var _dom_helper__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./dom-helper */ "./src/dom-helper.js");
+
+
+
+(0,_dom_helper__WEBPACK_IMPORTED_MODULE_2__.renderHeader)();
+(0,_dom_helper__WEBPACK_IMPORTED_MODULE_2__.renderStaticElements)();
+(0,_dom_helper__WEBPACK_IMPORTED_MODULE_2__.renderProjectSidebar)();
+(0,_projects_tasks__WEBPACK_IMPORTED_MODULE_1__.createTask)("title1", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a luctus dui, sed rhoncus est. Nulla bibendum metus non quam viverra iaculis. Aliquam erat volutpat. Aenean in tempus lacus. Nullam et tortor porta, facilisis ante a, vehicula ligula. Integer ex magna, fringilla eget orci a, feugiat accumsan ligula. Ut vehicula tempus elementum.", 12, 1, 0)
+;(0,_projects_tasks__WEBPACK_IMPORTED_MODULE_1__.createTask)("title2", "description2", 23, 2, 0)
+;(0,_projects_tasks__WEBPACK_IMPORTED_MODULE_1__.createTask)("title3", "description3", 32, 3, 0)
+;(0,_dom_helper__WEBPACK_IMPORTED_MODULE_2__.renderTaskList)();
+})();
+
+/******/ })()
+;
+//# sourceMappingURL=main.js.map
