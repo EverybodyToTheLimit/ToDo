@@ -3,6 +3,7 @@
     --yellow: #FAF3DD;
     --green: #B8F2E6;
     --blue: #545a5c;
+    --blue-highlight: #545a5c83;
     --grey: #e9e9e9;
     --grey-highlight: #e9e9e970;
     --black: #2D2D34;
@@ -28,6 +29,10 @@ body {
     width: 300px;
     height: 100vh;
     background-color: var(--blue);
+}
+
+.material-symbols-outlined {
+    cursor: pointer;
 }
 
 .static-list-item {
@@ -84,6 +89,8 @@ a {
 .active-project:hover{
     background-color: var(--grey-highlight);
 }
+
+
 
 .active-project {
     display: flex;
@@ -166,6 +173,50 @@ input {
 
 .submit-button {
     background-color: var(--salmon);
+}
+
+.main {
+    padding: 20px;
+    color: var(--blue)
+}
+
+.project-title { 
+    font-size: 25px;
+    padding-bottom: 20px;
+}
+
+.task-div {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 5px;
+
+}
+
+.task-project-name {
+    flex: 1;
+}
+
+.new-task-div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+}
+
+.task-description {
+    margin-top: -10px;
+    margin-left: 25px;
+    font-size: 12px;
+    padding-bottom: 0;
+}
+
+.task-div-top {
+    width: 100%;
+}
+
+.task-div-top:hover {
+    background-color: var(--blue-highlight)
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Tillana&display=swap');

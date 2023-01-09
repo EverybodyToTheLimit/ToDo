@@ -1,5 +1,5 @@
 import { clickHandler } from "./handlers";
-import { getProjectNames } from "./projects";
+import { getProjectNames } from "./projects-tasks";
 
 let renderHeader = () => {
     let headerObject = document.createElement('div');
@@ -19,6 +19,7 @@ let renderStaticElements = () => {
     sidebarObject.className = "sidebar";
     let mainObject = document.createElement('div');
     mainObject.className = "main";
+    mainObject.id = "main";
     let navStaticObject = document.createElement('div');
     navStaticObject.className = "nav-static";
     let navProjectsObject = document.createElement('div');
@@ -123,7 +124,7 @@ let renderNewProject = (projectName, projectId) => {
 
     // add click listerners and pass to handler
 
-    newTitle.addEventListener('click', () => {clickHandler(projectName, projectId)})
+    newTitle.addEventListener('click', () => {clickHandler("sidebar-project", projectId)})
     newEditModal.addEventListener('click', () => {clickHandler("edit", projectId)})
     newDeleteModal.addEventListener('click', () => {clickHandler("delete", projectId)})
 
@@ -226,6 +227,88 @@ let removeNewProjectModal = () => {
     newProjectModal.remove();
 }
 
+let renderTaskList = (projectId) => {
+
+    document.getElementById('main').innerHTML = '';
+
+    let projectTitle = document.createElement('div')
+    projectTitle.classList = "project-title"
+    if (projectId == undefined) {
+        projectTitle.textContent = "Select an existing project" + "\r\n" + "or add a new one"
+        let mainAppend = document.getElementById('main');
+        mainAppend.appendChild(projectTitle);
+        return
+    }
+ 
+    let projectList = getProjectNames();
+    projectTitle.textContent = projectList[projectId].title
+    projectTitle.id = projectId
+ 
+
+    let mainAppend = document.getElementById('main');
+    mainAppend.appendChild(projectTitle);
+
+    for (let i = 0; i < projectList[projectId].tasks.length; i++ ) {
+        let taskDivTop = document.createElement('div')
+        taskDivTop.className = "task-div-top"
+        
+        let taskDiv = document.createElement('div')
+        taskDiv.className = "task-div"
+        taskDiv.id = i;
+
+        let radioButton = document.createElement('i')
+        radioButton.className = "material-symbols-outlined"
+        radioButton.textContent = "circle"
+        taskDiv.appendChild(radioButton);
+        let projectName = document.createElement('p');
+        projectName.textContent = projectList[projectId].tasks[i].title;
+        projectName.className = "task-project-name";
+        taskDiv.appendChild(projectName);
+        let dueDate = document.createElement('p');
+        dueDate.textContent = projectList[projectId].tasks[i].dueDate;
+        taskDiv.appendChild(dueDate);
+        let editButton = document.createElement('i')
+        editButton.className = "material-symbols-outlined task-edit"
+        editButton.textContent = "edit"
+        taskDiv.appendChild(editButton);
+        let deleteButton = document.createElement('i')
+        deleteButton.className = "material-symbols-outlined task-delete"
+        deleteButton.textContent = "delete"
+        taskDiv.appendChild(deleteButton)
+
+        let descriptionDiv = document.createElement("p");
+        descriptionDiv.className = "task-description";
+        descriptionDiv.textContent = projectList[projectId].tasks[i].description
+
+        taskDivTop.appendChild(taskDiv)
+        taskDivTop.appendChild(descriptionDiv)
+        mainAppend.appendChild(taskDivTop)
+    }
+
+    renderNewTaskSection(projectId);
+
+}
+
+function renderNewTaskSection (projectId) {
+    let mainAppend = document.getElementById('main');
+    let newTaskSection = document.createElement('div');
+    newTaskSection.className =  "new-task-div"
+    let newTaskIcon = document.createElement('i');
+    newTaskIcon.className = "material-symbols-outlined"
+    newTaskIcon.textContent = "Add"
+    let newTaskText = document.createElement('p');
+    newTaskText.textContent = "Add new task"
+
+    newTaskIcon.addEventListener('click', () => {
+        clickHandler("add-new-event", projectId);
+    })
+
+
+    newTaskSection.appendChild(newTaskIcon);
+    newTaskSection.appendChild(newTaskText);
+    mainAppend.appendChild(newTaskSection);
+}
+
 export {
     renderHeader,
     renderStaticElements,
@@ -234,4 +317,5 @@ export {
     removeProjectSidebar,
     renderNewProjectModal,
     removeNewProjectModal,
+    renderTaskList
 }
