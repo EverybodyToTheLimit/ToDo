@@ -356,6 +356,8 @@ let renderTaskList = (projectId) => {
         taskDivTop.appendChild(taskDiv)
         taskDivTop.appendChild(descriptionDiv)
         mainAppend.appendChild(taskDivTop)
+
+        if (projectList[projectId].tasks[i].complete == true) {completeTaskToggle(i)}
     }
 
     renderNewTaskSection(projectId);
@@ -382,6 +384,20 @@ function renderNewTaskSection (projectId) {
     mainAppend.appendChild(newTaskSection);
 }
 
+function completeTaskToggle (taskId) {
+    let targetDiv = document.querySelectorAll(".task-div")
+    if (targetDiv[taskId].className == "task-div completed") {
+        targetDiv[taskId].className = "task-div"
+        targetDiv[taskId].nextSibling.className = "task-description"
+        targetDiv[taskId].firstChild.textContent = "circle"
+    }
+    else {
+        targetDiv[taskId].className = "task-div completed"
+        targetDiv[taskId].nextSibling.className = "task-description strikethrough"
+        targetDiv[taskId].firstChild.textContent = "task_alt"
+    }
+}
+
 export {
     renderHeader,
     renderStaticElements,
@@ -390,5 +406,6 @@ export {
     removeProjectSidebar,
     renderNewProjectModal,
     removeNewProjectModal,
-    renderTaskList
+    renderTaskList,
+    completeTaskToggle
 }

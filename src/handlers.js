@@ -1,5 +1,5 @@
-import { renderTaskList, renderProjectSidebar, removeNewProjectModal, renderNewProjectModal } from "./dom-helper"
-import { deleteTask, createTask, createProject, deleteProject} from "./projects-tasks"
+import { completeTaskToggle, renderTaskList, renderProjectSidebar, removeNewProjectModal, renderNewProjectModal } from "./dom-helper"
+import { toggleTaskCompleteStatus, deleteTask, createTask, createProject, deleteProject} from "./projects-tasks"
 
 let clickHandler = (
                         clickOrigin, 
@@ -44,6 +44,10 @@ let clickHandler = (
         createTask(Projectname, taskDescription, dueDate, priority, projectId)
         removeNewProjectModal();
         renderTaskList(projectId);
+    }
+    else if (clickOrigin == "task-complete") {
+        toggleTaskCompleteStatus(projectId, taskId);
+        completeTaskToggle(taskId)
     }
 }
 
