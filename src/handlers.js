@@ -1,5 +1,5 @@
-import { completeTaskToggle, renderTaskList, renderProjectSidebar, removeNewProjectModal, renderNewProjectModal } from "./dom-helper"
-import { toggleTaskCompleteStatus, deleteTask, createTask, createProject, deleteProject} from "./projects-tasks"
+import { filterMain, clearMainScreen, completeTaskToggle, renderTaskList, renderProjectSidebar, removeNewProjectModal, renderNewProjectModal } from "./dom-helper"
+import { updateTask, toggleTaskCompleteStatus, deleteTask, createTask, createProject, deleteProject, getProjectNames} from "./projects-tasks"
 
 let clickHandler = (
                         clickOrigin, 
@@ -36,6 +36,11 @@ let clickHandler = (
         // createTask("some-title", "Etiam diam lectus, fermentum in nunc in, euismod sollicitudin justo. Donec varius lacus leo, ut hendrerit nunc laoreet sodales.", 123, 1, projectId)
         renderTaskList(projectId);
     }
+    else if (clickOrigin == "task-edit") {
+        renderNewProjectModal("task", projectId, taskId)
+        // createTask("some-title", "Etiam diam lectus, fermentum in nunc in, euismod sollicitudin justo. Donec varius lacus leo, ut hendrerit nunc laoreet sodales.", 123, 1, projectId)
+        renderTaskList(projectId);
+    }
     else if (clickOrigin == "task-delete") {
         deleteTask(projectId, taskId);
         renderTaskList(projectId);
@@ -47,7 +52,24 @@ let clickHandler = (
     }
     else if (clickOrigin == "task-complete") {
         toggleTaskCompleteStatus(projectId, taskId);
-        completeTaskToggle(taskId)
+        completeTaskToggle(taskId, projectId)
+    }
+    else if (clickOrigin == "complete") {
+        clearMainScreen();
+        let projectList = getProjectNames()
+        for (let i = 0; i < projectList.length; i++) {
+            renderTaskList(i, true);
+            filterMain("completed")
+        }
+    }
+
+    else if (clickOrigin == "important") {
+        clearMainScreen();
+        let projectList = getProjectNames()
+        for (let i = 0; i < projectList.length; i++) {
+            renderTaskList(i, true);
+        }
+        filterMain("important")
     }
 }
 

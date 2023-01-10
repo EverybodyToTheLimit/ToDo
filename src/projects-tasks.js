@@ -50,6 +50,13 @@
         projectList[projectIndex].tasks.splice(taskIndex, 1);
     }
 
+    function updateTask(title, description, dueDate, priority, projectIndex, taskIndex) {
+        projectList[projectIndex].tasks[taskIndex].description = description;
+        projectList[projectIndex].tasks[taskIndex].title = title;
+        projectList[projectIndex].tasks[taskIndex].dueDate = dueDate;
+        projectList[projectIndex].tasks[taskIndex].priority  = priority;
+    }
+
     function toggleTaskCompleteStatus(projectIndex, taskIndex){
         projectList[projectIndex].tasks[taskIndex].complete == false ? projectList[projectIndex].tasks[taskIndex].complete = true : projectList[projectIndex].tasks[taskIndex].complete = false;
     };
@@ -60,6 +67,7 @@ export {
     deleteProject,
     createTask,
     deleteTask,
+    updateTask,
     toggleTaskCompleteStatus
 }
 

@@ -147,7 +147,7 @@ let removeProjectSidebar = (projectName, projectId) => {
 }
 
 
-let renderNewProjectModal = (type, projectId) => {
+let renderNewProjectModal = (type, projectId, taskId) => {
 
     //create elements and define properties
 
@@ -198,7 +198,7 @@ let renderNewProjectModal = (type, projectId) => {
 
     // plug in fields for task modal
 
-    if (type == "task") {
+    if (type == "task" || type == "task-edit") {
     let modalFormTaskDescription = document.createElement('input')
     modalFormTaskDescription.id = "task-description"
     modalFormTaskDescription.name = "task-description"
@@ -230,6 +230,14 @@ let renderNewProjectModal = (type, projectId) => {
     modalFormLabel.textContent = "Task title*"
     modalTitleText.textContent = "New Task"
 
+    if (type == "task-edit") {
+        let projectList = getProjectNames()
+        modalFormProjectName.textContent = projectList[projectId].tasks[taskId].title;
+        modalFormTaskDescription.textContent = projectList[projectId].tasks[taskId].description;
+        modalFormPriority.textContent = projectList[projectId].tasks[taskId].priority;
+        modalFormDueDate.textContent = projectList[projectId].tasks[taskId].dueDate;
+    }
+
 
     modalBody.appendChild(modalFormLabel);
     modalBody.appendChild(modalFormProjectName);
@@ -251,11 +259,13 @@ let renderNewProjectModal = (type, projectId) => {
     let header = document.getElementById('header')
     header.before(modalDisplay)
 
+
+
     // add event listeners for tasks
 
     modalSubmit.addEventListener('click', (event) => {
         event.preventDefault();
-        clickHandler("new-event-created",projectId,modalFormProjectName.value,undefined,modalFormTaskDescription.value,modalFormDueDate.value,modalFormPriority.value)
+        clickHandler("new-event-created",projectId,modalFormProjectName.value,undefined,modalFormTaskDescription.value,modalFormDueDate.value,modalFormPriority.checked)
         modalForm.reset();
     })
 
@@ -295,9 +305,15 @@ let removeNewProjectModal = () => {
     newProjectModal.remove();
 }
 
-let renderTaskList = (projectId) => {
-
+let clearMainScreen = () => {
     document.getElementById('main').innerHTML = '';
+}
+
+let renderTaskList = (projectId, complete) => {
+
+    if (complete !== true) {
+    clearMainScreen();
+    }
 
     let projectTitle = document.createElement('div')
     projectTitle.classList = "project-title"
@@ -316,14 +332,16 @@ let renderTaskList = (projectId) => {
     let mainAppend = document.getElementById('main');
     mainAppend.appendChild(projectTitle);
 
-    for (let i = 0; i < projectList[projectId].tasks.length; i++ ) {
+    for (let i = 0; i < projectList[projectId].tasks.length; i++ ) 
+    {
+
         let taskDivTop = document.createElement('div')
         taskDivTop.className = "task-div-top"
-        
         let taskDiv = document.createElement('div')
         taskDiv.className = "task-div"
         taskDiv.id = i;
-
+        taskDiv.dataset.id = "p" + projectId + "t" + i ;
+        taskDiv.dataset.priority = projectList[projectId].tasks[i].priority;
         let radioButton = document.createElement('i')
         radioButton.className = "material-symbols-outlined"
         radioButton.textContent = "circle"
@@ -357,7 +375,7 @@ let renderTaskList = (projectId) => {
         taskDivTop.appendChild(descriptionDiv)
         mainAppend.appendChild(taskDivTop)
 
-        if (projectList[projectId].tasks[i].complete == true) {completeTaskToggle(i)}
+        if (projectList[projectId].tasks[i].complete == true) {completeTaskToggle(i, projectId)}
     }
 
     renderNewTaskSection(projectId);
@@ -384,19 +402,58 @@ function renderNewTaskSection (projectId) {
     mainAppend.appendChild(newTaskSection);
 }
 
-function completeTaskToggle (taskId) {
-    let targetDiv = document.querySelectorAll(".task-div")
-    if (targetDiv[taskId].className == "task-div completed") {
-        targetDiv[taskId].className = "task-div"
-        targetDiv[taskId].nextSibling.className = "task-description"
-        targetDiv[taskId].firstChild.textContent = "circle"
+function completeTaskToggle (taskId, projectId) {
+    let dataValue = "p" + projectId + "t" + taskId
+    let targetDiv = document.querySelector('[data-id="' + dataValue + '"]')
+
+    if (targetDiv.className == "task-div completed") {
+        targetDiv.className = "task-div"
+        targetDiv.nextSibling.className = "task-description"
+        targetDiv.firstChild.textContent = "circle"
     }
-    else {
-        targetDiv[taskId].className = "task-div completed"
-        targetDiv[taskId].nextSibling.className = "task-description strikethrough"
-        targetDiv[taskId].firstChild.textContent = "task_alt"
+    else if (targetDiv.className == "task-div"){
+        targetDiv.className = "task-div completed"
+        targetDiv.nextSibling.className = "task-description strikethrough"
+        targetDiv.firstChild.textContent = "task_alt"
+    }
+};
+
+function filterMain(mode) {
+    let mainScreen = document.getElementById("main");
+    mainScreen.querySelectorAll(".new-task-div").forEach(e => e.remove());
+    if (mode == "completed") {
+        mainScreen.querySelectorAll(".task-div").forEach(e => {
+            
+            if (e.className !== "task-div completed") {
+                e.parentNode.remove();
+            }
+        })
+    }
+    else if (mode == "important") {
+        mainScreen.querySelectorAll(".task-div").forEach(e => {
+            
+            if (e.dataset.priority === "false") {
+                e.parentNode.remove();
+            }
+        })
+
+    }
+
+    mainScreen.querySelectorAll(".project-title").forEach(e => {
+            
+        if (e.nextSibling == null) {
+            e.remove();
+        }
+    })
+
+    if (mainScreen.childNodes.length == 0) {
+        let infoDiv = document.createElement('div');
+        infoDiv.textContent = "Looks like there are no " + mode + " tasks. Time to get cracking..."
+        infoDiv.className = "project-title"
+        mainScreen.appendChild(infoDiv);
     }
 }
+
 
 export {
     renderHeader,
@@ -407,5 +464,7 @@ export {
     renderNewProjectModal,
     removeNewProjectModal,
     renderTaskList,
-    completeTaskToggle
+    completeTaskToggle,
+    clearMainScreen,
+    filterMain
 }
