@@ -657,7 +657,7 @@ let renderNewProject = (projectName, projectId) => {
     // add click listerners and pass to handler
 
     newTitle.addEventListener('click', () => {;(0,_handlers__WEBPACK_IMPORTED_MODULE_0__.clickHandler)("sidebar-project", projectId)})
-    newEditModal.addEventListener('click', () => {;(0,_handlers__WEBPACK_IMPORTED_MODULE_0__.clickHandler)("edit", projectId)})
+    newEditModal.addEventListener('click', () => {;(0,_handlers__WEBPACK_IMPORTED_MODULE_0__.clickHandler)("edit-project", projectId)})
     newDeleteModal.addEventListener('click', () => {;(0,_handlers__WEBPACK_IMPORTED_MODULE_0__.clickHandler)("delete", projectId)})
 
     // add elements to the DOM 
@@ -812,14 +812,28 @@ let renderNewProjectModal = (type, projectId, taskId) => {
 
     }
 
-    else if (type == "project"){
-    //add event listeners for project
+    else if (type == "project" || type == "project-edit"){
+    
+    //plug in logic for project-edit
+    if (type == "project-edit") {
+        let projectList = (0,_projects_tasks__WEBPACK_IMPORTED_MODULE_1__.getProjectNames)();
+        modalTitle.value = projectList[projectId].title;
 
+        modalSubmit.addEventListener('click', (event) => {
+            event.preventDefault();
+            (0,_handlers__WEBPACK_IMPORTED_MODULE_0__.clickHandler)("project-edited", projectId, modalFormProjectName.value)
+            modalForm.reset();
+        })
+
+    }
+
+    //add event listeners for project
+    else if (type == "project") {
     modalSubmit.addEventListener('click', (event) => {
         event.preventDefault();
         (0,_handlers__WEBPACK_IMPORTED_MODULE_0__.clickHandler)("new-project-created",undefined,modalFormProjectName.value)
         modalForm.reset();
-    })
+    })}
 
 
     //create in DOM
@@ -1030,6 +1044,14 @@ let clickHandler = (
         (0,_dom_helper__WEBPACK_IMPORTED_MODULE_0__.renderProjectSidebar)();
         (0,_dom_helper__WEBPACK_IMPORTED_MODULE_0__.renderTaskList)();
     }
+    else if (clickOrigin == "edit-project") {
+        (0,_dom_helper__WEBPACK_IMPORTED_MODULE_0__.renderNewProjectModal)("project-edit", projectId);
+    }
+    else if (clickOrigin == "project-edited") {
+        (0,_projects_tasks__WEBPACK_IMPORTED_MODULE_1__.updateProject)(Projectname,projectId)
+        ;(0,_dom_helper__WEBPACK_IMPORTED_MODULE_0__.removeNewProjectModal)();
+        (0,_dom_helper__WEBPACK_IMPORTED_MODULE_0__.renderProjectSidebar)();
+    }
     else if (clickOrigin == "new-project-created") {
         (0,_projects_tasks__WEBPACK_IMPORTED_MODULE_1__.createProject)(Projectname)
         ;(0,_dom_helper__WEBPACK_IMPORTED_MODULE_0__.removeNewProjectModal)();
@@ -1047,12 +1069,10 @@ let clickHandler = (
     }
     else if (clickOrigin == "add-new-event") {
         (0,_dom_helper__WEBPACK_IMPORTED_MODULE_0__.renderNewProjectModal)("task", projectId)
-        // createTask("some-title", "Etiam diam lectus, fermentum in nunc in, euismod sollicitudin justo. Donec varius lacus leo, ut hendrerit nunc laoreet sodales.", 123, 1, projectId)
         ;(0,_dom_helper__WEBPACK_IMPORTED_MODULE_0__.renderTaskList)(projectId);
     }
     else if (clickOrigin == "task-edit") {
         (0,_dom_helper__WEBPACK_IMPORTED_MODULE_0__.renderNewProjectModal)("task-edit", projectId, taskId)
-        // createTask("some-title", "Etiam diam lectus, fermentum in nunc in, euismod sollicitudin justo. Donec varius lacus leo, ut hendrerit nunc laoreet sodales.", 123, 1, projectId)
         ;(0,_dom_helper__WEBPACK_IMPORTED_MODULE_0__.renderTaskList)(projectId);
     }
     else if (clickOrigin == "task-delete") {
@@ -1090,6 +1110,7 @@ let clickHandler = (
         }
         (0,_dom_helper__WEBPACK_IMPORTED_MODULE_0__.filterMain)("important")
     }
+
 }
 
 
@@ -1110,6 +1131,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "deleteTask": () => (/* binding */ deleteTask),
 /* harmony export */   "getProjectNames": () => (/* binding */ getProjectNames),
 /* harmony export */   "toggleTaskCompleteStatus": () => (/* binding */ toggleTaskCompleteStatus),
+/* harmony export */   "updateProject": () => (/* binding */ updateProject),
 /* harmony export */   "updateTask": () => (/* binding */ updateTask)
 /* harmony export */ });
 
@@ -1136,6 +1158,10 @@ __webpack_require__.r(__webpack_exports__);
     function deleteProject(index) {
         projectList.splice(index, 1);
     };
+
+    function updateProject(title, projectIndex) {
+        projectList[projectIndex].title = title;
+    }
 
     function getProjectNames() {
         return projectList
