@@ -1,6 +1,6 @@
 import { clickHandler } from "./handlers";
 import { getProjectNames } from "./projects-tasks";
-import {parseISO, format} from "date-fns";
+import {formatRelative, isToday, isThisWeek, parseISO, format} from "date-fns";
 
 let renderHeader = () => {
     let headerObject = document.createElement('div');
@@ -376,6 +376,7 @@ let renderTaskList = (projectId, complete) => {
         taskDiv.appendChild(projectName);
         let dueDate = document.createElement('p');
         dueDate.textContent = format(new Date(projectList[projectId].tasks[i].dueDate), 'dd MMM yyyy');
+        dueDate.className = "due-date"
         taskDiv.appendChild(dueDate);
         let editButton = document.createElement('i')
         editButton.className = "material-symbols-outlined task-edit"
@@ -458,6 +459,32 @@ function filterMain(mode) {
             
             if (e.dataset.priority === "false") {
                 e.parentNode.remove();
+            }
+        })
+
+    }
+
+    else if (mode == "week") {
+        mainScreen.querySelectorAll(".due-date").forEach(e => {
+            e.textContent
+
+            if (!isThisWeek(new Date(e.textContent))) {
+                e.parentNode.parentNode.remove();
+            }
+            else {
+                const result = formatRelative(new Date(e.textContent), new Date());
+                e.textContent = result;
+            }
+        })
+
+    }
+
+    else if (mode == "today") {
+        mainScreen.querySelectorAll(".due-date").forEach(e => {
+            e.textContent
+
+            if (!isToday(new Date(e.textContent))) {
+                e.parentNode.parentNode.remove();
             }
         })
 

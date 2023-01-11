@@ -83,6 +83,24 @@ let clickHandler = (
         filterMain("important")
     }
 
+    else if (clickOrigin == "week") {
+        clearMainScreen();
+        let projectList = getProjectNames()
+        for (let i = 0; i < projectList.length; i++) {
+            renderTaskList(i, true);
+        }
+        filterMain("week")
+    }
+
+    else if (clickOrigin == "today") {
+        clearMainScreen();
+        let projectList = getProjectNames()
+        for (let i = 0; i < projectList.length; i++) {
+            renderTaskList(i, true);
+        }
+        filterMain("today")
+    }
+
 }
 
 export {
