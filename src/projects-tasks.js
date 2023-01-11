@@ -1,4 +1,6 @@
 
+    import parseISO from "date-fns/parseISO";
+    
     let projectList = [{
         title: 'Demo Project',
         tasks: [
@@ -45,7 +47,7 @@
     };
     
     function createTask(title, description, dueDate, priority, projectIndex) {
-        let newTask = new task(title, description, dueDate, priority, projectIndex);
+        let newTask = new task(title, description, parseISO(dueDate), priority, projectIndex);
         projectList[projectIndex].tasks.push(newTask);
         console.log(projectList)        // only to check status
     }
@@ -57,7 +59,7 @@
     function updateTask(title, description, dueDate, priority, projectIndex, taskIndex) {
         projectList[projectIndex].tasks[taskIndex].description = description;
         projectList[projectIndex].tasks[taskIndex].title = title;
-        projectList[projectIndex].tasks[taskIndex].dueDate = dueDate;
+        projectList[projectIndex].tasks[taskIndex].dueDate = parseISO(dueDate);
         projectList[projectIndex].tasks[taskIndex].priority  = priority;
     }
 

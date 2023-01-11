@@ -1,5 +1,6 @@
 import { clickHandler } from "./handlers";
 import { getProjectNames } from "./projects-tasks";
+import {parseISO, format} from "date-fns";
 
 let renderHeader = () => {
     let headerObject = document.createElement('div');
@@ -374,7 +375,7 @@ let renderTaskList = (projectId, complete) => {
         projectName.className = "task-project-name";
         taskDiv.appendChild(projectName);
         let dueDate = document.createElement('p');
-        dueDate.textContent = projectList[projectId].tasks[i].dueDate;
+        dueDate.textContent = format(new Date(projectList[projectId].tasks[i].dueDate), 'dd MMM yyyy');
         taskDiv.appendChild(dueDate);
         let editButton = document.createElement('i')
         editButton.className = "material-symbols-outlined task-edit"
@@ -464,7 +465,7 @@ function filterMain(mode) {
 
     mainScreen.querySelectorAll(".project-title").forEach(e => {
             
-        if (e.nextSibling == null) {
+        if (e.nextSibling == null || e.nextSibling.className !== "task-div-top") {
             e.remove();
         }
     })
