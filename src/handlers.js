@@ -1,5 +1,5 @@
 import { filterMain, clearMainScreen, completeTaskToggle, renderTaskList, renderProjectSidebar, removeNewProjectModal, renderNewProjectModal } from "./dom-helper"
-import { updateTask, toggleTaskCompleteStatus, deleteTask, createTask, createProject, deleteProject, getProjectNames} from "./projects-tasks"
+import { updateProject, updateTask, toggleTaskCompleteStatus, deleteTask, createTask, createProject, deleteProject, getProjectNames} from "./projects-tasks"
 
 let clickHandler = (
                         clickOrigin, 
@@ -15,6 +15,14 @@ let clickHandler = (
         deleteProject(projectId);
         renderProjectSidebar();
         renderTaskList();
+    }
+    else if (clickOrigin == "edit-project") {
+        renderNewProjectModal("project-edit", projectId);
+    }
+    else if (clickOrigin == "project-edited") {
+        updateProject(Projectname,projectId)
+        removeNewProjectModal();
+        renderProjectSidebar();
     }
     else if (clickOrigin == "new-project-created") {
         createProject(Projectname)
@@ -33,12 +41,10 @@ let clickHandler = (
     }
     else if (clickOrigin == "add-new-event") {
         renderNewProjectModal("task", projectId)
-        // createTask("some-title", "Etiam diam lectus, fermentum in nunc in, euismod sollicitudin justo. Donec varius lacus leo, ut hendrerit nunc laoreet sodales.", 123, 1, projectId)
         renderTaskList(projectId);
     }
     else if (clickOrigin == "task-edit") {
         renderNewProjectModal("task-edit", projectId, taskId)
-        // createTask("some-title", "Etiam diam lectus, fermentum in nunc in, euismod sollicitudin justo. Donec varius lacus leo, ut hendrerit nunc laoreet sodales.", 123, 1, projectId)
         renderTaskList(projectId);
     }
     else if (clickOrigin == "task-delete") {
@@ -76,6 +82,7 @@ let clickHandler = (
         }
         filterMain("important")
     }
+
 }
 
 export {

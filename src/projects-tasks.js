@@ -23,6 +23,10 @@
         projectList.splice(index, 1);
     };
 
+    function updateProject(title, projectIndex) {
+        projectList[projectIndex].title = title;
+    }
+
     function getProjectNames() {
         return projectList
 
@@ -68,6 +72,7 @@ export {
     createTask,
     deleteTask,
     updateTask,
+    updateProject,
     toggleTaskCompleteStatus
 }
 

@@ -125,7 +125,7 @@ let renderNewProject = (projectName, projectId) => {
     // add click listerners and pass to handler
 
     newTitle.addEventListener('click', () => {clickHandler("sidebar-project", projectId)})
-    newEditModal.addEventListener('click', () => {clickHandler("edit", projectId)})
+    newEditModal.addEventListener('click', () => {clickHandler("edit-project", projectId)})
     newDeleteModal.addEventListener('click', () => {clickHandler("delete", projectId)})
 
     // add elements to the DOM 
@@ -280,14 +280,28 @@ let renderNewProjectModal = (type, projectId, taskId) => {
 
     }
 
-    else if (type == "project"){
-    //add event listeners for project
+    else if (type == "project" || type == "project-edit"){
+    
+    //plug in logic for project-edit
+    if (type == "project-edit") {
+        let projectList = getProjectNames();
+        modalTitle.value = projectList[projectId].title;
 
+        modalSubmit.addEventListener('click', (event) => {
+            event.preventDefault();
+            clickHandler("project-edited", projectId, modalFormProjectName.value)
+            modalForm.reset();
+        })
+
+    }
+
+    //add event listeners for project
+    else if (type == "project") {
     modalSubmit.addEventListener('click', (event) => {
         event.preventDefault();
         clickHandler("new-project-created",undefined,modalFormProjectName.value)
         modalForm.reset();
-    })
+    })}
 
 
     //create in DOM
