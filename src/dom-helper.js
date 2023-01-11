@@ -232,10 +232,11 @@ let renderNewProjectModal = (type, projectId, taskId) => {
 
     if (type == "task-edit") {
         let projectList = getProjectNames()
-        modalFormProjectName.textContent = projectList[projectId].tasks[taskId].title;
-        modalFormTaskDescription.textContent = projectList[projectId].tasks[taskId].description;
-        modalFormPriority.textContent = projectList[projectId].tasks[taskId].priority;
-        modalFormDueDate.textContent = projectList[projectId].tasks[taskId].dueDate;
+        modalFormProjectName.value = projectList[projectId].tasks[taskId].title;
+        modalFormTaskDescription.value = projectList[projectId].tasks[taskId].description;
+        modalFormPriority.value = projectList[projectId].tasks[taskId].priority;
+        if(modalFormPriority.value !== "false") {modalFormPriority.checked = true}
+        modalFormDueDate.value = projectList[projectId].tasks[taskId].dueDate;
     }
 
 
@@ -262,12 +263,20 @@ let renderNewProjectModal = (type, projectId, taskId) => {
 
 
     // add event listeners for tasks
-
+    if (type == "task-edit") {
     modalSubmit.addEventListener('click', (event) => {
         event.preventDefault();
+        clickHandler("task-edited",projectId,modalFormProjectName.value,taskId,modalFormTaskDescription.value,modalFormDueDate.value,modalFormPriority.checked)
+        modalForm.reset();
+    })   
+    }
+
+    else if (type == "task") {
+        modalSubmit.addEventListener('click', (event) => {
         clickHandler("new-event-created",projectId,modalFormProjectName.value,undefined,modalFormTaskDescription.value,modalFormDueDate.value,modalFormPriority.checked)
         modalForm.reset();
-    })
+        })
+    }  
 
     }
 

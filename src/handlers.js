@@ -37,7 +37,7 @@ let clickHandler = (
         renderTaskList(projectId);
     }
     else if (clickOrigin == "task-edit") {
-        renderNewProjectModal("task", projectId, taskId)
+        renderNewProjectModal("task-edit", projectId, taskId)
         // createTask("some-title", "Etiam diam lectus, fermentum in nunc in, euismod sollicitudin justo. Donec varius lacus leo, ut hendrerit nunc laoreet sodales.", 123, 1, projectId)
         renderTaskList(projectId);
     }
@@ -47,6 +47,11 @@ let clickHandler = (
     }
     else if (clickOrigin == "new-event-created") {
         createTask(Projectname, taskDescription, dueDate, priority, projectId)
+        removeNewProjectModal();
+        renderTaskList(projectId);
+    }
+    else if (clickOrigin == "task-edited") {
+        updateTask(Projectname,taskDescription, dueDate, priority, projectId, taskId)
         removeNewProjectModal();
         renderTaskList(projectId);
     }

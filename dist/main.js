@@ -764,10 +764,11 @@ let renderNewProjectModal = (type, projectId, taskId) => {
 
     if (type == "task-edit") {
         let projectList = (0,_projects_tasks__WEBPACK_IMPORTED_MODULE_1__.getProjectNames)()
-        modalFormProjectName.textContent = projectList[projectId].tasks[taskId].title;
-        modalFormTaskDescription.textContent = projectList[projectId].tasks[taskId].description;
-        modalFormPriority.textContent = projectList[projectId].tasks[taskId].priority;
-        modalFormDueDate.textContent = projectList[projectId].tasks[taskId].dueDate;
+        modalFormProjectName.value = projectList[projectId].tasks[taskId].title;
+        modalFormTaskDescription.value = projectList[projectId].tasks[taskId].description;
+        modalFormPriority.value = projectList[projectId].tasks[taskId].priority;
+        if(modalFormPriority.value !== "false") {modalFormPriority.checked = true}
+        modalFormDueDate.value = projectList[projectId].tasks[taskId].dueDate;
     }
 
 
@@ -794,12 +795,20 @@ let renderNewProjectModal = (type, projectId, taskId) => {
 
 
     // add event listeners for tasks
-
+    if (type == "task-edit") {
     modalSubmit.addEventListener('click', (event) => {
         event.preventDefault();
+        (0,_handlers__WEBPACK_IMPORTED_MODULE_0__.clickHandler)("task-edited",projectId,modalFormProjectName.value,taskId,modalFormTaskDescription.value,modalFormDueDate.value,modalFormPriority.checked)
+        modalForm.reset();
+    })   
+    }
+
+    else if (type == "task") {
+        modalSubmit.addEventListener('click', (event) => {
         (0,_handlers__WEBPACK_IMPORTED_MODULE_0__.clickHandler)("new-event-created",projectId,modalFormProjectName.value,undefined,modalFormTaskDescription.value,modalFormDueDate.value,modalFormPriority.checked)
         modalForm.reset();
-    })
+        })
+    }  
 
     }
 
@@ -1042,7 +1051,7 @@ let clickHandler = (
         ;(0,_dom_helper__WEBPACK_IMPORTED_MODULE_0__.renderTaskList)(projectId);
     }
     else if (clickOrigin == "task-edit") {
-        (0,_dom_helper__WEBPACK_IMPORTED_MODULE_0__.renderNewProjectModal)("task", projectId, taskId)
+        (0,_dom_helper__WEBPACK_IMPORTED_MODULE_0__.renderNewProjectModal)("task-edit", projectId, taskId)
         // createTask("some-title", "Etiam diam lectus, fermentum in nunc in, euismod sollicitudin justo. Donec varius lacus leo, ut hendrerit nunc laoreet sodales.", 123, 1, projectId)
         ;(0,_dom_helper__WEBPACK_IMPORTED_MODULE_0__.renderTaskList)(projectId);
     }
@@ -1052,6 +1061,11 @@ let clickHandler = (
     }
     else if (clickOrigin == "new-event-created") {
         (0,_projects_tasks__WEBPACK_IMPORTED_MODULE_1__.createTask)(Projectname, taskDescription, dueDate, priority, projectId)
+        ;(0,_dom_helper__WEBPACK_IMPORTED_MODULE_0__.removeNewProjectModal)();
+        (0,_dom_helper__WEBPACK_IMPORTED_MODULE_0__.renderTaskList)(projectId);
+    }
+    else if (clickOrigin == "task-edited") {
+        (0,_projects_tasks__WEBPACK_IMPORTED_MODULE_1__.updateTask)(Projectname,taskDescription, dueDate, priority, projectId, taskId)
         ;(0,_dom_helper__WEBPACK_IMPORTED_MODULE_0__.removeNewProjectModal)();
         (0,_dom_helper__WEBPACK_IMPORTED_MODULE_0__.renderTaskList)(projectId);
     }
