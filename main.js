@@ -16,13 +16,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/getUrl.js */ "./node_modules/css-loader/dist/runtime/getUrl.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__);
 // Imports
 
 
+
+var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ../src/white_paper.jpg */ "./src/white_paper.jpg"), __webpack_require__.b);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Concert+One&family=Tillana&display=swap);"]);
+var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ":root {\n    --salmon: rgb(255, 166, 158);\n    --yellow: #FAF3DD;\n    --green: #B8F2E6;\n    --blue: #545a5c;\n    --blue-highlight: #545a5c83;\n    --grey: #e9e9e9;\n    --grey-highlight: #e9e9e970;\n    --black: #2D2D34;\n    --white: #ffffff;\n}\n\nbody {\n    margin: 0;\n    font-family: 'Tillana', cursive;\n}\n\n.header {\n    background-color: var(--salmon);\n    height: 60px;\n    padding-left: 30px;\n    font-size: 25px;\n}\n\n.sidebar {\n    display: flex;\n    flex-direction: column;\n    width: 300px;\n    height: 100vh;\n    background-color: var(--blue);\n}\n\n.material-symbols-outlined {\n    cursor: pointer;\n}\n\n.static-list-item {\n    display: inline-flex;\n    flex-direction: row-reverse;\n    justify-content: flex-end;\n    gap: 20px;\n    padding: 10px;\n    padding-left: 20px;\n    color: var(--grey);\n    font-size: 25px;\n    align-items: center;\n\n}\n\n.static-list-item:hover {\n    background-color: var(--grey-highlight);\n}\n\n.nav-static {\n    display: flex;\n    flex-direction: column;\n    padding-top: 30px;\n}\n\na {\n    text-decoration:none;\n    color: var(--grey);\n }\n\n.container {\n    display: flex;\n    width: 100%;\n}\n\n.main {\n    flex: 1;\n    min-width: 300px;\n    background-color: var(--grey);\n}\n\n.nav-project-header {\n    display:flex;\n    margin: 20px;\n    margin-top: 40px;\n    justify-content: space-between;\n    align-items: center;\n    color: var(--grey);\n    font-size: 20px;\n    padding-bottom: 5px;\n    border-bottom: 2px solid var(--grey);\n}\n\n.active-project:hover{\n    background-color: var(--grey-highlight);\n}\n\n\n\n.active-project {\n    display: flex;\n    justify-content: space-between;\n    padding: 10px 20px 10px 20px;\n    font-size: 20px;\n    align-items: center\n}\n\n.modal-div {\n    display: flex;\n    justify-content: space-between;\n    gap: 5px;\n    align-items: center\n}\n\n\n.modal-display {\n    position:absolute;\n    z-index: 10;\n    display: flex;\n    justify-content: center;\n    align-items: flex-start;\n    position: fixed;\n    left: 0;\n    right: 0;\n    width: 100%;\n    height: 100%;\n    background-color: #121e2281\n}\n\n.new-project-modal-container {\n    display: flex;\n    flex-direction: column;\n    min-width: 400px;\n    margin-top: 180px;\n    height: auto;\n    background-color: var(--grey);\n    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;\n    color: var(--blue);\n}\n\n.modal-title-div {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    padding: 15px;\n    font-size: 20px;\n    background-color: var(--salmon);\n}\n\n.modal-body, .modal-submit{\n    margin: 20px;\n    display: flex;\n    flex-direction: column;\n    gap: 5px;\n    background-color: var(--);\n}\n\ninput {\n    padding-top: 5px;\n    height: 45px;\n    padding: 0 12px;\n    border: solid 1px var(--black);\n    border-radius: 8px;\n    color: var(--black);\n    -webkit-transition: all .2s;\n    transition: all .2s;\n}\n\n.modal-submit {\n    flex-direction: row;\n    justify-content: flex-end;\n}\n\n.cancel-button, .submit-button {\n    border: solid 1px rgba(0,0,0,.15);\n    padding: 8px 12px;\n    cursor: pointer;\n    border-radius: 6px;\n}\n\n.submit-button {\n    background-color: var(--salmon);\n}\n\n.main {\n    padding: 20px;\n    color: var(--blue)\n}\n\n.project-title { \n    font-size: 25px;\n    padding-bottom: 20px;\n}\n\n.task-div {\n    display: flex;\n    justify-content: space-evenly;\n    align-items: center;\n    gap: 5px;\n\n}\n\n.task-project-name {\n    flex: 1;\n}\n\n.new-task-div {\n    display: flex;\n    align-items: center;\n    gap: 5px;\n\n}\n\n.task-description {\n    margin-top: -10px;\n    margin-left: 25px;\n    font-size: 12px;\n    padding-bottom: 0;\n}\n\n.task-div-top {\n}\n\n.task-div-top:hover {\n    background-color: var(--blue-highlight)\n}\n\n.completed {\n    position: relative;\n}\n.completed:after {\n    position: absolute;\n    z-index: 1;\n    content: \"\";\n    left: 5%;\n    top: 50%;\n    right: 0;\n    border-top: 3px solid;\n    border-color: inherit;\n    text-decoration: line-through;\n    \n}\n\n.strikethrough {\n    text-decoration: line-through;\n}", "",{"version":3,"sources":["webpack://./src/styles.css"],"names":[],"mappings":"AAAA;IACI,4BAA4B;IAC5B,iBAAiB;IACjB,gBAAgB;IAChB,eAAe;IACf,2BAA2B;IAC3B,eAAe;IACf,2BAA2B;IAC3B,gBAAgB;IAChB,gBAAgB;AACpB;;AAEA;IACI,SAAS;IACT,+BAA+B;AACnC;;AAEA;IACI,+BAA+B;IAC/B,YAAY;IACZ,kBAAkB;IAClB,eAAe;AACnB;;AAEA;IACI,aAAa;IACb,sBAAsB;IACtB,YAAY;IACZ,aAAa;IACb,6BAA6B;AACjC;;AAEA;IACI,eAAe;AACnB;;AAEA;IACI,oBAAoB;IACpB,2BAA2B;IAC3B,yBAAyB;IACzB,SAAS;IACT,aAAa;IACb,kBAAkB;IAClB,kBAAkB;IAClB,eAAe;IACf,mBAAmB;;AAEvB;;AAEA;IACI,uCAAuC;AAC3C;;AAEA;IACI,aAAa;IACb,sBAAsB;IACtB,iBAAiB;AACrB;;AAEA;IACI,oBAAoB;IACpB,kBAAkB;CACrB;;AAED;IACI,aAAa;IACb,WAAW;AACf;;AAEA;IACI,OAAO;IACP,gBAAgB;IAChB,6BAA6B;AACjC;;AAEA;IACI,YAAY;IACZ,YAAY;IACZ,gBAAgB;IAChB,8BAA8B;IAC9B,mBAAmB;IACnB,kBAAkB;IAClB,eAAe;IACf,mBAAmB;IACnB,oCAAoC;AACxC;;AAEA;IACI,uCAAuC;AAC3C;;;;AAIA;IACI,aAAa;IACb,8BAA8B;IAC9B,4BAA4B;IAC5B,eAAe;IACf;AACJ;;AAEA;IACI,aAAa;IACb,8BAA8B;IAC9B,QAAQ;IACR;AACJ;;;AAGA;IACI,iBAAiB;IACjB,WAAW;IACX,aAAa;IACb,uBAAuB;IACvB,uBAAuB;IACvB,eAAe;IACf,OAAO;IACP,QAAQ;IACR,WAAW;IACX,YAAY;IACZ;AACJ;;AAEA;IACI,aAAa;IACb,sBAAsB;IACtB,gBAAgB;IAChB,iBAAiB;IACjB,YAAY;IACZ,6BAA6B;IAC7B,2CAA2C;IAC3C,kBAAkB;AACtB;;AAEA;IACI,aAAa;IACb,8BAA8B;IAC9B,mBAAmB;IACnB,aAAa;IACb,eAAe;IACf,+BAA+B;AACnC;;AAEA;IACI,YAAY;IACZ,aAAa;IACb,sBAAsB;IACtB,QAAQ;IACR,yBAAyB;AAC7B;;AAEA;IACI,gBAAgB;IAChB,YAAY;IACZ,eAAe;IACf,8BAA8B;IAC9B,kBAAkB;IAClB,mBAAmB;IACnB,2BAA2B;IAC3B,mBAAmB;AACvB;;AAEA;IACI,mBAAmB;IACnB,yBAAyB;AAC7B;;AAEA;IACI,iCAAiC;IACjC,iBAAiB;IACjB,eAAe;IACf,kBAAkB;AACtB;;AAEA;IACI,+BAA+B;AACnC;;AAEA;IACI,aAAa;IACb;AACJ;;AAEA;IACI,eAAe;IACf,oBAAoB;AACxB;;AAEA;IACI,aAAa;IACb,6BAA6B;IAC7B,mBAAmB;IACnB,QAAQ;;AAEZ;;AAEA;IACI,OAAO;AACX;;AAEA;IACI,aAAa;IACb,mBAAmB;IACnB,QAAQ;;AAEZ;;AAEA;IACI,iBAAiB;IACjB,iBAAiB;IACjB,eAAe;IACf,iBAAiB;AACrB;;AAEA;AACA;;AAEA;IACI;AACJ;;AAEA;IACI,kBAAkB;AACtB;AACA;IACI,kBAAkB;IAClB,UAAU;IACV,WAAW;IACX,QAAQ;IACR,QAAQ;IACR,QAAQ;IACR,qBAAqB;IACrB,qBAAqB;IACrB,6BAA6B;;AAEjC;;AAEA;IACI,6BAA6B;AACjC","sourcesContent":[":root {\n    --salmon: rgb(255, 166, 158);\n    --yellow: #FAF3DD;\n    --green: #B8F2E6;\n    --blue: #545a5c;\n    --blue-highlight: #545a5c83;\n    --grey: #e9e9e9;\n    --grey-highlight: #e9e9e970;\n    --black: #2D2D34;\n    --white: #ffffff;\n}\n\nbody {\n    margin: 0;\n    font-family: 'Tillana', cursive;\n}\n\n.header {\n    background-color: var(--salmon);\n    height: 60px;\n    padding-left: 30px;\n    font-size: 25px;\n}\n\n.sidebar {\n    display: flex;\n    flex-direction: column;\n    width: 300px;\n    height: 100vh;\n    background-color: var(--blue);\n}\n\n.material-symbols-outlined {\n    cursor: pointer;\n}\n\n.static-list-item {\n    display: inline-flex;\n    flex-direction: row-reverse;\n    justify-content: flex-end;\n    gap: 20px;\n    padding: 10px;\n    padding-left: 20px;\n    color: var(--grey);\n    font-size: 25px;\n    align-items: center;\n\n}\n\n.static-list-item:hover {\n    background-color: var(--grey-highlight);\n}\n\n.nav-static {\n    display: flex;\n    flex-direction: column;\n    padding-top: 30px;\n}\n\na {\n    text-decoration:none;\n    color: var(--grey);\n }\n\n.container {\n    display: flex;\n    width: 100%;\n}\n\n.main {\n    flex: 1;\n    min-width: 300px;\n    background-color: var(--grey);\n}\n\n.nav-project-header {\n    display:flex;\n    margin: 20px;\n    margin-top: 40px;\n    justify-content: space-between;\n    align-items: center;\n    color: var(--grey);\n    font-size: 20px;\n    padding-bottom: 5px;\n    border-bottom: 2px solid var(--grey);\n}\n\n.active-project:hover{\n    background-color: var(--grey-highlight);\n}\n\n\n\n.active-project {\n    display: flex;\n    justify-content: space-between;\n    padding: 10px 20px 10px 20px;\n    font-size: 20px;\n    align-items: center\n}\n\n.modal-div {\n    display: flex;\n    justify-content: space-between;\n    gap: 5px;\n    align-items: center\n}\n\n\n.modal-display {\n    position:absolute;\n    z-index: 10;\n    display: flex;\n    justify-content: center;\n    align-items: flex-start;\n    position: fixed;\n    left: 0;\n    right: 0;\n    width: 100%;\n    height: 100%;\n    background-color: #121e2281\n}\n\n.new-project-modal-container {\n    display: flex;\n    flex-direction: column;\n    min-width: 400px;\n    margin-top: 180px;\n    height: auto;\n    background-color: var(--grey);\n    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;\n    color: var(--blue);\n}\n\n.modal-title-div {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    padding: 15px;\n    font-size: 20px;\n    background-color: var(--salmon);\n}\n\n.modal-body, .modal-submit{\n    margin: 20px;\n    display: flex;\n    flex-direction: column;\n    gap: 5px;\n    background-color: var(--);\n}\n\ninput {\n    padding-top: 5px;\n    height: 45px;\n    padding: 0 12px;\n    border: solid 1px var(--black);\n    border-radius: 8px;\n    color: var(--black);\n    -webkit-transition: all .2s;\n    transition: all .2s;\n}\n\n.modal-submit {\n    flex-direction: row;\n    justify-content: flex-end;\n}\n\n.cancel-button, .submit-button {\n    border: solid 1px rgba(0,0,0,.15);\n    padding: 8px 12px;\n    cursor: pointer;\n    border-radius: 6px;\n}\n\n.submit-button {\n    background-color: var(--salmon);\n}\n\n.main {\n    padding: 20px;\n    color: var(--blue)\n}\n\n.project-title { \n    font-size: 25px;\n    padding-bottom: 20px;\n}\n\n.task-div {\n    display: flex;\n    justify-content: space-evenly;\n    align-items: center;\n    gap: 5px;\n\n}\n\n.task-project-name {\n    flex: 1;\n}\n\n.new-task-div {\n    display: flex;\n    align-items: center;\n    gap: 5px;\n\n}\n\n.task-description {\n    margin-top: -10px;\n    margin-left: 25px;\n    font-size: 12px;\n    padding-bottom: 0;\n}\n\n.task-div-top {\n}\n\n.task-div-top:hover {\n    background-color: var(--blue-highlight)\n}\n\n.completed {\n    position: relative;\n}\n.completed:after {\n    position: absolute;\n    z-index: 1;\n    content: \"\";\n    left: 5%;\n    top: 50%;\n    right: 0;\n    border-top: 3px solid;\n    border-color: inherit;\n    text-decoration: line-through;\n    \n}\n\n.strikethrough {\n    text-decoration: line-through;\n}\n\n@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Tillana&display=swap');"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ":root {\n    --salmon: #369A7E;\n    --yellow: #FAF3DD;\n    --green: #B8F2E6;\n    --blue: #545a5c;\n    --blue-highlight: #545a5c83;\n    --grey: #e9e9e9;\n    --grey-highlight: #e9e9e970;\n    --black: #2D2D34;\n    --white: #ffffff;\n}\n\nbody {\n    margin: 0;\n    font-family: 'Tillana', cursive;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n}\n\n.header {\n    background-color: var(--salmon);\n    height: 60px;\n    font-size: 20px;\n    width: 70%;\n\n}\n\n\n.sidebar {\n    display: flex;\n    flex-direction: column;\n    width: 250px;\n    height: 100vh;\n    background-color: var(--blue);\n}\n\n@media (max-width:991px) {\n    #sidebar {\n        /* position: absolute;\n        left: -100px;\n        width: 100px;\n        height: 100px;\n        background: blue;\n        -webkit-animation: slide 1s forwards;\n        -webkit-animation-delay: 3s;\n        animation: slide 1s forwards;\n        animation-delay: 2s; */\n\n        display: none;\n    }\n    .main {\n        width: 100vw;\n        flex-direction: column;\n        height: 100vh;\n        flex: 1;\n    }\n    .container {\n        width: 100%;\n    }\n}\n\n@media (min-width:991px) {\n    #sidebar {\n\n        display: flex;\n    }\n    .container {\n        width: 70%;\n    }\n}\n\n\n.sidebar-show {\n    -webkit-transform: translateX(0);\n    transform: translateX(0);\n    display: flex;\n  }\n\n.sidebar-hide {\n    -webkit-transform: translateX(-1000px);\n    transform: translateX(-1000px);\n    display: none;\n}\n\n.material-symbols-outlined {\n    cursor: pointer;\n}\n\n.static-list-item {\n    display: inline-flex;\n    flex-direction: row-reverse;\n    justify-content: flex-end;\n    gap: 20px;\n    padding: 10px;\n    padding-left: 20px;\n    color: var(--grey);\n    font-size: 25px;\n    align-items: center;\n\n}\n\n.static-list-item:hover {\n    background-color: var(--grey-highlight);\n}\n\n.nav-static {\n    display: flex;\n    flex-direction: column;\n    padding-top: 30px;\n}\n\na {\n    text-decoration:none;\n    color: var(--grey);\n }\n\n.container {\n    display: flex;\n    width: 70%;\n}\n\n.main {\n    flex: 1;\n    min-width: 300px;\n    /* background-color: var(--grey); */\n    background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n}\n\n.nav-project-header {\n    display:flex;\n    margin: 20px;\n    margin-top: 40px;\n    justify-content: space-between;\n    align-items: center;\n    color: var(--grey);\n    font-size: 20px;\n    padding-bottom: 5px;\n    border-bottom: 2px solid var(--grey);\n}\n\n.active-project:hover{\n    background-color: var(--grey-highlight);\n}\n\n\n\n.active-project {\n    display: flex;\n    justify-content: space-between;\n    padding: 10px 20px 10px 20px;\n    font-size: 20px;\n    align-items: center\n}\n\n.modal-div {\n    display: flex;\n    justify-content: space-between;\n    gap: 5px;\n    align-items: center\n}\n\n\n.modal-display {\n    position:absolute;\n    z-index: 10;\n    display: flex;\n    justify-content: center;\n    align-items: flex-start;\n    position: fixed;\n    left: 0;\n    right: 0;\n    width: 100%;\n    height: 100%;\n    background-color: #121e2281\n}\n\n.new-project-modal-container {\n    display: flex;\n    flex-direction: column;\n    min-width: 400px;\n    margin-top: 180px;\n    height: auto;\n    background-color: var(--grey);\n    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;\n    color: var(--blue);\n}\n\n.modal-title-div {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    padding: 15px;\n    font-size: 20px;\n    background-color: var(--salmon);\n}\n\n.modal-body, .modal-submit{\n    margin: 20px;\n    display: flex;\n    flex-direction: column;\n    gap: 5px;\n    background-color: var(--);\n}\n\ninput {\n    padding-top: 5px;\n    height: 45px;\n    padding: 0 12px;\n    border: solid 1px var(--black);\n    border-radius: 8px;\n    color: var(--black);\n    -webkit-transition: all .2s;\n    transition: all .2s;\n}\n\n.modal-submit {\n    flex-direction: row;\n    justify-content: flex-end;\n}\n\n.cancel-button, .submit-button {\n    border: solid 1px rgba(0,0,0,.15);\n    padding: 8px 12px;\n    cursor: pointer;\n    border-radius: 6px;\n}\n\n.submit-button {\n    background-color: var(--salmon);\n}\n\n.main {\n    padding: 20px;\n    color: var(--blue)\n}\n\n.project-title { \n    font-size: 25px;\n    padding-bottom: 20px;\n}\n\n.task-div {\n    display: flex;\n    justify-content: space-evenly;\n    align-items: center;\n    gap: 5px;\n\n}\n\n.task-project-name {\n    flex: 1;\n}\n\n.new-task-div {\n    display: flex;\n    align-items: center;\n    gap: 5px;\n\n}\n\n.task-description {\n    margin-top: -10px;\n    margin-left: 25px;\n    font-size: 12px;\n    padding-bottom: 0;\n}\n\n.task-div-top {\n}\n\n.task-div-top:hover {\n    background-color: var(--blue-highlight)\n}\n\n.completed {\n    position: relative;\n}\n.completed:after {\n    position: absolute;\n    z-index: 1;\n    content: \"\";\n    left: 5%;\n    top: 50%;\n    right: 0;\n    border-top: 3px solid;\n    border-color: inherit;\n    text-decoration: line-through;\n    \n}\n\n.strikethrough {\n    text-decoration: line-through;\n}", "",{"version":3,"sources":["webpack://./src/styles.css"],"names":[],"mappings":"AAAA;IACI,iBAAiB;IACjB,iBAAiB;IACjB,gBAAgB;IAChB,eAAe;IACf,2BAA2B;IAC3B,eAAe;IACf,2BAA2B;IAC3B,gBAAgB;IAChB,gBAAgB;AACpB;;AAEA;IACI,SAAS;IACT,+BAA+B;IAC/B,aAAa;IACb,sBAAsB;IACtB,mBAAmB;AACvB;;AAEA;IACI,+BAA+B;IAC/B,YAAY;IACZ,eAAe;IACf,UAAU;;AAEd;;;AAGA;IACI,aAAa;IACb,sBAAsB;IACtB,YAAY;IACZ,aAAa;IACb,6BAA6B;AACjC;;AAEA;IACI;QACI;;;;;;;;8BAQsB;;QAEtB,aAAa;IACjB;IACA;QACI,YAAY;QACZ,sBAAsB;QACtB,aAAa;QACb,OAAO;IACX;IACA;QACI,WAAW;IACf;AACJ;;AAEA;IACI;;QAEI,aAAa;IACjB;IACA;QACI,UAAU;IACd;AACJ;;;AAGA;IACI,gCAAgC;IAChC,wBAAwB;IACxB,aAAa;EACf;;AAEF;IACI,sCAAsC;IACtC,8BAA8B;IAC9B,aAAa;AACjB;;AAEA;IACI,eAAe;AACnB;;AAEA;IACI,oBAAoB;IACpB,2BAA2B;IAC3B,yBAAyB;IACzB,SAAS;IACT,aAAa;IACb,kBAAkB;IAClB,kBAAkB;IAClB,eAAe;IACf,mBAAmB;;AAEvB;;AAEA;IACI,uCAAuC;AAC3C;;AAEA;IACI,aAAa;IACb,sBAAsB;IACtB,iBAAiB;AACrB;;AAEA;IACI,oBAAoB;IACpB,kBAAkB;CACrB;;AAED;IACI,aAAa;IACb,UAAU;AACd;;AAEA;IACI,OAAO;IACP,gBAAgB;IAChB,mCAAmC;IACnC,yDAA+C;AACnD;;AAEA;IACI,YAAY;IACZ,YAAY;IACZ,gBAAgB;IAChB,8BAA8B;IAC9B,mBAAmB;IACnB,kBAAkB;IAClB,eAAe;IACf,mBAAmB;IACnB,oCAAoC;AACxC;;AAEA;IACI,uCAAuC;AAC3C;;;;AAIA;IACI,aAAa;IACb,8BAA8B;IAC9B,4BAA4B;IAC5B,eAAe;IACf;AACJ;;AAEA;IACI,aAAa;IACb,8BAA8B;IAC9B,QAAQ;IACR;AACJ;;;AAGA;IACI,iBAAiB;IACjB,WAAW;IACX,aAAa;IACb,uBAAuB;IACvB,uBAAuB;IACvB,eAAe;IACf,OAAO;IACP,QAAQ;IACR,WAAW;IACX,YAAY;IACZ;AACJ;;AAEA;IACI,aAAa;IACb,sBAAsB;IACtB,gBAAgB;IAChB,iBAAiB;IACjB,YAAY;IACZ,6BAA6B;IAC7B,2CAA2C;IAC3C,kBAAkB;AACtB;;AAEA;IACI,aAAa;IACb,8BAA8B;IAC9B,mBAAmB;IACnB,aAAa;IACb,eAAe;IACf,+BAA+B;AACnC;;AAEA;IACI,YAAY;IACZ,aAAa;IACb,sBAAsB;IACtB,QAAQ;IACR,yBAAyB;AAC7B;;AAEA;IACI,gBAAgB;IAChB,YAAY;IACZ,eAAe;IACf,8BAA8B;IAC9B,kBAAkB;IAClB,mBAAmB;IACnB,2BAA2B;IAC3B,mBAAmB;AACvB;;AAEA;IACI,mBAAmB;IACnB,yBAAyB;AAC7B;;AAEA;IACI,iCAAiC;IACjC,iBAAiB;IACjB,eAAe;IACf,kBAAkB;AACtB;;AAEA;IACI,+BAA+B;AACnC;;AAEA;IACI,aAAa;IACb;AACJ;;AAEA;IACI,eAAe;IACf,oBAAoB;AACxB;;AAEA;IACI,aAAa;IACb,6BAA6B;IAC7B,mBAAmB;IACnB,QAAQ;;AAEZ;;AAEA;IACI,OAAO;AACX;;AAEA;IACI,aAAa;IACb,mBAAmB;IACnB,QAAQ;;AAEZ;;AAEA;IACI,iBAAiB;IACjB,iBAAiB;IACjB,eAAe;IACf,iBAAiB;AACrB;;AAEA;AACA;;AAEA;IACI;AACJ;;AAEA;IACI,kBAAkB;AACtB;AACA;IACI,kBAAkB;IAClB,UAAU;IACV,WAAW;IACX,QAAQ;IACR,QAAQ;IACR,QAAQ;IACR,qBAAqB;IACrB,qBAAqB;IACrB,6BAA6B;;AAEjC;;AAEA;IACI,6BAA6B;AACjC","sourcesContent":[":root {\n    --salmon: #369A7E;\n    --yellow: #FAF3DD;\n    --green: #B8F2E6;\n    --blue: #545a5c;\n    --blue-highlight: #545a5c83;\n    --grey: #e9e9e9;\n    --grey-highlight: #e9e9e970;\n    --black: #2D2D34;\n    --white: #ffffff;\n}\n\nbody {\n    margin: 0;\n    font-family: 'Tillana', cursive;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n}\n\n.header {\n    background-color: var(--salmon);\n    height: 60px;\n    font-size: 20px;\n    width: 70%;\n\n}\n\n\n.sidebar {\n    display: flex;\n    flex-direction: column;\n    width: 250px;\n    height: 100vh;\n    background-color: var(--blue);\n}\n\n@media (max-width:991px) {\n    #sidebar {\n        /* position: absolute;\n        left: -100px;\n        width: 100px;\n        height: 100px;\n        background: blue;\n        -webkit-animation: slide 1s forwards;\n        -webkit-animation-delay: 3s;\n        animation: slide 1s forwards;\n        animation-delay: 2s; */\n\n        display: none;\n    }\n    .main {\n        width: 100vw;\n        flex-direction: column;\n        height: 100vh;\n        flex: 1;\n    }\n    .container {\n        width: 100%;\n    }\n}\n\n@media (min-width:991px) {\n    #sidebar {\n\n        display: flex;\n    }\n    .container {\n        width: 70%;\n    }\n}\n\n\n.sidebar-show {\n    -webkit-transform: translateX(0);\n    transform: translateX(0);\n    display: flex;\n  }\n\n.sidebar-hide {\n    -webkit-transform: translateX(-1000px);\n    transform: translateX(-1000px);\n    display: none;\n}\n\n.material-symbols-outlined {\n    cursor: pointer;\n}\n\n.static-list-item {\n    display: inline-flex;\n    flex-direction: row-reverse;\n    justify-content: flex-end;\n    gap: 20px;\n    padding: 10px;\n    padding-left: 20px;\n    color: var(--grey);\n    font-size: 25px;\n    align-items: center;\n\n}\n\n.static-list-item:hover {\n    background-color: var(--grey-highlight);\n}\n\n.nav-static {\n    display: flex;\n    flex-direction: column;\n    padding-top: 30px;\n}\n\na {\n    text-decoration:none;\n    color: var(--grey);\n }\n\n.container {\n    display: flex;\n    width: 70%;\n}\n\n.main {\n    flex: 1;\n    min-width: 300px;\n    /* background-color: var(--grey); */\n    background-image: url(\"../src/white_paper.jpg\");\n}\n\n.nav-project-header {\n    display:flex;\n    margin: 20px;\n    margin-top: 40px;\n    justify-content: space-between;\n    align-items: center;\n    color: var(--grey);\n    font-size: 20px;\n    padding-bottom: 5px;\n    border-bottom: 2px solid var(--grey);\n}\n\n.active-project:hover{\n    background-color: var(--grey-highlight);\n}\n\n\n\n.active-project {\n    display: flex;\n    justify-content: space-between;\n    padding: 10px 20px 10px 20px;\n    font-size: 20px;\n    align-items: center\n}\n\n.modal-div {\n    display: flex;\n    justify-content: space-between;\n    gap: 5px;\n    align-items: center\n}\n\n\n.modal-display {\n    position:absolute;\n    z-index: 10;\n    display: flex;\n    justify-content: center;\n    align-items: flex-start;\n    position: fixed;\n    left: 0;\n    right: 0;\n    width: 100%;\n    height: 100%;\n    background-color: #121e2281\n}\n\n.new-project-modal-container {\n    display: flex;\n    flex-direction: column;\n    min-width: 400px;\n    margin-top: 180px;\n    height: auto;\n    background-color: var(--grey);\n    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;\n    color: var(--blue);\n}\n\n.modal-title-div {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    padding: 15px;\n    font-size: 20px;\n    background-color: var(--salmon);\n}\n\n.modal-body, .modal-submit{\n    margin: 20px;\n    display: flex;\n    flex-direction: column;\n    gap: 5px;\n    background-color: var(--);\n}\n\ninput {\n    padding-top: 5px;\n    height: 45px;\n    padding: 0 12px;\n    border: solid 1px var(--black);\n    border-radius: 8px;\n    color: var(--black);\n    -webkit-transition: all .2s;\n    transition: all .2s;\n}\n\n.modal-submit {\n    flex-direction: row;\n    justify-content: flex-end;\n}\n\n.cancel-button, .submit-button {\n    border: solid 1px rgba(0,0,0,.15);\n    padding: 8px 12px;\n    cursor: pointer;\n    border-radius: 6px;\n}\n\n.submit-button {\n    background-color: var(--salmon);\n}\n\n.main {\n    padding: 20px;\n    color: var(--blue)\n}\n\n.project-title { \n    font-size: 25px;\n    padding-bottom: 20px;\n}\n\n.task-div {\n    display: flex;\n    justify-content: space-evenly;\n    align-items: center;\n    gap: 5px;\n\n}\n\n.task-project-name {\n    flex: 1;\n}\n\n.new-task-div {\n    display: flex;\n    align-items: center;\n    gap: 5px;\n\n}\n\n.task-description {\n    margin-top: -10px;\n    margin-left: 25px;\n    font-size: 12px;\n    padding-bottom: 0;\n}\n\n.task-div-top {\n}\n\n.task-div-top:hover {\n    background-color: var(--blue-highlight)\n}\n\n.completed {\n    position: relative;\n}\n.completed:after {\n    position: absolute;\n    z-index: 1;\n    content: \"\";\n    left: 5%;\n    top: 50%;\n    right: 0;\n    border-top: 3px solid;\n    border-color: inherit;\n    text-decoration: line-through;\n    \n}\n\n.strikethrough {\n    text-decoration: line-through;\n}\n\n\n@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Tillana&display=swap');"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -119,6 +124,41 @@ module.exports = function (cssWithMappingToString) {
     }
   };
   return list;
+};
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/runtime/getUrl.js":
+/*!********************************************************!*\
+  !*** ./node_modules/css-loader/dist/runtime/getUrl.js ***!
+  \********************************************************/
+/***/ ((module) => {
+
+
+
+module.exports = function (url, options) {
+  if (!options) {
+    options = {};
+  }
+  if (!url) {
+    return url;
+  }
+  url = String(url.__esModule ? url.default : url);
+
+  // If url is already wrapped in quotes, remove them
+  if (/^['"].*['"]$/.test(url)) {
+    url = url.slice(1, -1);
+  }
+  if (options.hash) {
+    url += options.hash;
+  }
+
+  // Should url be wrapped?
+  // See https://drafts.csswg.org/css-values-3/#urls
+  if (/["'() \t\n]|(%20)/.test(url) || options.needQuotes) {
+    return "\"".concat(url.replace(/"/g, '\\"').replace(/\n/g, "\\n"), "\"");
+  }
+  return url;
 };
 
 /***/ }),
@@ -4482,6 +4522,7 @@ let renderStaticElements = () => {
     containerObject.className = "container";
     let sidebarObject = document.createElement('nav');
     sidebarObject.className = "sidebar";
+    sidebarObject.id = "sidebar";
     let mainObject = document.createElement('div');
     mainObject.className = "main";
     mainObject.id = "main";
@@ -4972,6 +5013,8 @@ function filterMain(mode) {
 
 
 
+
+
 /***/ }),
 
 /***/ "./src/handlers.js":
@@ -5267,6 +5310,16 @@ function updateLocalStorage (db) {
 
 
 
+/***/ }),
+
+/***/ "./src/white_paper.jpg":
+/*!*****************************!*\
+  !*** ./src/white_paper.jpg ***!
+  \*****************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "9c0e717176e02ea01e95.jpg";
+
 /***/ })
 
 /******/ 	});
@@ -5295,6 +5348,9 @@ function updateLocalStorage (db) {
 /******/ 		return module.exports;
 /******/ 	}
 /******/ 	
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = __webpack_modules__;
+/******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/compat get default export */
 /******/ 	(() => {
@@ -5320,6 +5376,18 @@ function updateLocalStorage (db) {
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -5334,6 +5402,52 @@ function updateLocalStorage (db) {
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/jsonp chunk loading */
+/******/ 	(() => {
+/******/ 		__webpack_require__.b = document.baseURI || self.location.href;
+/******/ 		
+/******/ 		// object to store loaded and loading chunks
+/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
+/******/ 		var installedChunks = {
+/******/ 			"main": 0
+/******/ 		};
+/******/ 		
+/******/ 		// no chunk on demand loading
+/******/ 		
+/******/ 		// no prefetching
+/******/ 		
+/******/ 		// no preloaded
+/******/ 		
+/******/ 		// no HMR
+/******/ 		
+/******/ 		// no HMR manifest
+/******/ 		
+/******/ 		// no on chunks loaded
+/******/ 		
+/******/ 		// no jsonp function
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/nonce */
