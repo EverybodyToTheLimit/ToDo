@@ -1,5 +1,5 @@
 :root {
-    --salmon: rgb(255, 166, 158);
+    --salmon: #369A7E;
     --yellow: #FAF3DD;
     --green: #B8F2E6;
     --blue: #545a5c;
@@ -13,21 +13,74 @@
 body {
     margin: 0;
     font-family: 'Tillana', cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .header {
     background-color: var(--salmon);
     height: 60px;
-    padding-left: 30px;
-    font-size: 25px;
+    font-size: 20px;
+    width: 70%;
+
 }
+
 
 .sidebar {
     display: flex;
     flex-direction: column;
-    width: 300px;
+    width: 250px;
     height: 100vh;
     background-color: var(--blue);
+}
+
+@media (max-width:991px) {
+    #sidebar {
+        /* position: absolute;
+        left: -100px;
+        width: 100px;
+        height: 100px;
+        background: blue;
+        -webkit-animation: slide 1s forwards;
+        -webkit-animation-delay: 3s;
+        animation: slide 1s forwards;
+        animation-delay: 2s; */
+
+        display: none;
+    }
+    .main {
+        width: 100vw;
+        flex-direction: column;
+        height: 100vh;
+        flex: 1;
+    }
+    .container {
+        width: 100%;
+    }
+}
+
+@media (min-width:991px) {
+    #sidebar {
+
+        display: flex;
+    }
+    .container {
+        width: 70%;
+    }
+}
+
+
+.sidebar-show {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    display: flex;
+  }
+
+.sidebar-hide {
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+    display: none;
 }
 
 .material-symbols-outlined {
@@ -64,13 +117,14 @@ a {
 
 .container {
     display: flex;
-    width: 100%;
+    width: 70%;
 }
 
 .main {
     flex: 1;
     min-width: 300px;
-    background-color: var(--grey);
+    /* background-color: var(--grey); */
+    background-image: url("../src/white_paper.jpg");
 }
 
 .nav-project-header {
@@ -238,5 +292,6 @@ input {
 .strikethrough {
     text-decoration: line-through;
 }
+
 
 @import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Tillana&display=swap');

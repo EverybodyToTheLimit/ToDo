@@ -18,6 +18,7 @@ let renderStaticElements = () => {
     containerObject.className = "container";
     let sidebarObject = document.createElement('nav');
     sidebarObject.className = "sidebar";
+    sidebarObject.id = "sidebar";
     let mainObject = document.createElement('div');
     mainObject.className = "main";
     mainObject.id = "main";
@@ -504,6 +505,8 @@ function filterMain(mode) {
         mainScreen.appendChild(infoDiv);
     }
 }
+
+
 
 
 export {
