@@ -247,7 +247,9 @@ let renderNewProjectModal = (type, projectId, taskId) => {
         modalFormTaskDescription.value = projectList[projectId].tasks[taskId].description;
         modalFormPriority.value = projectList[projectId].tasks[taskId].priority;
         if(modalFormPriority.value !== "false") {modalFormPriority.checked = true}
-        modalFormDueDate.value = projectList[projectId].tasks[taskId].dueDate;
+        let dateFeed = projectList[projectId].tasks[taskId].dueDate.toString();
+        modalFormDueDate.value = dateFeed.slice(0,10)
+
     }
 
     modalCheckboxGroup.appendChild(modalFormPriorityLabel);
