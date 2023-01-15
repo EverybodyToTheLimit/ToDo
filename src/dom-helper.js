@@ -227,6 +227,8 @@ let renderNewProjectModal = (type, projectId, taskId) => {
     modalFormDueDateLabel.htmlFor = "due-date"
     modalFormDueDateLabel.innerHTML = "Due Date"
 
+    let modalCheckboxGroup = document.createElement("div");
+    modalCheckboxGroup.className = "check-group"
     let modalFormPriority = document.createElement('input')
     modalFormPriority.id = "priority"
     modalFormPriority.name = "priority"
@@ -247,13 +249,13 @@ let renderNewProjectModal = (type, projectId, taskId) => {
         modalFormDueDate.value = projectList[projectId].tasks[taskId].dueDate;
     }
 
-
+    modalCheckboxGroup.appendChild(modalFormPriorityLabel);
+    modalCheckboxGroup.appendChild(modalFormPriority);
     modalBody.appendChild(modalFormLabel);
     modalBody.appendChild(modalFormProjectName);
     modalBody.appendChild(modalFormDescriptionLabel);
     modalBody.appendChild(modalFormTaskDescription);
-    modalBody.appendChild(modalFormPriorityLabel);
-    modalBody.appendChild(modalFormPriority);
+    modalBody.appendChild(modalCheckboxGroup);
     modalBody.appendChild(modalFormDueDateLabel);
     modalBody.appendChild(modalFormDueDate);
     modalSubmitDiv.appendChild(modalCancell);

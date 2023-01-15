@@ -214,11 +214,25 @@ input {
     padding-top: 5px;
     height: 45px;
     padding: 0 12px;
-    border: solid 1px var(--black);
-    border-radius: 8px;
-    color: var(--black);
+    background-color: var(--grey);
+    border:none;
+    border-bottom:1px solid #757575;
     -webkit-transition: all .2s;
     transition: all .2s;
+}
+
+input:focus     { outline:none; }
+
+input[type="checkbox"] {
+    /* ...existing styles */
+    float: right;
+    width: 20px;
+  }
+
+.check-group {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
 }
 
 
