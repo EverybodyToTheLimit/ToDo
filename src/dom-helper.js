@@ -223,6 +223,7 @@ let renderNewProjectModal = (type, projectId, taskId) => {
     modalFormDueDate.name = "due-date"
     modalFormDueDate.type = "date"
     modalFormDueDate.required = false;
+    modalFormDueDate.max = "9999-12-30"
     let modalFormDueDateLabel = document.createElement('LABEL')
     modalFormDueDateLabel.htmlFor = "due-date"
     modalFormDueDateLabel.innerHTML = "Due Date"
@@ -276,15 +277,26 @@ let renderNewProjectModal = (type, projectId, taskId) => {
     if (type == "task-edit") {
     modalSubmit.addEventListener('click', (event) => {
         event.preventDefault();
+        if (!validateForm()) {
+            return
+        } else {
         clickHandler("task-edited",projectId,modalFormProjectName.value,taskId,modalFormTaskDescription.value,modalFormDueDate.value,modalFormPriority.checked)
         modalForm.reset();
+        }
     })   
     }
 
     else if (type == "task") {
+        
         modalSubmit.addEventListener('click', (event) => {
+
+            event.preventDefault();
+            if (!validateForm()) {
+                return
+            } else {
         clickHandler("new-event-created",projectId,modalFormProjectName.value,undefined,modalFormTaskDescription.value,modalFormDueDate.value,modalFormPriority.checked)
         modalForm.reset();
+            }
         })
     }  
 
@@ -296,11 +308,14 @@ let renderNewProjectModal = (type, projectId, taskId) => {
     if (type == "project-edit") {
         let projectList = getProjectNames();
         modalTitle.value = projectList[projectId].title;
-
         modalSubmit.addEventListener('click', (event) => {
             event.preventDefault();
+            if (!validateForm()) {
+                return
+            } else {
             clickHandler("project-edited", projectId, modalFormProjectName.value)
             modalForm.reset();
+            }
         })
 
     }
@@ -309,8 +324,12 @@ let renderNewProjectModal = (type, projectId, taskId) => {
     else if (type == "project") {
     modalSubmit.addEventListener('click', (event) => {
         event.preventDefault();
+        if (!validateForm()) {
+            return
+        } else {
         clickHandler("new-project-created",undefined,modalFormProjectName.value)
         modalForm.reset();
+        }
     })}
 
 
@@ -331,6 +350,35 @@ let renderNewProjectModal = (type, projectId, taskId) => {
     header.before(modalDisplay)
     }
 
+}
+
+let validateForm = () => {
+    let modalFormProjectName = document.getElementById("project-name")
+    let dueDate = document.getElementById("due-date")
+    let hint = document.querySelector(".hint")
+    if (hint !== null) {hint.remove()}
+  
+        if (modalFormProjectName.value == "") {
+        modalFormProjectName.classList.add("invalid")
+        let hintDev = document.createElement('div');
+        hintDev.textContent = "Title cannot be empty"
+        hintDev.classList.add("hint")
+        modalFormProjectName.parentNode.insertBefore(hintDev, modalFormProjectName.nextSibling)
+        return false
+        }
+
+        else if (dueDate !== null && dueDate.value == "") {
+        dueDate.classList.add("invalid")
+        let hintDev1 = document.createElement('div');
+        hintDev1.textContent = "Please enter a valid date"
+        hintDev1.classList.add("hint")
+        dueDate.parentNode.insertBefore(hintDev1, dueDate.nextSibling)
+        return false
+        }
+        
+        else {
+            return true
+        }
 }
 
 let removeNewProjectModal = () => {

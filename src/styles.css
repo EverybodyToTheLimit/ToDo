@@ -1,7 +1,7 @@
 :root {
     --salmon: #369a7e;
     --salmon-gradient: linear-gradient(90deg, rgba(84,90,92,1) 0%, rgba(54,154,126,1) 60%, rgba(0,212,255,1) 100%);
-    --yellow: #FAF3DD;
+    --yellow: #F87575;
     --green: #B8F2E6;
     --blue: #545a5c;
     --blue-highlight: #545a5c83;
@@ -315,5 +315,21 @@ input[type="checkbox"] {
     text-decoration: line-through;
 }
 
+.invalid {
+    border-bottom: 2px solid var(--salmon)
+}
+
+.hint {
+    font-size: 10px;
+    font-weight: bold;
+    animation: shake .3s;
+    color: var(--yellow);
+}
+
+@keyframes shake {
+ 	25% { transform: translateX(4px) }
+	50% { transform: translateX(-4px) }
+	75% { transform: translateX(4px) }
+}
 
 @import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Tillana&display=swap');
