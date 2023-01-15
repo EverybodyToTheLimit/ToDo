@@ -24,7 +24,6 @@ body {
     height: 60px;
     font-size: 20px;
     width: 70%;
-    min-width: 300px;
     display: flex;
     justify-items: flex-start;
     align-items: center;
@@ -46,7 +45,6 @@ body {
 
 .sidebar {
     flex-direction: column;
-    width: 250px;
     height: 100vh;
     background-color: var(--blue);
     box-shadow: 25px 0 20px -20px rgba(0, 0, 0, 0.45), -25px 0 20px -20px rgba(0, 0, 0, 0.45);
@@ -60,6 +58,12 @@ body {
     display: flex;
 }
 
+.container {
+    display: flex;
+    z-index: 0;
+    width: 70%;
+}
+
 .main-mobile {
     width: 100vw;
     flex-direction: column;
@@ -68,13 +72,6 @@ body {
     padding: 0;
 }
 
-.container-mobile {
-    width: 100%;
-}
-
-.container-wide {
-    width: 70%;
-}
 
 
 .sidebar-show {
@@ -121,16 +118,18 @@ a {
     color: var(--grey);
  }
 
-.container {
-    display: flex;
-    z-index: 0;
-}
+
 
 .main {
     flex: 1;
-    min-width: 300px;
     /* background-color: var(--grey); */
     background-image: url("../src/white_paper.jpg");
+    width: 100vw;
+    flex-direction: column;
+    height: 100vh;
+    flex: 1;
+    padding: 0;
+
 }
 
 .nav-project-header {
@@ -224,7 +223,6 @@ input {
 input:focus     { outline:none; }
 
 input[type="checkbox"] {
-    /* ...existing styles */
     float: right;
     width: 20px;
   }
@@ -331,5 +329,14 @@ input[type="checkbox"] {
 	50% { transform: translateX(-4px) }
 	75% { transform: translateX(4px) }
 }
+
+
+/* Responsiveness */
+
+@media only screen and (max-width: 600px) {
+    .header, .container {
+      width: 100%
+    }
+  }
 
 @import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Tillana&display=swap');

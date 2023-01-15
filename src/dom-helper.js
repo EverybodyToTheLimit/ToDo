@@ -577,36 +577,36 @@ function toggleSidebar() {
   }
 
 
-function responsiveSidebar (e) {
-    let sidebar = document.getElementById('sidebar');
-    let menuButton = document.getElementById('menu-button');
-    let main = document.querySelector(".main");
-    let container = document.querySelector(".container");
-    let header = document.getElementById('header');
-    // Check if the media query is true
-    if (e.matches && !sidebar.classList.contains('sidebar-show')) {
-      // Then log the following message to the console
-      console.log('Media Query Matched!')
-      sidebar.classList.remove('sidebar-hide');
-      sidebar.classList.add('sidebar-show');
-      menuButton.classList.remove('sidebar-show');
-      menuButton.classList.add('sidebar-hide');
-      main.classList.remove('main-mobile');
-      container.classList.remove('container-mobile');
-      container.classList.add('container-wide');
-      header.classList.remove('header-mobile')
-    }
-    else if (!e.matches && sidebar.classList.contains('sidebar-show')){
-      sidebar.classList.remove('sidebar-show');
-      sidebar.classList.add('sidebar-hide');
-      menuButton.classList.remove('sidebar-hide');
-      menuButton.classList.add('sidebar-show');
-      main.classList.add('main-mobile');
-      container.classList.add('container-mobile');
-      container.classList.remove('container-wide');
-      header.classList.add('header-mobile')
-    }
-  }
+// function responsiveSidebar (e) {
+//     let sidebar = document.getElementById('sidebar');
+//     let menuButton = document.getElementById('menu-button');
+//     let main = document.querySelector(".main");
+//     let container = document.querySelector(".container");
+//     let header = document.getElementById('header');
+//     // Check if the media query is true
+//     if (e.matches && !sidebar.classList.contains('sidebar-show')) {
+//       // Then log the following message to the console
+//       console.log('Media Query Matched!')
+//       sidebar.classList.remove('sidebar-hide');
+//       sidebar.classList.add('sidebar-show');
+//       menuButton.classList.remove('sidebar-show');
+//       menuButton.classList.add('sidebar-hide');
+//       main.classList.remove('main-mobile');
+//       container.classList.remove('container-mobile');
+//       container.classList.add('container-wide');
+//       header.classList.remove('header-mobile')
+//     }
+//     else if (!e.matches && sidebar.classList.contains('sidebar-show')){
+//       sidebar.classList.remove('sidebar-show');
+//       sidebar.classList.add('sidebar-hide');
+//       menuButton.classList.remove('sidebar-hide');
+//       menuButton.classList.add('sidebar-show');
+//       main.classList.add('main-mobile');
+//       container.classList.add('container-mobile');
+//       container.classList.remove('container-wide');
+//       header.classList.add('header-mobile')
+//     }
+//   }
   
 
 export {
@@ -620,6 +620,5 @@ export {
     renderTaskList,
     completeTaskToggle,
     clearMainScreen,
-    filterMain,
-    responsiveSidebar
+    filterMain
 }
