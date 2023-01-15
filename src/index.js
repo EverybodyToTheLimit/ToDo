@@ -11,7 +11,7 @@ let mediaQuery = window.matchMedia('(max-width: 768px)')
     responsiveSidebar(mediaQuery)
   })
 
-  window.addEventListener('DOMContentLoaded', (event) => {
+  window.addEventListener('DOMContentLoaded', () => {
     responsiveSidebar(mediaQuery)
 });
   

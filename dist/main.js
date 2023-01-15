@@ -5083,9 +5083,11 @@ function toggleSidebar() {
 
 
 function responsiveSidebar (e) {
-        toggleSidebar();
+    if (e.matches !== false) {    
+    
+    toggleSidebar();
     }
-  
+}
 
 
 
@@ -5552,7 +5554,7 @@ let mediaQuery = window.matchMedia('(max-width: 768px)')
     ;(0,_dom_helper__WEBPACK_IMPORTED_MODULE_1__.responsiveSidebar)(mediaQuery)
   })
 
-  window.addEventListener('DOMContentLoaded', (event) => {
+  window.addEventListener('DOMContentLoaded', () => {
     ;(0,_dom_helper__WEBPACK_IMPORTED_MODULE_1__.responsiveSidebar)(mediaQuery)
 });
   

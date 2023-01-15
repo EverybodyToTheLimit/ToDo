@@ -578,9 +578,11 @@ function toggleSidebar() {
 
 
 function responsiveSidebar (e) {
-        toggleSidebar();
+    if (e.matches !== false) {    
+    
+    toggleSidebar();
     }
-  
+}
 
 export {
     renderHeader,
