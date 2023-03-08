@@ -1,4 +1,4 @@
-import { renderLoginPrompt, filterMain, clearMainScreen, completeTaskToggle, renderTaskList, renderProjectSidebar, removeNewProjectModal, renderNewProjectModal, responsiveSidebar,renderStaticElements, renderHeader } from "./dom-helper"
+import { updateLoginInfo, renderLoginPrompt, filterMain, clearMainScreen, completeTaskToggle, renderTaskList, renderProjectSidebar, removeNewProjectModal, renderNewProjectModal, responsiveSidebar,renderStaticElements, renderHeader } from "./dom-helper"
 import { retrieveLocalstorage, updateProject, updateTask, toggleTaskCompleteStatus, deleteTask, createTask, createProject, deleteProject, getProjectNames} from "./projects-tasks"
 import {
     
@@ -26,6 +26,7 @@ let authHandler = async () => {
             renderHeader() 
             renderStaticElements() 
             renderProjectSidebar()
+            updateLoginInfo(getUserName(), getProfilePicUrl())
         }
 }
     else {

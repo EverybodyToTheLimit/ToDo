@@ -17,6 +17,24 @@ let renderLoginPrompt = (firstLogon) => {
     document.body.appendChild(containerObject)
 }
 
+let updateLoginInfo = (name, image) => {
+    
+
+        let container = document.getElementById('login-menu-container')
+        let authButton = document.getElementById('auth-button')
+        authButton.textContent = "Logout"
+        let userImage = document.createElement('img')
+        userImage.id = "user-image"
+        userImage.src = image
+        let userName = document.createElement('h4')
+        userName.textContent = name
+        userName.id = "user-name"
+
+        container.insertBefore(userName, container.firstChild)
+        container.insertBefore(userImage, container.firstChild)
+
+}
+
 let renderHeader = (firstLongon) => {
     let header = document.getElementById('header')
     if (header !== null) {
@@ -26,9 +44,14 @@ let renderHeader = (firstLongon) => {
     let headerObject = document.createElement('div');
     let menuButton = document.createElement('btn');
     let authButton = document.createElement('btn');
+    let rightMenu = document.createElement('div')
     menuButton.className = "material-symbols-outlined"
     menuButton.id = "menu-button"
     menuButton.textContent = "menu"
+
+    rightMenu.id = "login-menu-container"
+
+
     authButton.className = "material-symbols-outlined"
     authButton.id = "auth-button"
     authButton.textContent = "Login"
@@ -40,7 +63,8 @@ let renderHeader = (firstLongon) => {
 
     authButton.addEventListener('click', () => {authHandler()})
     headerObject.appendChild(menuButton)
-    headerObject.appendChild(authButton)
+    rightMenu.appendChild(authButton)
+    headerObject.appendChild(rightMenu)
     document.body.appendChild(headerObject);
 
 }
@@ -618,18 +642,6 @@ function responsiveSidebar (e) {
     }
 }
 
-let mediaQuery = window.matchMedia('(max-width: 768px)')
-
-
-  mediaQuery.addEventListener("change", () => {
-    responsiveSidebar(mediaQuery)
-  })
-
-  window.addEventListener('DOMContentLoaded', () => {
-    responsiveSidebar(mediaQuery)
-});
-  
-  responsiveSidebar(mediaQuery);
 
 export {
     renderHeader,
@@ -644,5 +656,6 @@ export {
     clearMainScreen,
     filterMain,
     responsiveSidebar,
-    renderLoginPrompt
+    renderLoginPrompt,
+    updateLoginInfo
 }

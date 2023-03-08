@@ -42,6 +42,31 @@ body {
     color: var(--grey);
 }
 
+#auth-button {
+
+        padding-right: 20px;
+        font-size: 25px;
+        color: var(--blue);
+
+}
+
+#login-menu-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+#user-image {
+    max-width: 40px;
+    max-height: 40px;
+    border-radius: 50%;
+}
+
+#user-name {
+    color: var(--blue);
+}
+
 
 .sidebar {
     flex-direction: column;

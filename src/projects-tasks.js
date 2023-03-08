@@ -36,7 +36,6 @@
             let docRef = doc(db, 'projects', UUID)
             const retrievedDoc = await getDoc(docRef) 
             projectList = JSON.parse(retrievedDoc.data().projectList)
-            console.log(projectList)
 
         }
         catch(error) {
