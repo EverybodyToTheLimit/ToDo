@@ -1,25 +1,59 @@
-import { clickHandler } from "./handlers";
+import { clickHandler, authHandler } from "./handlers";
 import { getProjectNames } from "./projects-tasks";
 import {formatRelative, isToday, isThisWeek, parseISO, format} from "date-fns";
 
-let renderHeader = () => {
+
+let renderLoginPrompt = (firstLogon) => {
+    document.body.innerHTML = ""
+    renderHeader(firstLogon)
+    let containerObject = document.createElement('div');
+    containerObject.className = "container";
+    containerObject.id = "container";
+    let mainObject = document.createElement('div');
+    mainObject.className = "main";
+    mainObject.id = "main";
+    mainObject.textContent = "Please log in to retrieve your projects"
+    containerObject.appendChild(mainObject)
+    document.body.appendChild(containerObject)
+}
+
+let renderHeader = (firstLongon) => {
+    let header = document.getElementById('header')
+    if (header !== null) {
+        header.remove()
+    }
+
     let headerObject = document.createElement('div');
     let menuButton = document.createElement('btn');
+    let authButton = document.createElement('btn');
     menuButton.className = "material-symbols-outlined"
     menuButton.id = "menu-button"
     menuButton.textContent = "menu"
+    authButton.className = "material-symbols-outlined"
+    authButton.id = "auth-button"
+    authButton.textContent = "Login"
     headerObject.className = "header";
     headerObject.id = "header"
+    if (firstLongon !== true) {
+        menuButton.addEventListener('click', () => {toggleSidebar()})
+    }
 
-    menuButton.addEventListener('click', () => {toggleSidebar()})
+    authButton.addEventListener('click', () => {authHandler()})
     headerObject.appendChild(menuButton)
+    headerObject.appendChild(authButton)
     document.body.appendChild(headerObject);
+
 }
 
 let renderStaticElements = () => {
 
     // Add static elements and define the properties
-
+    let checkForContainer = document.getElementById('container')
+    if (checkForContainer !== null) {
+        checkForContainer.remove()
+    }
+    else {
+    }
     let containerObject = document.createElement('div');
     containerObject.className = "container";
     let sidebarObject = document.createElement('nav');
@@ -584,6 +618,19 @@ function responsiveSidebar (e) {
     }
 }
 
+let mediaQuery = window.matchMedia('(max-width: 768px)')
+
+
+  mediaQuery.addEventListener("change", () => {
+    responsiveSidebar(mediaQuery)
+  })
+
+  window.addEventListener('DOMContentLoaded', () => {
+    responsiveSidebar(mediaQuery)
+});
+  
+  responsiveSidebar(mediaQuery);
+
 export {
     renderHeader,
     renderStaticElements,
@@ -596,5 +643,6 @@ export {
     completeTaskToggle,
     clearMainScreen,
     filterMain,
-    responsiveSidebar
+    responsiveSidebar,
+    renderLoginPrompt
 }

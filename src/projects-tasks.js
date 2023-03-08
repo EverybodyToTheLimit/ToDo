@@ -1,12 +1,53 @@
 
     import parseISO from "date-fns/parseISO";
-    import { updateLocalStorage, retrieveLocalstorage } from "./storage";
+    import { getFirestore, collection, getDoc, addDoc, setDoc, doc } from 'firebase/firestore/lite'
+    import { getUUID } from "./auth";
+    import { firebaseConfig } from "./firebase-setup";
+    import { initializeApp } from "firebase/app";
+
     
-    
+
+    //plugging in Firestore 
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    async function updateLocalStorage(projectList) {
+
+
+        // Add a new message entry to the Firebase database.
+        try {
+            let docRef = doc(db, 'projects', getUUID())
+            let jsonized = JSON.stringify(projectList)
+            let data = {
+                "projectList" : jsonized
+            }
+
+            await setDoc(docRef, data)
+        }
+        catch(error) {
+          console.error('Error writing new message to Firebase Database', error);
+        }
+      }
+
+    async function retrieveLocalstorage (UUID) {
+        try {
+            const app = initializeApp(firebaseConfig);
+            const db = getFirestore(app);
+            let docRef = doc(db, 'projects', UUID)
+            const retrievedDoc = await getDoc(docRef) 
+            projectList = JSON.parse(retrievedDoc.data().projectList)
+            console.log(projectList)
+
+        }
+        catch(error) {
+            console.error(error)
+        }    
+    }
+
+
+
+
     let projectList = [];
-    if (retrieveLocalstorage(projectList)) {
-        projectList = retrieveLocalstorage(projectList)
-    };
 
     class project {
         constructor(title, tasks) {
@@ -81,6 +122,7 @@ export {
     deleteTask,
     updateTask,
     updateProject,
-    toggleTaskCompleteStatus
+    toggleTaskCompleteStatus,
+    retrieveLocalstorage
 }
 

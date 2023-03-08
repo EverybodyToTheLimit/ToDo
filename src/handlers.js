@@ -1,5 +1,38 @@
-import { filterMain, clearMainScreen, completeTaskToggle, renderTaskList, renderProjectSidebar, removeNewProjectModal, renderNewProjectModal } from "./dom-helper"
-import { updateProject, updateTask, toggleTaskCompleteStatus, deleteTask, createTask, createProject, deleteProject, getProjectNames} from "./projects-tasks"
+import { renderLoginPrompt, filterMain, clearMainScreen, completeTaskToggle, renderTaskList, renderProjectSidebar, removeNewProjectModal, renderNewProjectModal, responsiveSidebar,renderStaticElements, renderHeader } from "./dom-helper"
+import { retrieveLocalstorage, updateProject, updateTask, toggleTaskCompleteStatus, deleteTask, createTask, createProject, deleteProject, getProjectNames} from "./projects-tasks"
+import {
+    
+        signIn,
+        signOutUser,
+        initFirebaseAuth,
+        getProfilePicUrl,
+        getUserName,
+        getUUID,
+        isUserSignedIn
+      
+} from './auth'
+import { firebaseConfig } from "./firebase-setup";
+import { initializeApp } from 'firebase/app';
+
+
+
+initializeApp(firebaseConfig);
+
+let authHandler = async () => {
+    if ((isUserSignedIn() === false)) {
+        await signIn()
+        if (isUserSignedIn() === true) {
+            await retrieveLocalstorage(getUUID())
+            renderHeader() 
+            renderStaticElements() 
+            renderProjectSidebar()
+        }
+}
+    else {
+        await signOutUser()
+        location.reload();
+    }
+}
 
 let clickHandler = (
                         clickOrigin, 
@@ -106,5 +139,6 @@ let clickHandler = (
 
 
 export {
-    clickHandler
+    clickHandler,
+    authHandler
 }
